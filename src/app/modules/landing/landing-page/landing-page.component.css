@@ -1,0 +1,53 @@
+/* Estilos generales */
+.landing-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    
+  }
+  
+  /* Estilos del encabezado */
+  .landing-header {
+    background-color: #d4700c;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .landing-header h1 {
+    font-size: 36px;
+  }
+  
+  .landing-header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .landing-header button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .landing-header button:hover {
+    background-color: #ffa200;
+  }
+  
+  /* Estilos del pie de página */
+  .landing-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
