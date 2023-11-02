@@ -58,6 +58,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "sslKey": "C:\\Users\\Jeremias\\Desktop\\facu\\laboratorio\\Regalito\\key.pem",
+            "sslCert": "C:\\Users\\Jeremias\\Desktop\\facu\\laboratorio\\Regalito\\cert.pem"
+          },
           "configurations": {
             "production": {
               "browserTarget": "Regalito:build:production"
@@ -94,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4016a1c4-e3d7-4709-a274-703b4e39afc7"
   }
 }
