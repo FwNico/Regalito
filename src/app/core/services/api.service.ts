@@ -10,12 +10,8 @@ export class ApiService {
 
   private baseURL = "https://api.mercadolibre.com/oauth/token"
 
-  constructor(private http: HttpClient) { }
 
-  /*! Users*/
-  public getToAuth(email: string, password: string): Observable<User[]> {
-    return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
-  }
+  constructor(private http: HttpClient) { }
 
 
   public fetchAccessToken(code:any): Promise<any> {

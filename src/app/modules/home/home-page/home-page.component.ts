@@ -37,6 +37,7 @@ export class HomePageComponent implements OnInit {
     this.apiService.fetchAccessToken(code)
       .then((response) => {
         this.myAccessToken = response.access_token;
+        
         console.log("access_token obtenido= " + this.myAccessToken);
         this.seeUser();
       })
