@@ -1,9 +1,9 @@
 import { User } from "./models";
 
 export interface IProduct {
-    id: number | null;
+    id: string | null;
     name: string | null;
-    description: string | null;
+    image: string | null;
     price: number | null;
   }
   

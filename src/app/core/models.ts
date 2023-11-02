@@ -2,15 +2,15 @@ import { IProduct, IUser } from "./interfaces";
 
 export class Product implements IProduct {
 
-  id: number | null;
+  id: string | null;
   name: string | null;
-  description: string | null;
+  image: string | null;
   price: number | null;
 
   constructor(product?: any) {
     this.id = product.id != null ? product.id : null;
     this.name = product.name != null ? product.name : null;
-    this.description = product.description != null ? product.description : null;
+    this.image = product.image != null ? product.image : null;
     this.price = product.price != null ? product.price : null;
   }
 }
