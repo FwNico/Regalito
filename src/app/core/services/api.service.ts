@@ -37,6 +37,26 @@ export class ApiService {
     return this.http.post(this.baseURL, body, httpOptions).toPromise()
 
   }
+
+  public getUserInfo(access_token: any): void {
+    const url = 'https://api.mercadolibre.com/users/me';
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${access_token}`
+    });
+  
+    this.http.get(url, { headers }).subscribe(
+      (response) => {
+        // Aquí puedes manejar la respuesta del servidor
+        console.log(response);
+      },
+      (error) => {
+        // Aquí puedes manejar el error en caso de que ocurra
+        console.error(error);
+      }
+    );
+  }
+
+
 }
 
 

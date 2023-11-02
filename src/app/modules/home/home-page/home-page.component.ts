@@ -9,8 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home-page.component.css']
 })
 
-export class HomePageComponent implements OnInit {
 
+
+export class HomePageComponent implements OnInit {
+  
+  myAccessToken:string ="";
+  
   private apiService: ApiService
   code: any
   constructor(apiService: ApiService, private route: ActivatedRoute) {
@@ -30,7 +34,24 @@ export class HomePageComponent implements OnInit {
   }
 
   public getToken(code: any) {
-    this.apiService.fetchAccessToken(code).then((response) => { console.log(JSON.stringify(response, null, 3)) })
+    this.apiService.fetchAccessToken(code)
+      .then((response) => {
+        this.myAccessToken = response.access_token;
+        console.log("access_token obtenido= " + this.myAccessToken);
+        this.seeUser();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
+  /*
+  public getToken(code: any) {
+  this.apiService.fetchAccessToken(code).then((response) => { console.log(JSON.stringify(response, null, 3)) })
+  }
+  */
+ 
+  public seeUser(){
+    console.log(this.apiService.getUserInfo(this.myAccessToken));
+  }
 }
