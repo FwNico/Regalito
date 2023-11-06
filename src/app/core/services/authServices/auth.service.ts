@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoginRespone } from '../../interfaces';
+///import { LoginResponse } from '../../interfaces';
 import { User } from '../../models';
 import { ApiService } from '../api.service';
 import { Observable, lastValueFrom, map } from 'rxjs';
@@ -23,19 +23,7 @@ export class AuthService {
 
     let isLogin = false;
 
-    try {
-      let apiResponse = this.apiService.getToAuth(email, password);
-      let userRespone = await lastValueFrom(apiResponse);
-      this.user = userRespone[0];
-
-      if (this.user) {
-        localStorage.setItem('token', this.user.id!.toString());
-        isLogin = true;
-      }
-    } catch (error) {
-      throw error;
-    }
-
+    
     return isLogin;
   }
 

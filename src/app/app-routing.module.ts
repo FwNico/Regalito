@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './modules/home/home-page/home-page.component';
 import { LandingPageComponent } from './modules/landing/landing-page/landing-page.component';
+import { Error404Component } from './shared/components/error404/error404.component';
 
 const routes: Routes = [
 
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'landing',
     pathMatch: 'full'
+  },
+
+  {
+    path:'**',
+    component: Error404Component
   }
   
 ];
