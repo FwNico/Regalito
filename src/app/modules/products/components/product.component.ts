@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenRepository } from 'src/app/repository/token/token-repository';
+import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 
 @Component({
   selector: 'app-landing-page',
@@ -15,5 +15,4 @@ export class ProductComponent implements OnInit{
 
          token?.access_token
     }
-
 }
