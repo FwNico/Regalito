@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ApiService } from '../../../core/services/api.service';
+import { ApiService } from '../../../core/services/api/api.service';
 import { Meli } from 'src/app/core/models/Meli';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/core/services/user/userService.service';

@@ -1,4 +1,4 @@
-import {IProduct, IUser} from "./interfaces";
+import {IProduct, IUserMeli, IAddress} from "./interfaces";
 
 export class Product implements IProduct {
 
@@ -15,50 +15,32 @@ export class Product implements IProduct {
   }
 }
 
-export class User implements IUser {
-
-  id: number | null;
-  userName: string | null;
-  email: string | null;
-  password: string | null;
-
-  constructor(user?: any) {
-    this.id = user.id != null ? user.id : null;
-    this.userName = user.userName != null ? user.userName : null;
-    this.email = user.email != null ? user.email : null;
-    this.password = user.password != null ? user.password : null;
-  }
-
-}
-
-/*
-export class User implements UserMeli{
+export class User implements IUserMeli{
   id: number | null;
   nickname: string | null;
   first_name: string | null;
   last_name: string | null;
   address: Address | null;
 
-  constructor(id?:number,nickname?: string, first_name?: string, last_name?: string, address: Address){
-    this.id = id != null ? id : null;
-    this.nickname = nickname != null ? nickname : null;
-    this.first_name = first_name != null ? first_name : null;
-    this.last_name = last_name != null ? last_name : null;
-    this.address = address != null ? address : null;
+  constructor(user?: any){
+    this.id = user.id != null ? user.id : null;
+    this.nickname = user.nickname != null ? user.nickname : null;
+    this.first_name = user.first_name != null ? user.first_name : null;
+    this.last_name = user.last_name != null ? user.last_name : null;
+    this.address = user.address != null ? user.address : null;
   }
 }
 
-export class address implements Address{
+export class Address implements IAddress{
   state:    string | null;
   city:     string| null;
   address:  string| null;
   zip_code: string| null;
 
-  constructor(state: string| null, city: string| null, address: string| null, zip_code : string| null){
-    this.state = state != null ? state : null;
-    this.city  = city != null ? city : null;
-    this.address = address != null ? address : null;
-    this.zip_code = zip_code != null ? zip_code : null;
+  constructor(addres?: any){
+    this.state = addres.state != null ? addres.state : null;
+    this.city  = addres.city != null ? addres.city : null;
+    this.address = addres.address != null ? addres.address : null;
+    this.zip_code = addres.zip_code != null ? addres.zip_code : null;
   }
 }
-*/

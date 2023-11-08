@@ -1,10 +1,11 @@
-import { ApiService } from "src/app/core/services/api.service"
+import { ApiService } from "src/app/core/services/api/api.service"
 import { TokenRepository } from "../token/tokenRepository";
 import { UserService } from "src/app/core/services/user/userService.service";
 import { Observable, Subject } from 'rxjs';
-import { ResponseUser } from '../../core/models/User';
+import { ResponseUser } from '../../core/models/UserDAO';
 import { Meli } from "src/app/core/models/Meli";
 import { Injectable } from "@angular/core";
+import { User } from "src/app/core/models";
 
 @Injectable({
     providedIn: 'root'
@@ -29,10 +30,8 @@ export class UserRepository {
         console.log(this.tokenAcces?.access_token)
         this.userService.getUserInfo(this.userService.getUserInfo(this.tokenAcces?.access_token)).then((response) => {
             
-            //hacer tratamiento de usuario
             console.log(response?.first_name)
         })
     }
-
 
 }
