@@ -7,16 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-    private baseURL = "https://api.mercadolibre.com/oauth/token"
-
     constructor(private http: HttpClient) { }
 
     async getUserInfo(access_token: any): Promise<ResponseUser | undefined> {
         const url = 'https://api.mercadolibre.com/users/me';
 
         const headers = new HttpHeaders({
-            Authorization: `Bearer ${access_token as any}`
+            Authorization: `Bearer ${access_token as any}`,
         });
+
+        console.log("headers del user" + headers)
+
         return this.http.get<ResponseUser>(url, { headers }).toPromise()
     }
 

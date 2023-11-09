@@ -8,6 +8,7 @@ import { ApiService } from 'src/app/core/services/api.service';
 import { HomeRepository } from 'src/app/repository/home/homeRepository';
 import { UserRepository } from 'src/app/repository/user/userRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
+import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TokenRepository } from 'src/app/repository/token/tokenRepository';
   providers: [
     UserRepository,
     HomeRepository,
-    TokenRepository
+    TokenRepository,
+    ProductRepository
   ]
 })
 export class HomeModule { }

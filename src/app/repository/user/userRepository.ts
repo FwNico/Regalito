@@ -28,11 +28,7 @@ export class UserRepository {
     fetchUser() {
         console.log(this.tokenAcces?.access_token)
         this.userService.getUserInfo(this.userService.getUserInfo(this.tokenAcces?.access_token)).then((response) => {
-            
-            //hacer tratamiento de usuario
             console.log(response?.first_name)
         })
     }
-
-
 }

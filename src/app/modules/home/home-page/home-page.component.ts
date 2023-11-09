@@ -6,6 +6,7 @@ import { UserService } from 'src/app/core/services/user/userService.service';
 import { UserRepository } from 'src/app/repository/user/userRepository';
 import { HomeRepository } from 'src/app/repository/home/homeRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
+import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
 
 @Component({
   selector: 'app-home-page',
@@ -19,7 +20,7 @@ export class HomePageComponent implements OnInit {
 
   myAccessToken: string = "";
   code: any
-  constructor(private userRepository: UserRepository, private homeRepository: HomeRepository, private tokenRepository: TokenRepository, private route: ActivatedRoute) { }
+  constructor(private productsRepository: ProductRepository, private userRepository: UserRepository, private homeRepository: HomeRepository, private tokenRepository: TokenRepository, private route: ActivatedRoute) { }
 
 
   ngOnInit() {
@@ -27,6 +28,7 @@ export class HomePageComponent implements OnInit {
       const code = params['code']
       if (code != null) {
         console.log("codigo obtenido= " + code)
+        this.getToken(code)
         this.code = code
         if (this.tokenRepository.getAccessToken() == null) {
           this.getToken(code);
@@ -55,5 +57,9 @@ export class HomePageComponent implements OnInit {
     this.userRepository.userObserver.subscribe((user) => {
       console.log('user' + user)
     })
+  }
+
+  public favoritesList() {
+    this.productsRepository.getListFavorites()
   }
 }
