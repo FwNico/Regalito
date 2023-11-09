@@ -18,6 +18,9 @@
         "city": "Palermo",
         "address": "Test Address 123",
         "zip_code": "1414"
+        },
+        "friends":{
+          "user": 
         }
       }
     ]
