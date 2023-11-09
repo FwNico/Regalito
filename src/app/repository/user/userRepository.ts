@@ -1,10 +1,10 @@
 import { ApiService } from "src/app/core/services/api.service"
 import { TokenRepository } from "../token/tokenRepository";
-import { UserService } from "src/app/core/services/user/userService.service";
 import { Observable, Subject } from 'rxjs';
 import { ResponseUser } from '../../core/models/User';
 import { Meli } from "src/app/core/models/Meli";
 import { Injectable } from "@angular/core";
+import { UserService } from "src/app/core/services/user/userService.service";
 
 @Injectable({
     providedIn: 'root'
@@ -25,13 +25,16 @@ export class UserRepository {
         this.tokenAcces = tokenRepository.getAccessToken()
     }
 
-    fetchUser() {
+    fetchUser(): any {
         console.log(this.tokenAcces?.access_token)
         this.userService.getUserInfo(this.userService.getUserInfo(this.tokenAcces?.access_token)).then((response) => {
             
             //hacer tratamiento de usuario
             console.log(response?.first_name)
-        })
+            return response;   
+
+        }).catch((error) => { console.log(error)
+            return error})
     }
 
 

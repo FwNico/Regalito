@@ -4,8 +4,13 @@ import { Meli } from 'src/app/core/models/Meli';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/core/services/user/userService.service';
 import { UserRepository } from 'src/app/repository/user/userRepository';
-import { HomeRepository } from 'src/app/repository/home/homeRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
+import { HomeRepository } from 'src/app/repository/home/homeRepository';
+import { ResponseUser } from 'src/app/core/models/User';
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
 
 @Component({
   selector: 'app-home-page',
@@ -17,8 +22,8 @@ import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 
 export class HomePageComponent implements OnInit {
 
-  myAccessToken: string = "";
-  code: any
+  code: any;
+  user?: ResponseUser;
   constructor(private userRepository: UserRepository, private homeRepository: HomeRepository, private tokenRepository: TokenRepository, private route: ActivatedRoute) { }
 
 
@@ -50,10 +55,59 @@ export class HomePageComponent implements OnInit {
   */
 
   public seeUser() {
-    this.userRepository.fetchUser()
-
     this.userRepository.userObserver.subscribe((user) => {
       console.log('user' + user)
     })
   }
+  fotos = [
+    {
+    url: 'https://www.cucinare.tv/wp-content/uploads/2020/08/Bananas1.jpg',
+    nombre:'Banana',
+    precio: '300',
+    cantidad: '1'
+    },
+    {
+      url: 'https://www.bupasalud.com/sites/default/files/inline-images/fuji-red.jpg',
+      nombre:'Manzana',
+      precio: '250',
+      cantidad: '1'
+    },
+    {
+      url: 'https://www.sabervivirtv.com/medio/2023/07/14/sandia-sin-pepitas_1f1e2965_230714105148_1280x720.jpg',
+      nombre:'Sandia',
+      precio: '190',
+      cantidad: '1'
+    },
+    {
+      url: 'https://naranjasribera.com/wp-content/uploads/2020/12/naranjas-y-mandarinas-diferencias.jpg',
+      nombre:'Mandarina',
+      precio: '175',
+      cantidad: '1'
+    },  
+    {
+      url: 'https://www.cucinare.tv/wp-content/uploads/2020/08/Bananas1.jpg',
+      nombre:'Banana',
+      precio: '300',
+      cantidad: '1'
+      },
+      {
+        url: 'https://www.bupasalud.com/sites/default/files/inline-images/fuji-red.jpg',
+        nombre:'Manzana',
+        precio: '250',
+        cantidad: '1'
+      },
+      {
+        url: 'https://www.sabervivirtv.com/medio/2023/07/14/sandia-sin-pepitas_1f1e2965_230714105148_1280x720.jpg',
+        nombre:'Sandia',
+        precio: '190',
+        cantidad: '1'
+      },
+      {
+        url: 'https://naranjasribera.com/wp-content/uploads/2020/12/naranjas-y-mandarinas-diferencias.jpg',
+        nombre:'Mandarina',
+        precio: '175',
+        cantidad: '1'
+      }  
+  ];
+  
 }
