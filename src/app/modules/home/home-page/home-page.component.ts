@@ -28,7 +28,6 @@ export class HomePageComponent implements OnInit {
       const code = params['code']
       if (code != null) {
         console.log("codigo obtenido= " + code)
-        this.getToken(code)
         this.code = code
         if (this.tokenRepository.getAccessToken() == null) {
           this.getToken(code);
