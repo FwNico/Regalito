@@ -6,6 +6,7 @@ import { ResponseUser } from '../../core/models/UserDAO';
 import { Meli } from "src/app/core/models/Meli";
 import { Injectable } from "@angular/core";
 import { User } from "src/app/core/models";
+import { DbService } from "src/app/core/services/db/db.service";
 
 @Injectable({
     providedIn: 'root'
@@ -19,18 +20,62 @@ export class UserRepository {
 
     //token para hacer peticiones
     tokenAcces: Meli | null
-
-    constructor(private userService: UserService, private tokenRepository: TokenRepository) {
+    
+    constructor(private userService: UserService, private tokenRepository: TokenRepository, private dbService: DbService) {
         this.userSubjet = new Subject<ResponseUser>
         this.userObserver = this.userSubjet.asObservable()
         this.tokenAcces = tokenRepository.getAccessToken()
     }
 
+    
     fetchUser() {
         console.log(this.tokenAcces?.access_token)
         this.userService.getUserInfo(this.userService.getUserInfo(this.tokenAcces?.access_token)).then((response) => {
             
             console.log(response?.first_name)
+        })
+    }
+
+    getAllUsers(){
+        this.userService.getAllUsers().subscribe({
+                next: (data) =>{
+                    //this.userList = data;
+                    console.log(data)
+                },
+                error: (error) => {console.log(error)} 
+        })
+    }
+
+    getUser(id: number){
+        this.userService.getUserById(id).subscribe({
+            next: (user)=>{
+                console.log(user)
+            },
+            error: (error)=> {console.log(error)}
+        })
+    }
+
+    deleteUser(id: number){
+        this.userService.deleteUser(id).subscribe({
+            next: () =>{
+                console.log("El usuario fue eliminado")
+            },
+            error: (error) =>{console.log(error)}
+        })
+    }
+
+    addUser(){
+        const user: User = {
+            //reemplazar null por datos reales
+            id: null,
+            nickname: null,
+            first_name: null,
+            last_name: null,
+            address: null,
+        }
+        this.userService.postUser(user).subscribe({
+            next: (data) => {console.log(data)},
+            error: (error) => {console.log(error)}
         })
     }
 

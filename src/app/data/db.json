@@ -7,6 +7,26 @@
         "price": 399
       }
     ],
+
+    "wishlists":[
+      {
+        "userId":202593498,
+        "wishlists":[
+          {
+            "id": 1,
+            "name": "Navidad",
+            "products":["MLA880652918", "MLA880653411"]
+          },
+          {
+            "id": 2,
+            "name": "Pileta",
+            "products":["MLA880652918", "MLA880653411"]
+          }
+        ]
+        
+      }
+    ],
+
     "users": [
       {
         "id": 202593498,
@@ -18,7 +38,9 @@
         "city": "Palermo",
         "address": "Test Address 123",
         "zip_code": "1414"
-        }
+        },
+        "friendships":["Jeremias", "Nahuel"]
       }
     ]
+    
   }

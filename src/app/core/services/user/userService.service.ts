@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ResponseUser } from '../../models/UserDAO';
 import { DbService } from '../db/db.service';
 import { User } from '../../models';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { User } from '../../models';
 })
 export class UserService {
 
-    private baseURL = "http://localhost:3000"
+    private baseURL = "http://localhost:3000/users"
 
     constructor(private http: HttpClient, private dbService: DbService) { }
 
@@ -24,10 +25,10 @@ export class UserService {
     }
 
     
-    //devuelven promesas para que las trabaje el componente con una funcion
-    // por ejemplo: public addUser(user: User){
-    //                  this.userService.addUser(user).then(data => )
-    //              }
+    /* devuelven promesas para que las trabaje el componente con una funcion
+    por ejemplo: public addUser(user: User){
+                      this.userService.addUser(user).then(data => )
+                  }
 
     public addUser(user: User): Promise<User> {
         return new Promise<User>((resolve, reject) => {
@@ -60,6 +61,40 @@ export class UserService {
                 error: error => reject (error)
             })
         });
+    } */
+
+    /* addUser(user: User): Promise<any>{
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
+        };
+        return this.http.post(this.baseURL, user, httpOptions).toPromise();
+
+        getUserById(id: number): Promise <any>{
+        return this.http.get(`${this.baseURL}/${id}`).toPromise();
     }
+    } */
+
+    getAllUsers(): Observable <User[]>{
+        return this.http.get<User[]>(this.baseURL)
+    }
+
+    getUserById(id: number): Observable <User>{
+        return this.http.get<User>(`${this.baseURL}/${id}`)
+    }
+
+    postUser(user: User): Observable<User>{
+        return this.http.post<User>(this.baseURL, user, {headers: {'Content-type':'application/json'}})
+    }
+
+    deleteUser(id:number | undefined){
+        return this.http.delete(`${this.baseURL}/${id}`)
+    }
+
+    putUser(user: User): Observable<User>{
+        return this.http.put<User>(`${this.baseURL}/${user.id}`, user, {headers: {'Content-type':'application/json'}})
+    }
+
 
 }
