@@ -59,8 +59,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "sslKey": "C:\\Users\\Jeremias\\Desktop\\facu\\laboratorio\\Regalito\\key.pem",
-            "sslCert": "C:\\Users\\Jeremias\\Desktop\\facu\\laboratorio\\Regalito\\cert.pem"
+            "sslKey": "C:\\Users\\mirab\\OneDrive\\Escritorio\\tpFinal\\Regalito\\key.pem",
+            "sslCert": "C:\\Users\\mirab\\OneDrive\\Escritorio\\tpFinal\\Regalito\\cert.pem"
           },
           "configurations": {
             "production": {

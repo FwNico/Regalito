@@ -1,24 +1,36 @@
 {
-    "products": [
-      {
-        "id": "MLA880652918",
-        "name": "Celular",
-        "image": " url Nokia 1100",
-        "price": 399
-      }
-    ],
-    "users": [
-      {
-        "id": 202593498,
-        "nickname": "TETE2870021",
-        "first_name": "Test",
-        "last_name": "Test",
-        "address": {
+  "products": [
+    {
+      "id": "MLA880652918",
+      "name": "Celular",
+      "image": " url Nokia 1100",
+      "price": 399
+    }
+  ],
+  "users": [
+    {
+      "id": 202593498,
+      "nickname": "TETE2870021",
+      "first_name": "Test",
+      "last_name": "Test",
+      "address": {
         "state": "AR-C",
         "city": "Palermo",
         "address": "Test Address 123",
         "zip_code": "1414"
-        }
       }
-    ]
-  }
+    },
+    {
+      "id": 414173926,
+      "nickname": "NICOLASDUARTE95",
+      "first_name": "Nicolas",
+      "last_name": "Duarte",
+      "address": {
+        "address": null,
+        "city": null,
+        "state": "AR-B",
+        "zip_code": null
+      }
+    }
+  ]
+}

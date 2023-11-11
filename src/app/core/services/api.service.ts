@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from '../models';
 import { Observable, catchError, map, of } from 'rxjs';
 import { Meli } from '../models/Meli';
 
