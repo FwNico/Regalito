@@ -6,8 +6,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ApiService } from 'src/app/core/services/api.service';
 import { HomeRepository } from 'src/app/repository/home/homeRepository';
-import { UserRepository } from 'src/app/repository/user/userRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
+import { UserService } from 'src/app/core/services/user/userService.service';
 
 
 @NgModule({
@@ -20,9 +20,9 @@ import { TokenRepository } from 'src/app/repository/token/tokenRepository';
     SharedModule
   ],
   providers: [
-    UserRepository,
     HomeRepository,
-    TokenRepository
+    TokenRepository,
+    UserService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

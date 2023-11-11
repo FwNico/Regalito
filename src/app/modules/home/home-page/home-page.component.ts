@@ -1,16 +1,17 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ApiService } from '../../../core/services/api.service';
+import { ApiService } from 'src/app/core/services/api.service';
 import { Meli } from 'src/app/core/models/Meli';
+import { ResponseUser } from 'src/app/core/models/UserDAO';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/core/services/user/userService.service';
-import { UserRepository } from 'src/app/repository/user/userRepository';
-import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 import { HomeRepository } from 'src/app/repository/home/homeRepository';
-import { ResponseUser } from 'src/app/core/models/User';
+import { TokenRepository } from 'src/app/repository/token/tokenRepository';
+import { User } from 'src/app/core/models/User';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
 register();
+
 
 @Component({
   selector: 'app-home-page',
@@ -18,18 +19,21 @@ register();
   styleUrls: ['./home-page.component.css']
 })
 
-
-
 export class HomePageComponent implements OnInit {
 
-  code: any;
-  user?: ResponseUser;
-  constructor(private userRepository: UserRepository, private homeRepository: HomeRepository, private tokenRepository: TokenRepository, private route: ActivatedRoute) { }
+  myAccessToken: Meli | null
+  code: any
+  user: ResponseUser | undefined = undefined
+  constructor(private userService: UserService, private homeRepository: HomeRepository, private tokenRepository: TokenRepository, private route: ActivatedRoute) { 
+    this.myAccessToken = tokenRepository.getAccessToken()
+    
+  }
 
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       const code = params['code']
+      //this.getToken(code);
       if (code != null) {
         console.log("codigo obtenido= " + code)
         this.code = code
@@ -48,17 +52,41 @@ export class HomePageComponent implements OnInit {
     this.homeRepository.getToken(code)
   }
 
+  fetchUser(){
+    console.log(this.myAccessToken?.access_token)
+    this.userService.getUserInfo(this.myAccessToken?.access_token).subscribe({
+      next: (data) => { 
+        this.user = data
+        this.addUser()
+      },
+      error: (error) => {console.log(error)}
+
+    })    
+  }
+
+  addUser(){
+    if(this.user != undefined){
+        const newUser: User = {
+            id: this.user.id,
+            nickname: this.user.nickname,
+            first_name: this.user.first_name,
+            last_name: this.user.last_name,
+            address: this.user.address,
+        }
+    
+        this.userService.postUser(newUser).subscribe({
+            next: (data) => {console.log(data)},
+            error: (error) => {console.log(error)}
+        })
+    }
+}
+
   /*
   public getToken(code: any) {
   this.apiService.fetchAccessToken(code).then((response) => { console.log(JSON.stringify(response, null, 3)) })
   }
   */
 
-  public seeUser() {
-    this.userRepository.userObserver.subscribe((user) => {
-      console.log('user' + user)
-    })
-  }
   fotos = [
     {
     url: 'https://www.cucinare.tv/wp-content/uploads/2020/08/Bananas1.jpg',
@@ -83,7 +111,7 @@ export class HomePageComponent implements OnInit {
       nombre:'Mandarina',
       precio: '175',
       cantidad: '1'
-    },  
+    },
     {
       url: 'https://www.cucinare.tv/wp-content/uploads/2020/08/Bananas1.jpg',
       nombre:'Banana',
@@ -107,7 +135,8 @@ export class HomePageComponent implements OnInit {
         nombre:'Mandarina',
         precio: '175',
         cantidad: '1'
-      }  
+      }
   ];
-  
+
+
 }
