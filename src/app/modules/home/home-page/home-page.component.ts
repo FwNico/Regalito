@@ -57,7 +57,8 @@ export class HomePageComponent implements OnInit {
     this.userService.getUserInfo(this.myAccessToken?.access_token).subscribe({
       next: (data) => { 
         this.user = data
-        this.addUser()
+        console.log(data);
+        this.checkUserExistence();
       },
       error: (error) => {console.log(error)}
 
@@ -79,7 +80,21 @@ export class HomePageComponent implements OnInit {
             error: (error) => {console.log(error)}
         })
     }
-}
+  }
+
+  checkUserExistence() {
+    if(this.user != undefined){
+      this.userService.userExists(this.user.id).subscribe(
+        (exists) => {
+          if(!exists){
+            this.addUser()
+          }
+        },
+        (error) => { console.log(error)}
+      )
+  }
+  }
+  
 
   /*
   public getToken(code: any) {

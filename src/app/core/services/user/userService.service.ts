@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ResponseUser } from '../../models/UserDAO';
-import { Observable } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
 import { User } from '../../models/User';
 
 @Injectable({
@@ -40,6 +40,14 @@ export class UserService {
 
     putUser(user: User): Observable<User>{
         return this.http.put<User>(`${this.baseURL}/${user.id}`, user, {headers: {'Content-type':'application/json'}})
+    }
+
+    userExists(id: number): Observable<boolean>{
+        return this.http.get<boolean>(`${this.baseURL}/${id}`)
+        .pipe(
+            map(resp => true), // Si sale bien retorna true. Recibir un response significa que salio bien
+            catchError(error => of(false)) // Si hay algun error en la solicitud me regresa falso
+          );
     }
 
 }
