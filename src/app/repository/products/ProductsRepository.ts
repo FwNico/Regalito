@@ -10,13 +10,12 @@ export class ProductRepository {
 
     tokenAcces: Meli | null
     constructor(private tokenRepository: TokenRepository, private service: ProductService) {
-        this.tokenAcces = tokenRepository.getAccessToken()
+        this.tokenAcces = tokenRepository.getAccessToken() as Meli
     }
 
-    getListFavorites() {
-        (this.tokenAcces != null) ? this.service.favoritesList(this.tokenAcces.access_token).
-            then((response) => {
-                console.log(JSON.stringify(response, null, 3))
-            }) : console.log("rompio")
+    getProductsList() {
+        (this.tokenAcces != null) ? this.service.productsList(this.tokenAcces.access_token, this.tokenAcces.user_id).subscribe((response) => {
+            console.log(response)
+        }) : console.log("rompio")
     }
 }
