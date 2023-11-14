@@ -9,6 +9,7 @@ import { HomeRepository } from 'src/app/repository/home/homeRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 import { UserService } from 'src/app/core/services/user/userService.service';
 import { CarouselFavComponent } from './home-page/carousel-fav/carousel-fav.component';
+import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CarouselFavComponent } from './home-page/carousel-fav/carousel-fav.comp
   providers: [
     HomeRepository,
     TokenRepository,
-    UserService
+    UserService,
+    ProductRepository
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
