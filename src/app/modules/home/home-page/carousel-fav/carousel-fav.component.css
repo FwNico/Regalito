@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-container .imagen{
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+}
+.swiper-slide{
+    width: auto;
+    margin: 0px 10px;
+    background-color: lightgray;
+    border: 2px solid black;
+    padding: 1.5%;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 6px 0px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  /* Cambios en el color al pasar el ratón sobre el botón */
+  .button:hover {
+    background-color: orangered;
+    color: black;
+    border-color: black;
+  }

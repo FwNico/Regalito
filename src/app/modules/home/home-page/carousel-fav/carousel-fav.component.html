@@ -1,0 +1,10 @@
+
+<swiper-container class="swiper-container" loop="true" autoplay="true" slides-per-view="auto" >
+    <swiper-slide *ngFor="let producto of fotos" class="swiper-slide">
+        <img [src]="producto.url" class="imagen">
+        <div class="nombre"><h3><b>{{producto.nombre}}</b></h3></div>
+        <div class="precio">{{producto.precio}}</div>
+        <div class="cantidad">{{producto.cantidad}}</div>
+        <button class="button" >Add to Wishlist</button>
+    </swiper-slide>
+</swiper-container>

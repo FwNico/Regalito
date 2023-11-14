@@ -8,11 +8,13 @@ import { ApiService } from 'src/app/core/services/api.service';
 import { HomeRepository } from 'src/app/repository/home/homeRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 import { UserService } from 'src/app/core/services/user/userService.service';
+import { CarouselFavComponent } from './home-page/carousel-fav/carousel-fav.component';
 
 
 @NgModule({
   declarations: [
-    HomePageComponent
+    HomePageComponent,
+    CarouselFavComponent
   ],
   imports: [
     CommonModule,

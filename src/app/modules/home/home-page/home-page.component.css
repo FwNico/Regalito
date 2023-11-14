@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 h1,
 h2,
 h3,
@@ -29,28 +27,12 @@ p {
     margin-top: 5%;
     display: grid; 
     grid-template-columns: 19% auto;
-    grid-template-rows: 37% auto;
+    grid-template-rows: 35% auto;
     border: solid 1px;
   }
-  
   .box{
     border: solid 1px ;
   }
   .b1{
     grid-row: 1/ span 2;
   }
-
-  .swiper-container .imagen{
-    width: 150px;
-    height: 100px;
-    border-radius: 5px;
-}
-
-.swiper-slide{
-    width: auto;
-    margin: 1%;
-    background-color: lightgray;
-    border: 2px solid black;
-    padding: 1.5%;
-    border-radius: 5px;
-}

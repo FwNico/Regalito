@@ -7,21 +7,9 @@
         <app-side-bar></app-side-bar>
     </div>
     <div class="box b2">
-        <swiper-container class="swiper-container" loop="true" autoplay="true" slides-per-view="auto" >
-                <swiper-slide *ngFor="let producto of fotos" class="swiper-slide">
-                    <img [src]="producto.url" class="imagen">
-                    <div class="nombre"><h3><b>{{producto.nombre}}</b></h3></div>
-                    <div class="precio">{{producto.precio}}</div>
-                    <div class="cantidad">{{producto.cantidad}}</div>
-                    <button class="button">Deseo</button>
-                </swiper-slide>
-        </swiper-container>
+        <app-carousel-fav></app-carousel-fav>
     </div>
     <div class="box b3">
         WHISLIST USER
     </div>
-</div>
-
-<div>
-
 </div>
