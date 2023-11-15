@@ -28,41 +28,49 @@ p {
     display: grid; 
     grid-template-columns: 19% auto;
     grid-template-rows: 35% auto;
-    border: solid 1px;
+   
   }
-  .box{
-    border: solid 1px ;
-  }
+ 
   .b1{
     grid-row: 1/ span 2;
   }
   /* En tu archivo de estilos (por ejemplo, styles.css) */
-.wishlist-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
-  background-color: #fff;
-  border: 2px solid black;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  text-align: center;
-}
-
-.wishlist-card:hover {
-  transform: scale(1.05); /* Efecto de escala al pasar el ratón sobre la tarjeta */
-}
-
-.wishlist-card img {
-  width: 200px;
-  max-width: 150px;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.wishlist-card div {
-  font-weight: bold;
-  margin-top: 10px;
-}
+  .whislist{
+    margin: 2%;
+  }
+  .new-wishlist-button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .new-wishlist-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Estilos para el botón "Delete Wishlist" */
+  .delete-wishlist-button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .delete-wishlist-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Espaciado entre los botones */
+  div span {
+    margin-left: 10%;
+    margin-right: 5%;
+  }

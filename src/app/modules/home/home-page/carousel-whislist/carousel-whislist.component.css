@@ -1,0 +1,77 @@
+
+/* En tu archivo de estilos (por ejemplo, styles.css) */
+.wishlist-card {
+  height: 100px;
+  width: 150px;
+  padding: 15px;
+  margin: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+}
+
+.wishlist-card:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el ratón sobre la tarjeta */
+}
+
+/* Estilos CSS */
+
+/* Contenedor flex con envoltura (wrap) para las tarjetas */
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  width: 15rem; /* Ancho fijo para cada tarjeta, ajusta según tus necesidades */
+  margin: 10px; /* Margen entre las tarjetas, ajusta según tus necesidades */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
+  transition: box-shadow 0.3s ease; /* Efecto de transición en la sombra al pasar el ratón */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+/* Estilo de la imagen dentro de la tarjeta */
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd; /* Línea divisoria sutil bajo la imagen */
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.card-body {
+  padding: 1rem;
+}
+
+/* Estilo del título de la tarjeta */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Estilo del texto de la tarjeta */
+.card-text {
+  color: #555;
+}
+/* Estilos para la clase 'boton-back' */
+.boton-back {
+  padding: 10px 15px; /* Ajusta el padding según tus preferencias */
+  font-size: 16px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s ease; /* Efecto de transición en el color de fondo al pasar el ratón */
+}
+
+.boton-back:hover {
+  background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}

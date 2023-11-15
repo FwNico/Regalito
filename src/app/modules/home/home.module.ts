@@ -10,12 +10,15 @@ import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 import { UserService } from 'src/app/core/services/user/userService.service';
 import { CarouselFavComponent } from './home-page/carousel-fav/carousel-fav.component';
 import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
+import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
+import { CarouselWhislistComponent } from './home-page/carousel-whislist/carousel-whislist.component';
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
-    CarouselFavComponent
+    CarouselFavComponent,
+    CarouselWhislistComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +29,8 @@ import { ProductRepository } from 'src/app/repository/products/ProductsRepositor
     HomeRepository,
     TokenRepository,
     UserService,
-    ProductRepository
+    ProductRepository,
+    WishListRepository
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

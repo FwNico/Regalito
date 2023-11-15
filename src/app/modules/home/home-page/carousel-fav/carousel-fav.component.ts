@@ -21,10 +21,10 @@ export class CarouselFavComponent implements OnInit {
     constructor(private favs : ProductService, private tokenRepository: TokenRepository){
       this.myAccessToken=tokenRepository.getAccessToken()
     }
+
   ngOnInit(): void {
     this.favs.productsList(this.myAccessToken!.access_token, this.myAccessToken!.user_id).subscribe((products) =>{
       this.products = products;
-      console.log(products[0])
     })
   }
     
