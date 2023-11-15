@@ -26,7 +26,8 @@ export class HomePageComponent implements OnInit {
   myAccessToken: Meli | null
   code: any
   user: ResponseUser | undefined = undefined
-  constructor(private userService: UserService, private homeRepository: HomeRepository, private tokenRepository: TokenRepository, private route: ActivatedRoute, private productService: ProductService) {
+  constructor(private userService: UserService, private homeRepository: HomeRepository, 
+    private tokenRepository: TokenRepository, private route: ActivatedRoute, private productService: ProductService) {
     this.myAccessToken = tokenRepository.getAccessToken()
 
   }
@@ -35,7 +36,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       const code = params['code']
-      //this.getToken(code);
+      this.getToken(code);
       if (code != null) {
         console.log("codigo obtenido= " + code)
         this.code = code
@@ -58,6 +59,7 @@ export class HomePageComponent implements OnInit {
     console.log(this.myAccessToken?.access_token)
     this.userService.getUserInfo(this.myAccessToken?.access_token).subscribe({
       next: (data) => {
+        console.log(data)
         this.user = data
         this.addUser()
       },
@@ -83,67 +85,12 @@ export class HomePageComponent implements OnInit {
     }
   }
 
-  productsList() {
-    (this.tokenRepository.getAccessToken() != null) ? this.productService.productsList(this.myAccessToken!.access_token, this.myAccessToken!.user_id).subscribe((response) => {
-      console.log(response)
-    }) : console.log("rompio")
-  }
+ 
   /*
   public getToken(code: any) {
   this.apiService.fetchAccessToken(code).then((response) => { console.log(JSON.stringify(response, null, 3)) })
   }
   */
 
-  fotos = [
-    {
-      url: 'https://www.cucinare.tv/wp-content/uploads/2020/08/Bananas1.jpg',
-      nombre: 'Banana',
-      precio: '300',
-      cantidad: '1'
-    },
-    {
-      url: 'https://www.bupasalud.com/sites/default/files/inline-images/fuji-red.jpg',
-      nombre: 'Manzana',
-      precio: '250',
-      cantidad: '1'
-    },
-    {
-      url: 'https://www.sabervivirtv.com/medio/2023/07/14/sandia-sin-pepitas_1f1e2965_230714105148_1280x720.jpg',
-      nombre: 'Sandia',
-      precio: '190',
-      cantidad: '1'
-    },
-    {
-      url: 'https://naranjasribera.com/wp-content/uploads/2020/12/naranjas-y-mandarinas-diferencias.jpg',
-      nombre: 'Mandarina',
-      precio: '175',
-      cantidad: '1'
-    },
-    {
-      url: 'https://www.cucinare.tv/wp-content/uploads/2020/08/Bananas1.jpg',
-      nombre: 'Banana',
-      precio: '300',
-      cantidad: '1'
-    },
-    {
-      url: 'https://www.bupasalud.com/sites/default/files/inline-images/fuji-red.jpg',
-      nombre: 'Manzana',
-      precio: '250',
-      cantidad: '1'
-    },
-    {
-      url: 'https://www.sabervivirtv.com/medio/2023/07/14/sandia-sin-pepitas_1f1e2965_230714105148_1280x720.jpg',
-      nombre: 'Sandia',
-      precio: '190',
-      cantidad: '1'
-    },
-    {
-      url: 'https://naranjasribera.com/wp-content/uploads/2020/12/naranjas-y-mandarinas-diferencias.jpg',
-      nombre: 'Mandarina',
-      precio: '175',
-      cantidad: '1'
-    }
-  ];
-
-
+  
 }

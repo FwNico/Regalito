@@ -36,3 +36,33 @@ p {
   .b1{
     grid-row: 1/ span 2;
   }
+  /* En tu archivo de estilos (por ejemplo, styles.css) */
+.wishlist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+}
+
+.wishlist-card:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el ratón sobre la tarjeta */
+}
+
+.wishlist-card img {
+  width: 200px;
+  max-width: 150px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.wishlist-card div {
+  font-weight: bold;
+  margin-top: 10px;
+}

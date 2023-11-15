@@ -4,15 +4,15 @@
 
 .swiper-container .imagen{
     width: 150px;
-    height: 100px;
+    height: 105px;
     border-radius: 5px;
 }
 .swiper-slide{
     width: auto;
     margin: 0px 10px;
     background-color: lightgray;
-    border: 2px solid black;
-    padding: 1.5%;
+    border: 2.5px solid black;
+    padding: 0.4%;
     border-radius: 5px;
 }
 

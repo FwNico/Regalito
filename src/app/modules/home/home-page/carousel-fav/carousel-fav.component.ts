@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
-import { FavoritesService } from '../favorites.service';
+import { Product } from 'src/app/core/models/Product';
+import { ProductService } from 'src/app/core/services/products/products.service';
+import { TokenRepository } from 'src/app/repository/token/tokenRepository';
+import { Meli } from 'src/app/core/models/Meli';
 // register Swiper custom elements
 register();
 
@@ -11,10 +14,21 @@ register();
   styleUrls: ['./carousel-fav.component.css']
 })
 
-export class CarouselFavComponent { 
-    fotos?: any[]; 
-    constructor(favs : FavoritesService){
-      this.fotos = favs.getFavs();
+export class CarouselFavComponent implements OnInit { 
+    products: Product[]=[]; 
+    myAccessToken: Meli | null
+
+    constructor(private favs : ProductService, private tokenRepository: TokenRepository){
+      this.myAccessToken=tokenRepository.getAccessToken()
     }
+  ngOnInit(): void {
+    this.favs.productsList(this.myAccessToken!.access_token, this.myAccessToken!.user_id).subscribe((products) =>{
+      this.products = products;
+      console.log(products[0])
+    })
+  }
     
-}
+    verproduct(){
+      console.log(this.products);
+    }
+  }
