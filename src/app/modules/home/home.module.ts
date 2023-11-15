@@ -9,6 +9,7 @@ import { HomeRepository } from 'src/app/repository/home/homeRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 import { UserService } from 'src/app/core/services/user/userService.service';
 import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
+import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductRepository } from 'src/app/repository/products/ProductsRepositor
     HomeRepository,
     TokenRepository,
     UserService,
-    ProductRepository
+    ProductRepository,
+    WishListRepository
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
