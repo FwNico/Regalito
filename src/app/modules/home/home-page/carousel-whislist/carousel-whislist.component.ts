@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Meli } from 'src/app/core/models/Meli';
 import { User } from 'src/app/core/models/User';
 import { ResponseUser } from 'src/app/core/models/UserDAO';
 import { WishList } from 'src/app/core/models/WishList';
 import { UserService } from 'src/app/core/services/user/userService.service';
 import { WishListService } from 'src/app/core/services/wishList/WishlistService.service';
+import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 import { UserRepository } from 'src/app/repository/user/userRepository';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
@@ -20,15 +22,20 @@ export class CarouselWhislistComponent implements OnInit {
   whislists: WishList[]=[];
   whislistItem?: WishList;
   view : boolean = true;
-  user?: User;
-  userId: number | undefined;
+  userMeli: Meli|null;
+  userId : number = 0;
+
   
 
-  constructor(private wishList: WishListService, private userService : UserService, private userRepository: UserRepository){
-    this.userId = this.userRepository.user?.id;
+  constructor(private wishList: WishListService, private userService : UserService, private tokenRepository: TokenRepository){
+    this.userMeli = tokenRepository.getAccessToken();
+    if(this.userMeli !== null){
+      this.userId = this.userMeli.user_id
+    }
   }
   ngOnInit(): void {
-    this.wishList.getAllWishList(202593497).subscribe((prod)=>{
+    console.log(this.userMeli?.user_id);    
+    this.wishList.getAllWishList(this.userId).subscribe((prod)=>{
       this.whislists = prod;
       console.log(this.whislists[0].idUser);  
     })

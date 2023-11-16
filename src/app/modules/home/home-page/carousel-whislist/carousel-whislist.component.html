@@ -1,11 +1,14 @@
 <h2>Wishlists</h2>
 
 <ng-container *ngIf="view === true">
-  <ng-container *ngFor="let prod of whislists">
-    <button class="wishlist-card" (click)="seeWishList(prod)">
-      <h3>{{prod.nombre}}</h3>
-    </button>
-  </ng-container>
+  <div class="wishlist-container">
+    <ng-container *ngFor="let prod of whislists">
+      <button class="wishlist-card" (click)="seeWishList(prod)">
+        <img src="{{prod.products[0].imagen_url}}" alt="">
+        <h3>{{prod.nombre}}</h3>
+      </button>
+    </ng-container>
+  </div>
 </ng-container>
 
 <ng-container *ngIf="view === false">

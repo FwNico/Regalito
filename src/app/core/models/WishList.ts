@@ -5,9 +5,9 @@ export class WishList implements IWishlist {
     id: number | null;
     idUser: number;
     nombre: string;
-    products: Product[] | null;
+    products: Product[];
 
-    constructor(name: string, product: Product[] | null, idUser: number) {
+    constructor(name: string, product: Product[], idUser: number) {
         this.id = null
         this.idUser = idUser
         this.nombre = name

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.swiper-container{
+  width: 1500px;
+}
+
 .swiper-container .imagen{
     width: 150px;
     height: 105px;
@@ -10,9 +15,10 @@
 
 .swiper-slide{
     width: auto;
-    margin: 0px 10px;
-    background-color: lightgray;
-    border: 2.5px solid black;
+    height: 230px;
+    margin: 30px 10px;
+    background-color: white;
+    border: 1px solid gray;
     padding: 0.4%;
     border-radius: 5px;
 }
@@ -29,9 +35,13 @@
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   }
 
+
   /* Cambios en el color al pasar el ratón sobre el botón */
+
   .button:hover {
     background-color: orangered;
     color: black;
     border-color: black;
   }
+
+

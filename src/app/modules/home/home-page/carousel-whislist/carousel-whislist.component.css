@@ -1,10 +1,17 @@
 
 /* En tu archivo de estilos (por ejemplo, styles.css) */
+.wishlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
 .wishlist-card {
-  height: 100px;
-  width: 150px;
+  flex: 0 0 calc(30% - 20px); /* Ajusta el ancho de cada tarjeta según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 15px;
-  margin: 15px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -12,12 +19,25 @@
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   text-align: center;
+  margin: 10px;
 }
 
 .wishlist-card:hover {
-  transform: scale(1.05); /* Efecto de escala al pasar el ratón sobre la tarjeta */
+  transform: scale(1.05);
 }
 
+.wishlist-card img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.wishlist-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
 /* Estilos CSS */
 
 /* Contenedor flex con envoltura (wrap) para las tarjetas */
