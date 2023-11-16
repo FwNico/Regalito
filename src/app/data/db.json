@@ -1,12 +1,4 @@
 {
-  "products": [
-    {
-      "id": "MLA880652918",
-      "name": "Celular",
-      "image": " url Nokia 1100",
-      "price": 399
-    }
-  ],
   "users": [
     {
       "id": 202593498,
@@ -31,6 +23,444 @@
         "state": "AR-B",
         "zip_code": null
       }
+    }
+  ],
+  "products": [
+    {
+      "id": "MLA880652918_A",
+      "nombre": "Producto 1",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 1",
+      "imagen_url": "url_imagen_1"
+    },
+    {
+      "id": "MLA878620076_B",
+      "nombre": "Producto 2",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 2",
+      "imagen_url": "url_imagen_2"
+    },
+    {
+      "id": "MLA905560536_C",
+      "nombre": "Producto 3",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 3",
+      "imagen_url": "url_imagen_3"
+    },
+    {
+      "id": "MLA812345678_D",
+      "nombre": "Producto 4",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 4",
+      "imagen_url": "url_imagen_4"
+    },
+    {
+      "id": "MLA789012345_E",
+      "nombre": "Producto 5",
+      "precio": 180,
+      "descripcion": "Descripción del Producto 5",
+      "imagen_url": "url_imagen_5"
+    },
+    {
+      "id": "MLA876543210_F",
+      "nombre": "Producto 6",
+      "precio": 90,
+      "descripcion": "Descripción del Producto 6",
+      "imagen_url": "url_imagen_6"
+    },
+    {
+      "id": "MLA765432109_G",
+      "nombre": "Producto 7",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 7",
+      "imagen_url": "url_imagen_7"
+    },
+    {
+      "id": "MLA654321098_H",
+      "nombre": "Producto 8",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 8",
+      "imagen_url": "url_imagen_8"
+    },
+    {
+      "id": "MLA543210987_I",
+      "nombre": "Producto 9",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 9",
+      "imagen_url": "url_imagen_9"
+    },
+    {
+      "id": "MLA432109876_J",
+      "nombre": "Producto 10",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 10",
+      "imagen_url": "url_imagen_10"
+    },
+    {
+      "id": "MLA321098765_K",
+      "nombre": "Producto 11",
+      "precio": 180,
+      "descripcion": "Descripción del Producto 11",
+      "imagen_url": "url_imagen_11"
+    },
+    {
+      "id": "MLA210987654_L",
+      "nombre": "Producto 12",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 12",
+      "imagen_url": "url_imagen_12"
+    },
+    {
+      "id": "MLA109876543_M",
+      "nombre": "Producto 13",
+      "precio": 90,
+      "descripcion": "Descripción del Producto 13",
+      "imagen_url": "url_imagen_13"
+    },
+    {
+      "id": "MLA098765432_N",
+      "nombre": "Producto 14",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 14",
+      "imagen_url": "url_imagen_14"
+    },
+    {
+      "id": "MLA987654321_O",
+      "nombre": "Producto 15",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 15",
+      "imagen_url": "url_imagen_15"
+    },
+    {
+      "id": "MLA876543210_P",
+      "nombre": "Producto 16",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 16",
+      "imagen_url": "url_imagen_16"
+    },
+    {
+      "id": "MLA765432109_Q",
+      "nombre": "Producto 17",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 17",
+      "imagen_url": "url_imagen_17"
+    },
+    {
+      "id": "MLA654321098_R",
+      "nombre": "Producto 18",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 18",
+      "imagen_url": "url_imagen_18"
+    },
+    {
+      "id": "MLA543210987_S",
+      "nombre": "Producto 19",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 19",
+      "imagen_url": "url_imagen_19"
+    },
+    {
+      "id": "MLA432109876_T",
+      "nombre": "Producto 20",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 20",
+      "imagen_url": "url_imagen_20"
+    },
+    {
+      "id": "MLA321098765_U",
+      "nombre": "Producto 21",
+      "precio": 180,
+      "descripcion": "Descripción del Producto 21",
+      "imagen_url": "url_imagen_21"
+    },
+    {
+      "id": "MLA210987654_V",
+      "nombre": "Producto 22",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 22",
+      "imagen_url": "url_imagen_22"
+    },
+    {
+      "id": "MLA109876543_W",
+      "nombre": "Producto 23",
+      "precio": 90,
+      "descripcion": "Descripción del Producto 23",
+      "imagen_url": "url_imagen_23"
+    },
+    {
+      "id": "MLA098765432_X",
+      "nombre": "Producto 24",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 24",
+      "imagen_url": "url_imagen_24"
+    },
+    {
+      "id": "MLA987654321_Y",
+      "nombre": "Producto 25",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 25",
+      "imagen_url": "url_imagen_25"
+    },
+    {
+      "id": "MLA876543210_Z",
+      "nombre": "Producto 26",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 26",
+      "imagen_url": "url_imagen_26"
+    },
+    {
+      "id": "MLA765432109_AA",
+      "nombre": "Producto 27",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 27",
+      "imagen_url": "url_imagen_27"
+    },
+    {
+      "id": "MLA654321098_BB",
+      "nombre": "Producto 28",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 28",
+      "imagen_url": "url_imagen_28"
+    },
+    {
+      "id": "MLA543210987_CC",
+      "nombre": "Producto 29",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 29",
+      "imagen_url": "url_imagen_29"
+    },
+    {
+      "id": "MLA432109876_DD",
+      "nombre": "Producto 30",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 30",
+      "imagen_url": "url_imagen_30"
+    },
+    {
+      "id": "MLA321098765_EE",
+      "nombre": "Producto 31",
+      "precio": 180,
+      "descripcion": "Descripción del Producto 31",
+      "imagen_url": "url_imagen_31"
+    },
+    {
+      "id": "MLA210987654_FF",
+      "nombre": "Producto 32",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 32",
+      "imagen_url": "url_imagen_32"
+    },
+    {
+      "id": "MLA109876543_GG",
+      "nombre": "Producto 33",
+      "precio": 90,
+      "descripcion": "Descripción del Producto 33",
+      "imagen_url": "url_imagen_33"
+    },
+    {
+      "id": "MLA098765432_HH",
+      "nombre": "Producto 34",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 34",
+      "imagen_url": "url_imagen_34"
+    },
+    {
+      "id": "MLA987654321_II",
+      "nombre": "Producto 35",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 35",
+      "imagen_url": "url_imagen_35"
+    },
+    {
+      "id": "MLA876543210_JJ",
+      "nombre": "Producto 36",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 36",
+      "imagen_url": "url_imagen_36"
+    },
+    {
+      "id": "MLA765432109_KK",
+      "nombre": "Producto 37",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 37",
+      "imagen_url": "url_imagen_37"
+    },
+    {
+      "id": "MLA654321098_LL",
+      "nombre": "Producto 38",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 38",
+      "imagen_url": "url_imagen_38"
+    },
+    {
+      "id": "MLA543210987_MM",
+      "nombre": "Producto 39",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 39",
+      "imagen_url": "url_imagen_39"
+    },
+    {
+      "id": "MLA432109876_NN",
+      "nombre": "Producto 40",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 40",
+      "imagen_url": "url_imagen_40"
+    },
+    {
+      "id": "MLA321098765_OO",
+      "nombre": "Producto 41",
+      "precio": 180,
+      "descripcion": "Descripción del Producto 41",
+      "imagen_url": "url_imagen_41"
+    },
+    {
+      "id": "MLA210987654_PP",
+      "nombre": "Producto 42",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 42",
+      "imagen_url": "url_imagen_42"
+    },
+    {
+      "id": "MLA109876543_QQ",
+      "nombre": "Producto 43",
+      "precio": 90,
+      "descripcion": "Descripción del Producto 43",
+      "imagen_url": "url_imagen_43"
+    },
+    {
+      "id": "MLA098765432_RR",
+      "nombre": "Producto 44",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 44",
+      "imagen_url": "url_imagen_44"
+    },
+    {
+      "id": "MLA987654321_SS",
+      "nombre": "Producto 45",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 45",
+      "imagen_url": "url_imagen_45"
+    },
+    {
+      "id": "MLA876543210_TT",
+      "nombre": "Producto 46",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 46",
+      "imagen_url": "url_imagen_46"
+    },
+    {
+      "id": "MLA765432109_UU",
+      "nombre": "Producto 47",
+      "precio": 120,
+      "descripcion": "Descripción del Producto 47",
+      "imagen_url": "url_imagen_47"
+    },
+    {
+      "id": "MLA654321098_VV",
+      "nombre": "Producto 48",
+      "precio": 200,
+      "descripcion": "Descripción del Producto 48",
+      "imagen_url": "url_imagen_48"
+    },
+    {
+      "id": "MLA543210987_WW",
+      "nombre": "Producto 49",
+      "precio": 150,
+      "descripcion": "Descripción del Producto 49",
+      "imagen_url": "url_imagen_49"
+    },
+    {
+      "id": "MLA432109876_XX",
+      "nombre": "Producto 50",
+      "precio": 100,
+      "descripcion": "Descripción del Producto 50",
+      "imagen_url": "url_imagen_50"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 1,
+      "idUser": 202593497,
+      "nombre": "",
+      "products": [
+        {
+          "id": "MLA987654321_SS",
+          "nombre": "Pprueba",
+          "imagen_url": "url_imagen_45",
+          "precio": 150,
+          "descripcion": "Descripción del Producto 45"
+        },
+        {
+          "id": "MLA987654321-11",
+          "nombre": "Pprueba 1",
+          "imagen_url": "url_imagen_1",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 1"
+        },
+        {
+          "id": "MLA987654321-33",
+          "nombre": "Pprueba 3",
+          "imagen_url": "url_imagen_3",
+          "precio": 300,
+          "descripcion": "Descripción del Producto 3"
+        }
+      ]
+    },
+    {
+      "id": 12124,
+      "idUser": 437402821,
+      "nombre": "coquita",
+      "products": [
+        {
+          "id": "MLA987654321_SS",
+          "nombre": "Pprueba 2",
+          "imagen_url": "url_imagen_2",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 2"
+        },
+        {
+          "id": "MLA987654321_AA",
+          "nombre": "Pprueba 3",
+          "imagen_url": "url_imagen_3",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 3"
+        },
+        {
+          "id": "MLA987654321_SS",
+          "nombre": "Pprueba 2",
+          "imagen_url": "url_imagen_2",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 2"
+        }
+      ]
+    },
+    {
+      "id": 12125,
+      "idUser": 437402821,
+      "nombre": "coquita",
+      "products": [
+        {
+          "id": "MLA878620076_B",
+          "nombre": "pelota",
+          "imagen_url": "2awsdasd",
+          "precio": 12000,
+          "descripcion": "algun producto"
+        },
+        {
+          "id": "MLA987654321-11",
+          "nombre": "Pprueba 1",
+          "imagen_url": "url_imagen_1",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 1"
+        },
+        {
+          "id": "MLA987654321-33",
+          "nombre": "Pprueba 3",
+          "imagen_url": "url_imagen_3",
+          "precio": 300,
+          "descripcion": "Descripción del Producto 3"
+        }
+      ]
     }
   ],
   "friendships": [
@@ -82,6 +512,5 @@
         }
       }
     }
-  ],
-  "wishlists": []
+  ]
 }
