@@ -8,13 +8,17 @@ import { ApiService } from 'src/app/core/services/api.service';
 import { HomeRepository } from 'src/app/repository/home/homeRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 import { UserService } from 'src/app/core/services/user/userService.service';
+import { CarouselFavComponent } from './home-page/carousel-fav/carousel-fav.component';
 import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
 import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
+import { CarouselWhislistComponent } from './home-page/carousel-whislist/carousel-whislist.component';
 
 
 @NgModule({
   declarations: [
-    HomePageComponent
+    HomePageComponent,
+    CarouselFavComponent,
+    CarouselWhislistComponent
   ],
   imports: [
     CommonModule,

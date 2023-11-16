@@ -1,0 +1,27 @@
+<h2>Wishlists</h2>
+
+<ng-container *ngIf="view === true">
+  <div class="wishlist-container">
+    <ng-container *ngFor="let prod of whislists">
+      <button class="wishlist-card" (click)="seeWishList(prod)">
+        <img src="{{prod.products[0].imagen_url}}" alt="">
+        <h3>{{prod.nombre}}</h3>
+      </button>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="view === false">
+  <div class="d-flex flex-wrap">
+    <div *ngFor="let item of whislistItem?.products" class="card m-2" style="width: 15rem;">
+      <img [src]="item.imagen_url" class="card-img-top" [alt]="item.nombre">
+      <div class="card-body">
+        <h5 class="card-title">{{item.nombre}}</h5>
+        <p class="card-text">{{item.descripcion}}</p>
+      </div>
+    </div>
+  </div>
+  <button class="boton-back" (click)="change()">Back</button>
+</ng-container>
+
+

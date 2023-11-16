@@ -17,7 +17,7 @@ export class UserService {
         const url = 'https://api.mercadolibre.com/users/me';
 
         const headers = new HttpHeaders({
-            Authorization: `Bearer ${access_token as any}`,
+            Authorization: `Bearer ${access_token as any}`
         });
         return this.http.get<ResponseUser>(url, { headers })
     }
