@@ -12,7 +12,7 @@ export class WishListService {
     private baseURL = "http://localhost:3000/wishlist"
 
     constructor(private http: HttpClient) { }
-    
+
     //GUARDA UNA NUEVA WISHLIST
     public saveWishList(wishtlist: WishList): Observable<WishList> {
         return this.http.post<WishList>(this.baseURL, wishtlist, { headers: { 'Content-type': 'application/json' } })
@@ -26,9 +26,9 @@ export class WishListService {
     }
 
     //METODO PARA OBTENER UNA WISHLIST DE UN USUARIO PASANDOLE ID DE LA LISTA
-    public getWishList(id: number): Observable<WishList> {
+    public getWishList(id: number): Promise<WishList | undefined> {
         const url = `${this.baseURL}/${id}`
-        return this.http.get<WishList>(url)
+        return this.http.get<WishList>(url).toPromise()
     }
 
     //METODO PARA OBTENER TODAS LAS WISHLSIT DE UN USUARIO

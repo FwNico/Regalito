@@ -4,6 +4,7 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { Error404Component } from './components/error404/error404.component';
+import { FriendsModule } from '../modules/friends/friends.module';
 import { FooterComponent } from './components/footer/footer.component';
 
 
@@ -16,7 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule, 
+    SharedRoutingModule,
+    FriendsModule, 
   ],
   exports: [
     SideBarComponent,

@@ -63,7 +63,8 @@ export class HomePageComponent implements OnInit {
       next: (data) => {
         console.log(data)
         this.user = data
-        this.addUser()
+        console.log(data);
+        this.checkUserExistence();
       },
       error: (error) => { console.log(error) }
 
@@ -87,6 +88,20 @@ export class HomePageComponent implements OnInit {
     }
   }
 
+    checkUserExistence() {
+    if(this.user != undefined){
+      this.userService.userExists(this.user.id).subscribe({
+        next: (bool) => {
+          if(bool == false){
+            this.addUser();
+          }
+        },
+        error: (error) => { console.log(error)}
+      })
+    }
+  }
+  
+
  
   /*
   public getToken(code: any) {
@@ -107,13 +122,13 @@ export class HomePageComponent implements OnInit {
     console.log(resp)
   }
 
-  editWhislist() {
-    let product: Product[] = []
-    const aux = new Product("MLA987654321_SS", "Pprueba 2", "url_imagen_2", 200, "Descripción del Producto 2")
-    product.push(aux)
+  // editWhislist() {
+  //   let product: Product[] = []
+  //   const aux = new Product("MLA987654321_SS", "Pprueba 2", "url_imagen_2", 200, "Descripción del Producto 2")
+  //   product.push(aux)
 
-    this.wishListRepo.editWishList(product, 12124)
-  }
+  //   this.wishListRepo.editWishList(product, 12124)
+  // }
 
   getWishList() {
     this.wishListRepo.getWishListForId(1)
@@ -122,5 +137,17 @@ export class HomePageComponent implements OnInit {
   getAllWishListForUser() {
    return this.wishListRepo.getAllWishList(437402821)
   }
+
+  editWishlist() {
+    let product: Product[] = []
+    const aux = new Product("MLA987654321-11", "Pprueba 1", "url_imagen_1", 200, "Descripción del Producto 1")
+    const aux2 = new Product("MLA987654321-33", "Pprueba 3", "url_imagen_3", 300, "Descripción del Producto 3")
+    product.push(aux)
+    product.push(aux2)
+
+    this.wishListRepo.editWishList(product, 1)
+  }
+
+
 
 }

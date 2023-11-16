@@ -1,3 +1,4 @@
+
 import { TokenRepository } from "../token/tokenRepository";
 import { UserService } from "src/app/core/services/user/userService.service";
 import { Observable, Subject } from 'rxjs';
@@ -13,13 +14,13 @@ import { User } from "src/app/core/models/User";
 export class UserRepository {
 
     myAccessToken: Meli | null
-    user: ResponseUser | any
+    user: ResponseUser | undefined = undefined
     
     constructor(private userService: UserService, private tokenRepository: TokenRepository) {
         this.myAccessToken= tokenRepository.getAccessToken()
 
     }
-    
+
     fetchUser(){
         console.log(this.myAccessToken?.access_token)
         this.userService.getUserInfo(this.myAccessToken?.access_token).subscribe({
@@ -62,7 +63,7 @@ export class UserRepository {
           })
         }
     }
-   
+
 
     getAllUsers(){
         this.userService.getAllUsers().subscribe({
@@ -91,7 +92,5 @@ export class UserRepository {
             error: (error) =>{console.log(error)}
         })
     }
-
-
 
 }

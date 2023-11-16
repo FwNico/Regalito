@@ -1,1 +1,3 @@
-<p>side-bar works!</p>
+
+<app-add-friends (onNewFriend)="addFriend($event)"></app-add-friends>
+<app-list-friends [friends]="friends" (friendToDelete)="deleteFriend($event)"></app-list-friends>
