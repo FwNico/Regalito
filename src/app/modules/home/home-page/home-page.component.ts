@@ -84,15 +84,15 @@ export class HomePageComponent implements OnInit {
 
   checkUserExistence() {
     if(this.user != undefined){
-      this.userService.userExists(this.user.id).subscribe(
-        (exists) => {
-          if(!exists){
-            this.addUser()
+      this.userService.userExists(this.user.id).subscribe({
+        next: (bool) => {
+          if(bool == false){
+            this.addUser();
           }
         },
-        (error) => { console.log(error)}
-      )
-  }
+        error: (error) => { console.log(error)}
+      })
+    }
   }
   
 

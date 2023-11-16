@@ -43,11 +43,19 @@ export class UserService {
     }
 
     userExists(id: number): Observable<boolean>{
-        return this.http.get<boolean>(`${this.baseURL}/${id}`)
+        return this.http.get<User>(`${this.baseURL}/${id}`)
         .pipe(
             map(resp => true), // Si sale bien retorna true. Recibir un response significa que salio bien
             catchError(error => of(false)) // Si hay algun error en la solicitud me regresa falso
           );
+    }
+
+    getUserByNickname(nickname: string): Observable<User| null>{
+        return this.http.get<User[]>(`${this.baseURL}?nickname=${nickname}`)
+        .pipe(
+            map(users => users.length > 0 ? users[0] : null),
+            catchError(error => of(null))
+        );
     }
 
 }

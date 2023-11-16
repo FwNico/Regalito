@@ -32,5 +32,40 @@
         "zip_code": null
       }
     }
-  ]
+  ],
+  "friendships": [
+    {
+      "id": 1,
+      "userId": 414173926,
+      "friend": {
+        "id": 2025934981,
+        "nickname": "TETETE",
+        "first_name": "Test",
+        "last_name": "Test",
+        "address": {
+          "state": "AR-C",
+          "city": "Palermo",
+          "address": "Test Address 123",
+          "zip_code": "1414"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "userId": 414173926,
+      "friend": {
+        "id": 202593497,
+        "nickname": "AgusAKD95",
+        "first_name": "TestAgus",
+        "last_name": "TestPingui",
+        "address": {
+          "state": "AR-C",
+          "city": "Palermo",
+          "address": "Test Address 123",
+          "zip_code": "1414"
+        }
+      }
+    }
+  ],
+  "wishlists": []
 }
