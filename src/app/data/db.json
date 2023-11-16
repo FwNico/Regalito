@@ -65,6 +65,22 @@
           "zip_code": "1414"
         }
       }
+    },
+    {
+      "id": 3,
+      "userId": 414173926,
+      "friend": {
+        "id": 202593498,
+        "nickname": "TETE2870021",
+        "first_name": "Test",
+        "last_name": "Test",
+        "address": {
+          "state": "AR-C",
+          "city": "Palermo",
+          "address": "Test Address 123",
+          "zip_code": "1414"
+        }
+      }
     }
   ],
   "wishlists": []
