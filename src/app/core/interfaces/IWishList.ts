@@ -4,5 +4,5 @@ export interface IWishlist {
     id: number | null,
     idUser: number,
     nombre: string
-    products: Product[] | null
+    products: Product[] 
 }

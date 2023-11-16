@@ -28,18 +28,22 @@ export class WishListRepository {
     }
 
     editWishList(product: Product[], idWishlist: number) {
-
-        this.wishlistService.editWishList(product, idWishlist).subscribe({
-            next: (data) => { console.log(data) },
-            error: (error) => { console.log(error) }
+        let list: Product[] | undefined
+        this.getWishListForId(idWishlist).then((response) => {
+            list = response?.products
+            if (list !== undefined) {
+                let baseList: Product[] = list.concat(product)
+                this.wishlistService.editWishList(baseList, idWishlist).subscribe({
+                    next: (data) => { console.log("se guardo correctamente" + data) },
+                    error: (error) => { console.log("Error al modificar la wishlist" + error) }
+                })
+            }
         })
+        
     }
 
-    getWishListForId(id: number) {
-        this.wishlistService.getWishList(id).subscribe({
-            next: (response) => { console.log(response) },
-            error: (error) => { console.log(error) }
-        })
+    getWishListForId(id: number): Promise<WishList | undefined> {
+        return this.wishlistService.getWishList(id)
     }
 
     getAllWishList(idUser: number) {

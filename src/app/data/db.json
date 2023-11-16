@@ -389,6 +389,20 @@
           "imagen_url": "url_imagen_45",
           "precio": 150,
           "descripcion": "Descripción del Producto 45"
+        },
+        {
+          "id": "MLA987654321-11",
+          "nombre": "Pprueba 1",
+          "imagen_url": "url_imagen_1",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 1"
+        },
+        {
+          "id": "MLA987654321-33",
+          "nombre": "Pprueba 3",
+          "imagen_url": "url_imagen_3",
+          "precio": 300,
+          "descripcion": "Descripción del Producto 3"
         }
       ]
     },
@@ -403,12 +417,20 @@
           "imagen_url": "url_imagen_2",
           "precio": 200,
           "descripcion": "Descripción del Producto 2"
-        },{
+        },
+        {
           "id": "MLA987654321_AA",
           "nombre": "Pprueba 3",
           "imagen_url": "url_imagen_3",
           "precio": 200,
           "descripcion": "Descripción del Producto 3"
+        },
+        {
+          "id": "MLA987654321_SS",
+          "nombre": "Pprueba 2",
+          "imagen_url": "url_imagen_2",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 2"
         }
       ]
     },
@@ -423,6 +445,20 @@
           "imagen_url": "2awsdasd",
           "precio": 12000,
           "descripcion": "algun producto"
+        },
+        {
+          "id": "MLA987654321-11",
+          "nombre": "Pprueba 1",
+          "imagen_url": "url_imagen_1",
+          "precio": 200,
+          "descripcion": "Descripción del Producto 1"
+        },
+        {
+          "id": "MLA987654321-33",
+          "nombre": "Pprueba 3",
+          "imagen_url": "url_imagen_3",
+          "precio": 300,
+          "descripcion": "Descripción del Producto 3"
         }
       ]
     }
