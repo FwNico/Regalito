@@ -61,7 +61,8 @@ export class HomePageComponent implements OnInit {
     this.userService.getUserInfo(this.myAccessToken?.access_token).subscribe({
       next: (data) => {
         this.user = data
-        this.addUser()
+        console.log(data);
+        this.checkUserExistence();
       },
       error: (error) => { console.log(error) }
 
@@ -84,6 +85,20 @@ export class HomePageComponent implements OnInit {
       })
     }
   }
+
+  checkUserExistence() {
+    if(this.user != undefined){
+      this.userService.userExists(this.user.id).subscribe({
+        next: (bool) => {
+          if(bool == false){
+            this.addUser();
+          }
+        },
+        error: (error) => { console.log(error)}
+      })
+    }
+  }
+  
 
   productsList() {
     (this.tokenRepository.getAccessToken() != null) ? this.productService.productsList(this.myAccessToken!.access_token, this.myAccessToken!.user_id).subscribe((response) => {

@@ -1,0 +1,10 @@
+<div class="add-friend-container">
+    <form autocomplete="off" [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
+        <div class="formGroup" >
+            <label for="nickname">Agregar:</label>
+            <input type="text" formControlName="nickname" placeholder="Ingrese el nickname de un usuario">
+            
+        </div>
+        <button type="submit" [disabled]="addFriendForm.invalid" class="add-friend-button">Agregar</button> 
+    </form>
+</div>
