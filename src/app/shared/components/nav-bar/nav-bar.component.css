@@ -1,17 +1,14 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
+
   a{
     cursor: pointer;
   }
   
   .navbar {
-    background-color: #bc6813;
+    background-color: #003D29;
     color: #fff;
     display: flex;
+    max-width: auto;
+    max-height: auto;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;

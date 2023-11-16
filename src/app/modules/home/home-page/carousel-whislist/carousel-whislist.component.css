@@ -13,7 +13,7 @@
   align-items: center;
   padding: 15px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #003D29;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
@@ -62,7 +62,6 @@
 .card-img-top {
   max-width: 100%;
   height: auto;
-  border-bottom: 1px solid #ddd; /* Línea divisoria sutil bajo la imagen */
 }
 
 /* Estilo del cuerpo de la tarjeta */
