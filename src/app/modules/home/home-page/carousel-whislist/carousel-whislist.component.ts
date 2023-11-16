@@ -35,7 +35,7 @@ export class CarouselWhislistComponent implements OnInit {
   }
   ngOnInit(): void {
     console.log(this.userMeli?.user_id);    
-    this.wishList.getAllWishList(this.userId).subscribe((prod)=>{
+    this.wishList.getAllWishList(414173926).subscribe((prod)=>{
       this.whislists = prod;
       console.log(this.whislists[0].idUser);  
     })

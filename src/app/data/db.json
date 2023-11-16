@@ -380,101 +380,149 @@
   "wishlist": [
     {
       "id": 1,
-      "idUser": 202593497,
-      "nombre": "",
+      "idUser": 414173926,
+      "nombre": "Futbol",
       "products": [
         {
-          "id": "MLA987654321_SS",
-          "nombre": "Pprueba",
-          "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%D0%A4%D0%9A_%22%D0%9A%D0%BE%D0%BB%D0%BE%D1%81%22_%28%D0%97%D0%B0%D1%87%D0%B5%D0%BF%D0%B8%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0%2C_%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_-_%D0%A4%D0%9A_%22%D0%91%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D1%8B%22_%28%D0%97%D0%B0%D1%80%D1%8F%2C_%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_%2818790931100%29.jpg/800px-thumbnail.jpg",
-          "precio": 150,
-          "descripcion": "Descripción del Producto 45"
+          "id": "MLA432109876_NN",
+          "nombre": " Velez Sarfield 2020",
+          "precio": 100,
+          "descripcion": "Camiseta Velez Sarfield 2020 Visitante",
+          "imagen_url": "https://latinfootballshop.es/cdn/shop/products/132Front.jpg?v=1688240958"
+        },
+        {
+          "id": "MLA321098765_OO",
+          "nombre": "Nike Mercurial Hardshell",
+          "precio": 180,
+          "descripcion": "Canilleras Nike",
+          "imagen_url": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/S/P/SP2128-410_0_4.jpg"
         }
       ]
     },
     {
       "id": 12124,
-      "idUser": 192380859,
-      "nombre": "coquita 1 ",
+      "idUser": 414173926,
+      "nombre": "Smartphone",
       "products": [
         {
-          "id": "MLA987654321_SS",
-          "nombre": "Pprueba 2",
-          "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%D0%A4%D0%9A_%22%D0%9A%D0%BE%D0%BB%D0%BE%D1%81%22_%28%D0%97%D0%B0%D1%87%D0%B5%D0%BF%D0%B8%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0%2C_%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_-_%D0%A4%D0%9A_%22%D0%91%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D1%8B%22_%28%D0%97%D0%B0%D1%80%D1%8F%2C_%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_%2818790931100%29.jpg/800px-thumbnail.jpg",
-          "precio": 200,
-          "descripcion": "Descripción del Producto 2"
-        },{
-          "id": "MLA987654321_AA",
-          "nombre": "Pprueba 3sadas",
-          "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%D0%A4%D0%9A_%22%D0%9A%D0%BE%D0%BB%D0%BE%D1%81%22_%28%D0%97%D0%B0%D1%87%D0%B5%D0%BF%D0%B8%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0%2C_%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_-_%D0%A4%D0%9A_%22%D0%91%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D1%8B%22_%28%D0%97%D0%B0%D1%80%D1%8F%2C_%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_%2818790931100%29.jpg/800px-thumbnail.jpg",
-          "precio": 200,
-          "descripcion": "Descripción del Producto 3"
+          "id": "MLA543210987_CC",
+          "nombre": "Galaxy S23 Ultra",
+          "precio": 150,
+          "descripcion": "Samsung 12gb 256gb Color Green",
+          "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp"
+        },
+        {
+          "id": "MLA432109876_DD",
+          "nombre": "Galaxy A24",
+          "precio": 100,
+          "descripcion": "Celular Samsung 128/6GB Light Green",
+          "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
+        },
+        {
+          "id": "MLA321098765_EE",
+          "nombre": "Moto G32",
+          "precio": 180,
+          "descripcion": "Celular Motorola 128GB Rosa Pastel",
+          "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
+        },
+        {
+          "id": "MLA210987654_FF",
+          "nombre": "Moto G42",
+          "precio": 120,
+          "descripcion": "Celular Motorola G42 6.4″ 64Gb 4Gb Snapdragon 680 Verde",
+          "imagen_url": "https://resources.sears.com.mx/medios-plazavip/mkt/6391016f3462c_p103_motog42_128gb_verde_2_1200wx1200h_cjpeg.jpg?scale=500&qlty=75"
         }
       ]
     },
     {
       "id": 12125,
-      "idUser": 192380859,
-      "nombre": "coquita 2 ",
+      "idUser": 414173926,
+      "nombre": "Zapatillas",
       "products": [
         {
-          "id": "MLA878620076_B",
-          "nombre": "pelota",
-          "imagen_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/%D0%A4%D0%9A_%22%D0%9A%D0%BE%D0%BB%D0%BE%D1%81%22_%28%D0%97%D0%B0%D1%87%D0%B5%D0%BF%D0%B8%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0%2C_%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_-_%D0%A4%D0%9A_%22%D0%91%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D1%8B%22_%28%D0%97%D0%B0%D1%80%D1%8F%2C_%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%29_%2818790931100%29.jpg/800px-thumbnail.jpg",
-          "precio": 12000,
-          "descripcion": ""
+          "id": "MLA876543210_P",
+          "nombre": "Air Force 1 Low",
+          "precio": 100,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
+        },
+        {
+          "id": "MLA765432109_Q",
+          "nombre": "Dunk Low SE",
+          "precio": 120,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+        },
+        {
+          "id": "MLA654321098_R",
+          "nombre": "React Infinity Run Fk 3",
+          "precio": 200,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
+        },
+        {
+          "id": "MLA543210987_S",
+          "nombre": "Nike W React Element 55",
+          "precio": 150,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
+        },
+        {
+          "id": "MLA432109876_T",
+          "nombre": "Suede Classic XXI",
+          "precio": 100,
+          "descripcion": "Zapatillas Puma",
+          "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
         }
       ]
     }
   ],
-  "friendships": [
-    {
-      "id": 1,
-      "userId": 414173926,
-      "friend": {
-        "id": 2025934981,
-        "nickname": "TETETE",
-        "first_name": "Test",
-        "last_name": "Test",
-        "address": {
-          "state": "AR-C",
-          "city": "Palermo",
-          "address": "Test Address 123",
-          "zip_code": "1414"
-        }
-      }
-    },
-    {
-      "id": 2,
-      "userId": 414173926,
-      "friend": {
-        "id": 202593497,
-        "nickname": "AgusAKD95",
-        "first_name": "TestAgus",
-        "last_name": "TestPingui",
-        "address": {
-          "state": "AR-C",
-          "city": "Palermo",
-          "address": "Test Address 123",
-          "zip_code": "1414"
-        }
-      }
-    },
-    {
-      "id": 3,
-      "userId": 414173926,
-      "friend": {
-        "id": 202593498,
-        "nickname": "TETE2870021",
-        "first_name": "Test",
-        "last_name": "Test",
-        "address": {
-          "state": "AR-C",
-          "city": "Palermo",
-          "address": "Test Address 123",
-          "zip_code": "1414"
-        }
+  "friendships": [{
+    "id": 1,
+    "userId": 414173926,
+    "friend": {
+      "id": 2025934981,
+      "nickname": "TETETE",
+      "first_name": "Test",
+      "last_name": "Test",
+      "address": {
+        "state": "AR-C",
+        "city": "Palermo",
+        "address": "Test Address 123",
+        "zip_code": "1414"
       }
     }
-  ]
+  },
+  {
+    "id": 2,
+    "userId": 414173926,
+    "friend": {
+      "id": 202593497,
+      "nickname": "AgusAKD95",
+      "first_name": "TestAgus",
+      "last_name": "TestPingui",
+      "address": {
+        "state": "AR-C",
+        "city": "Palermo",
+        "address": "Test Address 123",
+        "zip_code": "1414"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "userId": 414173926,
+    "friend": {
+      "id": 202593498,
+      "nickname": "TETE2870021",
+      "first_name": "Test",
+      "last_name": "Test",
+      "address": {
+        "state": "AR-C",
+        "city": "Palermo",
+        "address": "Test Address 123",
+        "zip_code": "1414"
+      }
+    }
+  }]
 }

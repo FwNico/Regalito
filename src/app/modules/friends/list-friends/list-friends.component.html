@@ -1,11 +1,11 @@
-<div>
-    <label>Amigos</label>
-    <table>
-        <tbody>
-          <tr *ngFor="let item of friends">
-            <td>{{ item.friend.nickname }}</td>
-            <td><button (click)="deleteFriend(item.id!)">X</button></td>
-          </tr>
-        </tbody>
-      </table>
+<div class="list-friend-container">
+  <label>Amigos</label>
+  <table>
+      <tbody>
+        <tr *ngFor="let item of friends">
+          <td>{{ item.friend.nickname }}</td>
+          <td><button class="delete-friend-button"(click)="deleteFriend(item.id!)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
 </div>

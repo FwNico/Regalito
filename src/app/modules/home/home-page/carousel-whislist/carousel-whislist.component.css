@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* En tu archivo de estilos (por ejemplo, styles.css) */
 .wishlist-container {
   display: flex;
@@ -11,7 +13,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
   background-color: #fff;
   border: 1px solid #003D29;
   border-radius: 8px;
@@ -19,7 +20,8 @@
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   text-align: center;
-  margin: 10px;
+  margin: 10px 15px;
+
 }
 
 .wishlist-card:hover {
@@ -30,7 +32,6 @@
   width: 100%;
   max-width: 200px;
   border-radius: 8px;
-  margin-top: 10px;
 }
 
 .wishlist-card h3 {
@@ -38,59 +39,159 @@
   font-size: 18px;
   font-weight: bold;
 }
-/* Estilos CSS */
 
-/* Contenedor flex con envoltura (wrap) para las tarjetas */
+
+/*SLIDES*/
+
+.swiper-container{
+  width: 1500px;
+}
+
+.swiper-container .imagen{
+    width: 120px;
+    height: 100px;
+    border-radius: 5px;
+    margin-left: 35px;
+    
+}
+
+.swiper-slide{
+    width: 200px;
+    height: 250px;
+    margin: 45px 10px;
+    background-color: white;
+    border: 1.5px solid #003D29;
+    padding: 0.4%;
+    border-radius: 5px;
+    text-align: center;
+}
+.nombre{
+  margin: 15px 0px;
+}
+.precio{
+  margin: 10px 0px;
+}
+
+.boton-back {
+  padding: 10px 15px; 
+  font-size: 16px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.boton-back:hover {
+  background-color: #0056b3; 
+}
+.masContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.masContainer:hover {
+  background-color: #003D29;
+  color: white;
+}
+
+.masImg {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* Estilos CSS */
+/*
 .d-flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Estilo de cada tarjeta */
+
+
 .card {
-  width: 15rem; /* Ancho fijo para cada tarjeta, ajusta según tus necesidades */
-  margin: 10px; /* Margen entre las tarjetas, ajusta según tus necesidades */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
-  transition: box-shadow 0.3s ease; /* Efecto de transición en la sombra al pasar el ratón */
+  width: 15rem; 
+  margin: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease; 
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-/* Estilo de la imagen dentro de la tarjeta */
+
 .card-img-top {
-  max-width: 100%;
-  height: auto;
+  width: 150px;
+  height: 120px;
+  margin-left: 50px;
+  border: 4px solid ;
 }
 
-/* Estilo del cuerpo de la tarjeta */
 .card-body {
-  padding: 1rem;
+  padding: 10px;
+  text-align: center;
 }
 
-/* Estilo del título de la tarjeta */
+
 .card-title {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-/* Estilo del texto de la tarjeta */
 .card-text {
   color: #555;
 }
-/* Estilos para la clase 'boton-back' */
+
 .boton-back {
-  padding: 10px 15px; /* Ajusta el padding según tus preferencias */
-  font-size: 16px; /* Ajusta el tamaño de la fuente según tus preferencias */
-  background-color: #007bff; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar el ratón */
-  transition: background-color 0.3s ease; /* Efecto de transición en el color de fondo al pasar el ratón */
+  padding: 10px 15px; 
+  font-size: 16px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 .boton-back:hover {
-  background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+  background-color: #0056b3; 
 }
+
+.masContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.masContainer:hover {
+  background-color: #003D29;
+  color: white;
+}
+
+.masImg {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+*/
+

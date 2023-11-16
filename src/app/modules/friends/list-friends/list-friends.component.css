@@ -1,0 +1,23 @@
+.add-friend-container {
+    display: flex;
+    flex-direction:row;
+    align-items: left;
+    justify-content: top;
+    margin-top: 50px;
+    height: 20vh;
+}
+
+label {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.delete-friend-button {
+    background-color: #9d0b0b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left: 50px;
+}
