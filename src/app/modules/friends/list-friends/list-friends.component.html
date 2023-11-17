@@ -3,7 +3,7 @@
   <table>
       <tbody>
         <tr *ngFor="let item of friends">
-          <td>{{ item.friend.nickname }}</td>
+          <td><button class= "friend" >{{ item.friend.nickname }} ({{item.friend.first_name}} {{item.friend.last_name}})</button></td>
           <td><button class="delete-friend-button"(click)="deleteFriend(item.id!)">X</button></td>
         </tr>
       </tbody>
