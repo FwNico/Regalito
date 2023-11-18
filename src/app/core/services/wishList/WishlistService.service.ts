@@ -9,6 +9,7 @@ import { Product } from "../../models/Product";
 })
 export class WishListService {
 
+
     private baseURL = "http://localhost:3000/wishlist"
 
     constructor(private http: HttpClient) { }
@@ -35,5 +36,11 @@ export class WishListService {
     public getAllWishList(idUser: number): Observable<WishList[]> {
         const url = `${this.baseURL}?idUser=${idUser}`;
         return this.http.get<WishList[]>(url)
+    }
+
+    //METODO PARA BORRAR UNA WISHLIST
+    deleteWishList(id: number): Observable<any>{
+        const url = `${this.baseURL}/${id}`;
+        return this.http.delete<any>(url)
     }
 }

@@ -3,6 +3,10 @@
   Add new wishlist
   <img src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png" class="masImg">
 </button>
+
+<button (click)="deleteWishList(0)">
+  borrar wishlist
+</button>
 <ng-container *ngIf="view === true">
   <div class="wishlist-container">
     <ng-container *ngFor="let prod of whislists">
@@ -26,6 +30,7 @@
 <div>
   <button class="boton-back" (click)="change()">Back</button>
   </div>
+  
 </ng-container>
 
 
