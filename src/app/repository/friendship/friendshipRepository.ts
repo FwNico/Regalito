@@ -13,9 +13,9 @@ export class FriendshipRepository{
 
     }
 
-    public getFriends(): Promise<Friendship[]> {
+    public getFriends(userId: number | undefined): Promise<Friendship[]> {
         return new Promise<Friendship[]>((resolve, reject) => {
-          this.friendshipService.getAllFriendships().subscribe({
+          this.friendshipService.getAllFriendships(userId).subscribe({
             next: data => resolve(data),
             error: error => reject(error)
           })
