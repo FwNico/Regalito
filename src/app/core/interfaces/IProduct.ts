@@ -4,4 +4,5 @@ export interface IProduct {
   precio: number | null;
   descripcion: string | null;
   imagen_url: string | null;
+  categoria: string | null;
 }

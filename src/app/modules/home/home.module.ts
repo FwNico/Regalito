@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -14,6 +14,8 @@ import { WishListRepository } from 'src/app/repository/wishList/wishListReposito
 import { CarouselWhislistComponent } from './home-page/carousel-whislist/carousel-whislist.component';
 
 
+
+
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -23,7 +25,8 @@ import { CarouselWhislistComponent } from './home-page/carousel-whislist/carouse
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [
     HomeRepository,

@@ -6,14 +6,16 @@ export class Product implements IProduct {
   precio: number | null;
   descripcion: string | null;
   imagen_url: string | null;
+  categoria: string | null;
 
 
-  constructor(id: string, nombre: string, imagen_url: string, precio: number, descripcion: string) {
+  constructor(id: string, nombre: string, imagen_url: string, precio: number, descripcion: string, categoria: string) {
     this.id = id;
     this.nombre = nombre;
     this.imagen_url = imagen_url
     this.precio = precio
     this.descripcion = descripcion
+    this.categoria = categoria
   }
 }
 
