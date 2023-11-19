@@ -5,10 +5,10 @@
   justify-content: top;
   margin-top: 50px;
   height: 20vh;
+  width: 250px;
 }
 
 form {
-  width: 250px;
   text-align:left;
 }
 
@@ -40,7 +40,7 @@ input {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 

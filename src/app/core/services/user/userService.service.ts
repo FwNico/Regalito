@@ -1,8 +1,9 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ResponseUser } from '../../models/UserDAO';
-import { Observable, catchError, map, of } from 'rxjs';
+import { EMPTY, Observable, catchError, map, of } from 'rxjs';
 import { User } from '../../models/User';
+
 
 @Injectable({
     providedIn: 'root'
@@ -55,6 +56,13 @@ export class UserService {
         .pipe(
             map(users => users.length > 0 ? users[0] : null),
             catchError(error => of(null))
+        );
+    }
+
+    searchUser(name: string): Observable<User[]>{
+        return this.http.get<User[]>(`${this.baseURL}?nickname_like=${name}`).pipe(
+            map((resp)=> resp),
+            catchError(() => EMPTY)
         );
     }
 
