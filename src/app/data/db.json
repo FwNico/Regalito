@@ -526,5 +526,28 @@
         }
       }
     }
+  ],
+  "regalito": [
+    {
+      "id": 0,
+      "idUserEmit": 2312,
+      "idUserRecived": 34213,
+      "status": "pending",
+      "idProduct": "MLA876543210_P"
+    },
+    {
+      "id": 1,
+      "idUserEmit": 2312,
+      "idUserRecived": 37123,
+      "status": "pending",
+      "idProduct": "MLA876543210_P"
+    },
+    {
+      "id": 2,
+      "idUserEmit": 2312,
+      "idUserRecived": 34213,
+      "status": "pending",
+      "idProduct": "MLA876543210_P"
+    }
   ]
 }

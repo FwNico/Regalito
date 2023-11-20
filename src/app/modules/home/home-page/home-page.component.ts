@@ -16,7 +16,6 @@ import { Product } from 'src/app/core/models/Product';
 // register Swiper custom elements
 register();
 
-
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -28,7 +27,7 @@ export class HomePageComponent implements OnInit {
   myAccessToken: Meli | null
   code: any
   user: ResponseUser | undefined = undefined
-  constructor(private wishListRepo: WishListRepository,private userService: UserService, private homeRepository: HomeRepository, 
+  constructor(private wishListRepo: WishListRepository, private userService: UserService, private homeRepository: HomeRepository,
     private tokenRepository: TokenRepository, private route: ActivatedRoute, private productService: ProductService) {
     this.myAccessToken = tokenRepository.getAccessToken()
 
@@ -38,7 +37,6 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       const code = params['code']
-      this.getToken(code);
       if (code != null) {
         console.log("codigo obtenido= " + code)
         this.code = code
@@ -55,19 +53,17 @@ export class HomePageComponent implements OnInit {
 
   public getToken(code: any) {
     this.homeRepository.getToken(code)
+    this.fetchUser()
   }
 
   fetchUser() {
     console.log(this.myAccessToken?.access_token)
     this.userService.getUserInfo(this.myAccessToken?.access_token).subscribe({
       next: (data) => {
-        console.log(data)
         this.user = data
-        console.log(data);
         this.checkUserExistence();
       },
       error: (error) => { console.log(error) }
-
     })
   }
 
@@ -88,21 +84,21 @@ export class HomePageComponent implements OnInit {
     }
   }
 
-    checkUserExistence() {
-    if(this.user != undefined){
+  checkUserExistence() {
+    if (this.user != undefined) {
       this.userService.userExists(this.user.id).subscribe({
         next: (bool) => {
-          if(bool == false){
+          if (bool == false) {
             this.addUser();
           }
         },
-        error: (error) => { console.log(error)}
+        error: (error) => { console.log(error) }
       })
     }
   }
-  
 
- 
+
+
   /*
   public getToken(code: any) {
   this.apiService.fetchAccessToken(code).then((response) => { console.log(JSON.stringify(response, null, 3)) })
@@ -135,7 +131,7 @@ export class HomePageComponent implements OnInit {
   }
 
   getAllWishListForUser() {
-   return this.wishListRepo.getAllWishList(437402821)
+    return this.wishListRepo.getAllWishList(437402821)
   }
 
   editWishlist() {
@@ -147,7 +143,5 @@ export class HomePageComponent implements OnInit {
 
     this.wishListRepo.editWishList(product, 1)
   }
-
-
 
 }
