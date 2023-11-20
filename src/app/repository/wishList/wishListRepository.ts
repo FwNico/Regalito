@@ -39,7 +39,7 @@ export class WishListRepository {
                 })
             }
         })
-        
+
     }
 
     getWishListForId(id: number): Promise<WishList | undefined> {
@@ -53,4 +53,11 @@ export class WishListRepository {
         })
     }
 
+    deleteWishList(idWishlist: number) {
+        this.wishlistService.deleteWishList(idWishlist).subscribe({
+            next: (data) => { console.log("se borro" + data) },
+            error: (error) => { console.log("error al eliminar" + error) }
+        }
+        )
+    }
 }

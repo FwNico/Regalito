@@ -379,27 +379,6 @@
   ],
   "wishlist": [
     {
-      "id": 1,
-      "idUser": 414173926,
-      "nombre": "Futbol",
-      "products": [
-        {
-          "id": "MLA432109876_NN",
-          "nombre": " Velez Sarfield 2020",
-          "precio": 100,
-          "descripcion": "Camiseta Velez Sarfield 2020 Visitante",
-          "imagen_url": "https://latinfootballshop.es/cdn/shop/products/132Front.jpg?v=1688240958"
-        },
-        {
-          "id": "MLA321098765_OO",
-          "nombre": "Nike Mercurial Hardshell",
-          "precio": 180,
-          "descripcion": "Canilleras Nike",
-          "imagen_url": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/S/P/SP2128-410_0_4.jpg"
-        }
-      ]
-    },
-    {
       "id": 12124,
       "idUser": 414173926,
       "nombre": "Smartphone",
