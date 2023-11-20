@@ -18,7 +18,7 @@
     </select>
   </div>
 <swiper-container class="swiper-container">
-
+    
     <swiper-slide *ngFor="let producto of filteredProducts" class="swiper-slide">
         <img [src]="producto.imagen_url" class="imagen">
         <div class="nombre"><h3><b>{{producto.nombre}}</b></h3></div>

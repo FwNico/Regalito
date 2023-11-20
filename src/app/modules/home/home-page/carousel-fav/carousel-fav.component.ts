@@ -16,12 +16,13 @@ register();
   templateUrl: './carousel-fav.component.html',
   styleUrls: ['./carousel-fav.component.css'],
 })
-export class CarouselFavComponent implements OnInit, AfterViewInit {
+export class CarouselFavComponent implements OnInit {
   products: Product[] = [];
   myAccessToken: Meli | null;
   selectElement: HTMLSelectElement | null = null;
   filteredProducts: Product[] = [];
   searchTerm: string = '';
+  swiper: Swiper | undefined;
 
   constructor(private favs: ProductService, private tokenRepository: TokenRepository) {
     this.myAccessToken = tokenRepository.getAccessToken();
@@ -34,35 +35,28 @@ export class CarouselFavComponent implements OnInit, AfterViewInit {
       this.products = products;
       this.filteredProducts = [...products];
     });
-    
+  }
+  ngAfterViewInit(): void {
+    // Inicializa el carrusel y almacena la instancia
+    const swiperInstance = this.initializeSwiper();
+    // Guarda la instancia del carrusel en una propiedad
+    this.swiper = swiperInstance;
+}
+
+  private initializeSwiper(): Swiper {
+      return new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        autoplay : true,
+        //loop : true
+      });
   }
 
-
-  ngAfterViewInit(): void {
-    // Configuración del carrusel
-    new Swiper('.swiper-container', {
-      loop: true,
-      autoplay: true,
-      slidesPerView: 'auto',
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      },
-    });
+  
+  private updateSwiper(): void {
+    // Verifica si la instancia del carrusel está definida antes de llamar al método update
+    if (this.swiper) {
+      this.swiper.update();
+    }
   }
 
   filtrarCategorias(): void {
@@ -71,6 +65,7 @@ export class CarouselFavComponent implements OnInit, AfterViewInit {
     } else {
       this.filteredProducts = [...this.products];
     }
+    this.updateSwiper();
   }
 
   verproduct(): void {
@@ -86,7 +81,6 @@ export class CarouselFavComponent implements OnInit, AfterViewInit {
     } else {
       this.filteredProducts = [...this.products];
     }
-    console.log(this.filteredProducts);
-    
+    this.updateSwiper();
   }
 }
