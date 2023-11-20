@@ -15,6 +15,7 @@ export class SideBarComponent implements OnInit{
 
   userId: number | undefined
 
+
   constructor(private friendshipRepository: FriendshipRepository, private tokenRepository: TokenRepository, private friendshipService: FriendshipService){
     this.userId = this.tokenRepository.getAccessToken()?.user_id
   }
@@ -30,6 +31,7 @@ export class SideBarComponent implements OnInit{
   public addFriend(friendship: Friendship) {
     this.friendshipRepository.addFriend(friendship).then(data => console.log("Se agrego la amistad:", data));
     this.listFriends();
+
   }
 
   public deleteFriend(id: number) {

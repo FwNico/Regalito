@@ -49,3 +49,24 @@
          
     </form>
 </div> -->
+
+<!-- <div class="add-friend-container">
+    <form autocomplete="off" [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
+        <div class="formGroup" >
+            <label for="nickname">Agregar Amigos:</label>
+            <input type="text" formControlName="nickname" (input)="search($event)" 
+            placeholder="Ingrese el nickname de un usuario">
+            
+        </div>
+        <div>
+            <ul>
+                <li *ngFor="let user of users$ | async"> 
+                    <button type="submit" [disabled]="addFriendForm.invalid" class="add-friend-button">
+                        {{user.nickname}} ({{user.first_name}} {{user.last_name}})
+                    </button>
+                </li>
+            </ul>
+        </div>
+         
+    </form>
+</div> -->
