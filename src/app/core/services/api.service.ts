@@ -14,7 +14,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
 
-  public fetchAccessToken(code:any): Promise<Meli | undefined> {
+  public fetchAccessToken(code:any): Observable<Meli | undefined> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -30,7 +30,7 @@ export class ApiService {
       redirect_uri: "https://localhost:4200/home"
     })
 
-    return this.http.post<Meli>(this.baseURL, body, httpOptions).toPromise()
+    return this.http.post<Meli>(this.baseURL, body, httpOptions)
 
   }
 
