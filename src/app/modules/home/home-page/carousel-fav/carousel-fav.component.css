@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .swiper-container{
   width: 1500px;
 }
@@ -10,12 +9,14 @@
 .swiper-container .imagen{
     width: 150px;
     height: 105px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
     border: 1px solid ;
 }
 
 .swiper-slide{
-    width: auto;
+    width: 200px !important;
     height: 230px;
     margin: 45px 10px;
     background-color: white;
@@ -29,10 +30,10 @@
 .precio{
   margin: 10px 0px;
 }
+
 .button {
     display: inline-block;
     padding: 3px 5px;
-   
     text-decoration: none;
     cursor: pointer;
     border: 1px solid black;
@@ -51,3 +52,68 @@
   }
 
 
+/* Estilo para el contenedor del filtro */
+.filtro-categorias {
+  display: flex; /* Usa flexbox para disposición horizontal */
+  align-items: center; /* Centra verticalmente los elementos */
+ /* Espacio en la parte inferior del contenedor */
+}
+
+/* Estilo para la etiqueta label */
+.filtro-categorias label {
+  margin-left: 50px;
+  margin-right: 10px; /* Espacio a la derecha de la etiqueta */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para la etiqueta select */
+.filtro-categorias select {
+  padding: 8px; /* Ajusta el padding según tus necesidades */
+  font-size: 16px; /* Ajusta el tamaño de fuente según tus necesidades */
+  width: 200px; /* Ancho del elemento select */
+}
+
+/* Estilo para las opciones del filtro */
+.filtro-categorias option {
+  background-color: #f2f2f2; /* Color de fondo de las opciones */
+}
+
+input[type="text"] {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px; /* Ajusta según sea necesario */
+}
+
+/* Estilos para el placeholder */
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+/* Estilos para el mensaje cuando no hay productos */
+.no-products-message {
+  background-color: #ffebeb;
+  color: #ff5757;
+  padding: 10px;
+  border: 1px solid #ff5757;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+/* Estilos para el texto del mensaje */
+.no-products-message p {
+  margin: 50px;
+  padding: 20px;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  margin-top: 10px;
+}

@@ -1,11 +1,33 @@
 
-<swiper-container class="swiper-container" loop="true" autoplay="true" slides-per-view="auto" >
+<div class="filtro-categorias">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Busca un producto" (input)="buscarProductos()">
+    <label for="categoria">Filtro por categoría: </label>
+    <select name="categoria" id="categoria" class="mi-selector" (change)="filtrarCategorias()">
+      <option value="Todas">Todas</option>
+      <option value="Futbol">Futbol</option>
+      <option value="Indumentaria">Indumentaria</option>
+      <option value="Periferico">Periferico</option>
+      <option value="Zapatillas">Calzado</option>
+      <option value="Smart TV">Smart TV</option>
+      <option value="Smartphone">Smartphone</option>
+      <option value="Aspiradora">Aspiradora</option>
+      <option value="Cargador">Cargador</option>
+      <option value="Hogar">Hogar</option>
+      <option value="Salud">Salud</option>
+      <option value="Audio">Audio</option>
+    </select>
+  </div>
+<swiper-container class="swiper-container">
     
-    <swiper-slide *ngFor="let producto of products" class="swiper-slide">
+    <swiper-slide *ngFor="let producto of filteredProducts" class="swiper-slide">
         <img [src]="producto.imagen_url" class="imagen">
         <div class="nombre"><h3><b>{{producto.nombre}}</b></h3></div>
         <div class="precio">${{producto.precio}}</div>
         <button class="button">Add to Wishlist</button>
     </swiper-slide>
+    <div *ngIf="filteredProducts.length===0" class="no-products-message">
+      <p>
+        No encontramos un producto que coincida con ese nombre.
+      </p>
+    </div>
 </swiper-container>
-
