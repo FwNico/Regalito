@@ -1,7 +1,10 @@
 import { Observable, catchError, map, of } from "rxjs";
 import { Regalito } from "../../models/Regalito";
 import { HttpClient } from "@angular/common/http";
-
+import { Injectable } from "@angular/core";
+@Injectable({
+    providedIn: 'root'
+  })
 export class RegalitoService {
 
     private baseURL = "http://localhost:3000/regalito"

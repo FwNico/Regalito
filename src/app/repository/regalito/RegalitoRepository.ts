@@ -2,6 +2,11 @@ import { Regalito } from 'src/app/core/models/Regalito';
 import { Meli } from '../../core/models/Meli';
 import { TokenRepository } from '../token/tokenRepository';
 import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService.service';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+    providedIn: 'root'
+  })
 export class RegalitoRepository {
 
     meli: Meli | null;

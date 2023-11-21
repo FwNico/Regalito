@@ -12,13 +12,17 @@ import { CarouselFavComponent } from './home-page/carousel-fav/carousel-fav.comp
 import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
 import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
 import { CarouselWhislistComponent } from './home-page/carousel-whislist/carousel-whislist.component';
+import { RegalitoPageComponent } from './home-page/regalito-page/regalito-page.component';
+import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoRepository';
+import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService.service';
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
     CarouselFavComponent,
-    CarouselWhislistComponent
+    CarouselWhislistComponent,
+    RegalitoPageComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +34,9 @@ import { CarouselWhislistComponent } from './home-page/carousel-whislist/carouse
     TokenRepository,
     UserService,
     ProductRepository,
-    WishListRepository
+    WishListRepository,
+    RegalitoRepository,
+    RegalitoService    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
