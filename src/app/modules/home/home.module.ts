@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -17,6 +17,8 @@ import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoReposito
 import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService.service';
 
 
+
+
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -27,7 +29,8 @@ import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [
     HomeRepository,

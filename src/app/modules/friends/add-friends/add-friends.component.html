@@ -1,4 +1,4 @@
-<div class="add-friend-container">
+<!-- <div class="add-friend-container">
     <form autocomplete="off" [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
         <div class="formGroup" >
             <label for="nickname">Agregar Amigos:</label>
@@ -7,4 +7,66 @@
         </div>
         <button type="submit" [disabled]="addFriendForm.invalid" class="add-friend-button">Agregar</button> 
     </form>
+</div> -->
+
+<div class="add-friend-container">
+    <form autocomplete="off">
+        <label> Agregar Amigos:</label>
+        <input [(ngModel)]="searchInput" name="searchInput" 
+        (input)="filterSearch()" type="search" placeholder="Ingrese el nombre de un usuario">
+        <div *ngIf="searchInput.length>0" class="results">
+            <tbody>
+                <tr *ngFor="let user of searchResults"> 
+                    <td>{{user.nickname}} ({{user.first_name}} {{user.last_name}})</td>
+                    <td><button type="button" class="add-friend-button" (click)="addFriend(user.id!)"> Agregar</button></td>
+                </tr>
+            </tbody>
+        </div>
+        <div *ngIf="searchInput.length == 0">
+            <span></span>
+        </div>
+    </form>
+
 </div>
+
+<!-- <div class="add-friend-container">
+    <form autocomplete="off" [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
+        <div class="formGroup" >
+            <label for="nickname">Agregar Amigos:</label>
+            <input type="text" formControlName="nickname" (input)="search($event)" 
+            placeholder="Ingrese el nickname de un usuario">
+            
+        </div>
+        <div>
+            <ul>
+                <li *ngFor="let user of users$ | async"> 
+                    <button type="submit" [disabled]="addFriendForm.invalid" class="add-friend-button">
+                        {{user.nickname}} ({{user.first_name}} {{user.last_name}})
+                    </button>
+                </li>
+            </ul>
+        </div>
+         
+    </form>
+</div> -->
+
+<!-- <div class="add-friend-container">
+    <form autocomplete="off" [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
+        <div class="formGroup" >
+            <label for="nickname">Agregar Amigos:</label>
+            <input type="text" formControlName="nickname" (input)="search($event)" 
+            placeholder="Ingrese el nickname de un usuario">
+            
+        </div>
+        <div>
+            <ul>
+                <li *ngFor="let user of users$ | async"> 
+                    <button type="submit" [disabled]="addFriendForm.invalid" class="add-friend-button">
+                        {{user.nickname}} ({{user.first_name}} {{user.last_name}})
+                    </button>
+                </li>
+            </ul>
+        </div>
+         
+    </form>
+</div> -->

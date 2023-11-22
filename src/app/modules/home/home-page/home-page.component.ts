@@ -110,7 +110,7 @@ export class HomePageComponent implements OnInit {
 
     let product: Product[] = []
 
-    const aux = new Product("MLA878620076_B", "pelota", "2awsdasd", 12000, "algun producto")
+    const aux = new Product("MLA878620076_B", "pelota", "2awsdasd", 12000, "algun producto", "alguna categoria")
     product.push(aux)
 
     const lista = new WishList("coquita", product, this.myAccessToken!.user_id)
@@ -137,8 +137,8 @@ export class HomePageComponent implements OnInit {
 
   editWishlist() {
     let product: Product[] = []
-    const aux = new Product("MLA987654321-11", "Pprueba 1", "url_imagen_1", 200, "Descripción del Producto 1")
-    const aux2 = new Product("MLA987654321-33", "Pprueba 3", "url_imagen_3", 300, "Descripción del Producto 3")
+    const aux = new Product("MLA987654321-11", "Pprueba 1", "url_imagen_1", 200, "Descripción del Producto 1", "categoriaNueva")
+    const aux2 = new Product("MLA987654321-33", "Pprueba 3", "url_imagen_3", 300, "Descripción del Producto 3", "categoriaNueva")
     product.push(aux)
     product.push(aux2)
 

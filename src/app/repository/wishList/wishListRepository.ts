@@ -42,6 +42,20 @@ export class WishListRepository {
 
     }
 
+    deleteProductWishList(idWishlist:number, idProducto: string){
+        let list: Product[] | undefined
+        this.getWishListForId(idWishlist).then((response) => {
+            list = response?.products
+            if (list !== undefined) {
+                list= list.filter((element)=> element.id !== idProducto)
+                this.wishlistService.editWishList(list, idWishlist).subscribe({
+                    next: (data) => { console.log("se borro pa" + data) },
+                    error: (error) => { console.log("Error al borrar el producto de la wishlist" + error) }
+                })
+            }
+        })
+    }
+    
     getWishListForId(id: number): Promise<WishList | undefined> {
         return this.wishlistService.getWishList(id)
     }

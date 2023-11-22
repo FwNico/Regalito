@@ -23,6 +23,54 @@
         "state": "AR-B",
         "zip_code": null
       }
+    },
+    {
+      "id": 202593496,
+      "nickname": "SABRINARAMOSS",
+      "first_name": "Sabrina",
+      "last_name": "Ramos",
+      "address": {
+        "state": "AR-C",
+        "city": "Palermo",
+        "address": "Test Address 123",
+        "zip_code": "1414"
+      }
+    },
+    {
+      "id": 202593497,
+      "nickname": "AgusAKD95",
+      "first_name": "Agustin",
+      "last_name": "Zubiaurre",
+      "address": {
+        "state": "AR-C",
+        "city": "Palermo",
+        "address": "Test Address 123",
+        "zip_code": "1414"
+      }
+    },
+    {
+      "id": 202593498,
+      "nickname": "CRISSIMONE",
+      "first_name": "Cristian",
+      "last_name": "Simone",
+      "address": {
+        "state": "AR-C",
+        "city": "Palermo",
+        "address": "Test Address 123",
+        "zip_code": "1414"
+      }
+    },
+    {
+      "id": 202593499,
+      "nickname": "MELINALOPEZ1",
+      "first_name": "Melina",
+      "last_name": "Lopez",
+      "address": {
+        "state": "AR-C",
+        "city": "Palermo",
+        "address": "Test Address 123",
+        "zip_code": "1414"
+      }
     }
   ],
   "products": [
@@ -31,477 +79,493 @@
       "nombre": "Adidas Brazuca",
       "precio": 100,
       "descripcion": "Pelota oficial del Mundial 2014 de Futbol",
-      "imagen_url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_Q_NP_734394-MLA27593054609_062018-O.webp",
+      "categoria": "Futbol"
     },
     {
       "id": "MLA878620076_B",
       "nombre": "Adidas Jabulani",
       "precio": 90,
       "descripcion": "Pelota oficial del Mundial 2010 de Futbol",
-      "imagen_url": "https://static.wixstatic.com/media/4a637e_22c487ee797247fea58f8c1b7ab4fa6c.jpg/v1/fill/w_420,h_420,al_c,lg_1,q_80,enc_auto/4a637e_22c487ee797247fea58f8c1b7ab4fa6c.jpg"
+      "imagen_url": "https://static.wixstatic.com/media/4a637e_22c487ee797247fea58f8c1b7ab4fa6c.jpg/v1/fill/w_420,h_420,al_c,lg_1,q_80,enc_auto/4a637e_22c487ee797247fea58f8c1b7ab4fa6c.jpg",
+      "categoria": "Futbol"
     },
     {
       "id": "MLA905560536_C",
       "nombre": "Campera Montagne",
       "precio": 200,
       "descripcion": "Campera de mujer",
-      "imagen_url": "https://d368r8jqz0fwvm.cloudfront.net/46119-product_lg/campera-de-mujer-ane.jpg"
+      "imagen_url": "https://d368r8jqz0fwvm.cloudfront.net/46119-product_lg/campera-de-mujer-ane.jpg",
+      "categoria": "Indumentaria"
     },
     {
       "id": "MLA812345678_D",
       "nombre": "Jean Bunker",
       "precio": 120,
       "descripcion": "Jean mom",
-      "imagen_url": "https://dcdn.mitiendanube.com/stores/002/295/621/products/24afff36-4a69-419b-8044-481656bea382-jpg-f72c5f3e434365fc9116837334198386-640-0.jpg"
+      "imagen_url": "https://dcdn.mitiendanube.com/stores/002/295/621/products/24afff36-4a69-419b-8044-481656bea382-jpg-f72c5f3e434365fc9116837334198386-640-0.jpg",
+      "categoria": "Indumentaria"
     },
     {
       "id": "MLA789012345_E",
       "nombre": "Logitech G435",
       "precio": 180,
       "descripcion": "Auriculares gamer inalambricos",
-      "imagen_url": "https://promart.vteximg.com.br/arquivos/ids/4183898-1000-1000/image-a0a9210fe76f4d168c4f63f661715176.jpg?v=637794318857870000"
+      "imagen_url": "https://promart.vteximg.com.br/arquivos/ids/4183898-1000-1000/image-a0a9210fe76f4d168c4f63f661715176.jpg?v=637794318857870000",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA876543210_F",
       "nombre": "HyperX Cloud Flight",
       "precio": 90,
       "descripcion": "Auriculares gamer inalambricos",
-      "imagen_url": "https://row.hyperx.com/cdn/shop/products/hyperx_cloud_20flight_1_main.jpg?v=1662435222"
+      "imagen_url": "https://row.hyperx.com/cdn/shop/products/hyperx_cloud_20flight_1_main.jpg?v=1662435222",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA765432109_G",
       "nombre": "Redragon Fizz Pro",
       "precio": 120,
       "descripcion": "Teclado inalambrico",
-      "imagen_url": "https://www.coimprit.com.mx/wp-content/uploads/2022/11/K616-PNGWEB-1-2.png"
+      "imagen_url": "https://www.coimprit.com.mx/wp-content/uploads/2022/11/K616-PNGWEB-1-2.png",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA654321098_H",
       "nombre": "Hyperx Alloy Origins",
       "precio": 200,
       "descripcion": "Teclado inalambrico 65%",
-      "imagen_url": "https://tecnocity.com.uy/wp-content/uploads/2023/01/Teclado-Hyperx-65-4.webp"
+      "imagen_url": "https://tecnocity.com.uy/wp-content/uploads/2023/01/Teclado-Hyperx-65-4.webp",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA543210987_I",
       "nombre": "Logitech G PRO",
       "precio": 150,
       "descripcion": "Mouse inalambrico",
-      "imagen_url": "https://shop.akinformatica.it/wp-content/uploads/2022/01/prd_img_14390.jpg"
+      "imagen_url": "https://shop.akinformatica.it/wp-content/uploads/2022/01/prd_img_14390.jpg",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA432109876_J",
       "nombre": "Logitech G203",
       "precio": 100,
       "descripcion": "Mouse gamer",
-      "imagen_url": "https://app.contabilium.com/files/explorer/16277/Productos-Servicios/concepto-5510243.jpg"
+      "imagen_url": "https://app.contabilium.com/files/explorer/16277/Productos-Servicios/concepto-5510243.jpg",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA321098765_K",
       "nombre": "ZOWIE BenQ EC2",
       "precio": 180,
       "descripcion": "Mouse gamer",
-      "imagen_url": "https://www.maxgaming.com/bilder/artiklar/23333.jpg?m=1673282191"
+      "imagen_url": "https://www.maxgaming.com/bilder/artiklar/23333.jpg?m=1673282191",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA210987654_L",
       "nombre": "NOGA NET XL",
       "precio": 120,
       "descripcion": "Mousepad XL 920X290X3",
-      "imagen_url": "https://www.sevenelectronics.com.ar/images/000779813771737537756D-NQ-NP-945483-MLA44191740718-112020-O.jpg"
+      "imagen_url": "https://www.sevenelectronics.com.ar/images/000779813771737537756D-NQ-NP-945483-MLA44191740718-112020-O.jpg",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA109876543_M",
       "nombre": "Logitech G640 L",
       "precio": 90,
       "descripcion": "Mousepad profesional",
-      "imagen_url": "https://www.suntech.cz/img.asp?stiid=364881"
+      "imagen_url": "https://www.suntech.cz/img.asp?stiid=364881",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA098765432_N",
       "nombre": "Superstar Foundation",
       "precio": 200,
       "descripcion": "Zapatillas Adidas",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_831884-MLA44412476409_122020-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_831884-MLA44412476409_122020-O.webp",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA987654321_O",
       "nombre": "Forum Low",
       "precio": 150,
       "descripcion": "Zapatillas Adidas",
-      "imagen_url": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/98da6e46c37b43199652ace2001df3d2_9366/Zapatillas_Forum_Low_Blanco_FY7986_01_standard.jpg"
+      "imagen_url": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/98da6e46c37b43199652ace2001df3d2_9366/Zapatillas_Forum_Low_Blanco_FY7986_01_standard.jpg",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA876543210_P",
       "nombre": "Air Force 1 Low",
       "precio": 100,
       "descripcion": "Zapatillas Nike",
-      "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
+      "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA765432109_Q",
       "nombre": "Dunk Low SE",
       "precio": 120,
       "descripcion": "Zapatillas Nike",
-      "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+      "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA654321098_R",
       "nombre": "React Infinity Run Fk 3",
       "precio": 200,
       "descripcion": "Zapatillas Nike",
-      "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
+      "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA543210987_S",
       "nombre": "Nike W React Element 55",
       "precio": 150,
       "descripcion": "Zapatillas Nike",
-      "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
+      "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA432109876_T",
       "nombre": "Suede Classic XXI",
       "precio": 100,
       "descripcion": "Zapatillas Puma",
-      "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
+      "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA321098765_U",
       "nombre": "Rbd Game Low",
       "precio": 180,
       "descripcion": "Zapatillas Puma",
-      "imagen_url": "https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/b5phvt5u67jdnf85faz6xtr65yiq/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5"
+      "imagen_url": "https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/b5phvt5u67jdnf85faz6xtr65yiq/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA210987654_V",
       "nombre": "Future Rider Play",
       "precio": 120,
       "descripcion": "Zapatillas Puma",
-      "imagen_url": "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwb0194d06/products/PU388973-88/PU388973-88-1.JPG"
+      "imagen_url": "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwb0194d06/products/PU388973-88/PU388973-88-1.JPG",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA109876543_W",
       "nombre": "Euro Jogger Tr",
       "precio": 90,
       "descripcion": "Zapatillas Fila",
-      "imagen_url": "https://tiendapodium.com.ar/wp-content/uploads/2023/04/F-F01L00150-465-Zapatillas-Fila-Euro-Jogger-Tr-Hombre-Azul-Rojo-Blanco.jpg"
+      "imagen_url": "https://tiendapodium.com.ar/wp-content/uploads/2023/04/F-F01L00150-465-Zapatillas-Fila-Euro-Jogger-Tr-Hombre-Azul-Rojo-Blanco.jpg",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA098765432_X",
       "nombre": "Philips 7400 Series",
       "precio": 200,
       "descripcion": "Smart TV 50PUD7406/77 LED Android 10 4K 50",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_668696-MLA71172143639_082023-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_668696-MLA71172143639_082023-O.webp",
+      "categoria": "Smart TV"
     },
     {
       "id": "MLA987654321_Y",
       "nombre": "Jvc Lt50da770",
       "precio": 150,
       "descripcion": "Televisor Led 50'' Full Hd Smart",
-      "imagen_url": "https://petenattiar.vtexassets.com/arquivos/ids/203892/Televisor-LED-50---JVC-LT50DA770-Full-HD-SMART.jpg?v=637932456208770000"
+      "imagen_url": "https://petenattiar.vtexassets.com/arquivos/ids/203892/Televisor-LED-50---JVC-LT50DA770-Full-HD-SMART.jpg?v=637932456208770000",
+      "categoria": "Smart TV"
     },
     {
       "id": "MLA876543210_Z",
       "nombre": "22/23 Boca Local",
       "precio": 100,
       "descripcion": "Camiseta De Fútbol Para Hombre Versión Azul",
-      "imagen_url": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/43b3d5dca79c4970ba7d510045536008_9366/camiseta-titular-boca-juniors-23-24.jpg"
+      "imagen_url": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/43b3d5dca79c4970ba7d510045536008_9366/camiseta-titular-boca-juniors-23-24.jpg",
+      "categoria": "Futbol"
     },
     {
       "id": "MLA765432109_AA",
       "nombre": "Remera Hollister ",
       "precio": 120,
       "descripcion": "Remera Hollister lisa",
-      "imagen_url": "https://static.wixstatic.com/media/e7ac96_c8f940eb8ebb47b0b3059c7da511d4b9~mv2.jpeg/v1/fill/w_960,h_1280,al_c,q_85,enc_auto/e7ac96_c8f940eb8ebb47b0b3059c7da511d4b9~mv2.jpeg"
+      "imagen_url": "https://static.wixstatic.com/media/e7ac96_c8f940eb8ebb47b0b3059c7da511d4b9~mv2.jpeg/v1/fill/w_960,h_1280,al_c,q_85,enc_auto/e7ac96_c8f940eb8ebb47b0b3059c7da511d4b9~mv2.jpeg",
+      "categoria": "Indumentaria"
     },
     {
       "id": "MLA654321098_BB",
       "nombre": "Hollister remera Batik",
       "precio": 200,
       "descripcion": "Remera Hollister",
-      "imagen_url": "https://d2r9epyceweg5n.cloudfront.net/stores/001/296/296/products/e7d651a7-6b1c-46cc-bb72-f38985b9e8ac1-6ab3cc6b00f921f1f915971715651235-640-0.jpeg"
+      "imagen_url": "https://d2r9epyceweg5n.cloudfront.net/stores/001/296/296/products/e7d651a7-6b1c-46cc-bb72-f38985b9e8ac1-6ab3cc6b00f921f1f915971715651235-640-0.jpeg",
+      "categoria": "Indumentaria"
     },
     {
       "id": "MLA543210987_CC",
       "nombre": "Galaxy S23 Ultra",
       "precio": 150,
       "descripcion": "Samsung 12gb 256gb Color Green",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp",
+      "categoria": "Smartphone"
     },
     {
       "id": "MLA432109876_DD",
       "nombre": "Galaxy A24",
       "precio": 100,
       "descripcion": "Celular Samsung 128/6GB Light Green",
-      "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
+      "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg",
+      "categoria": "Smartphone"
     },
     {
       "id": "MLA321098765_EE",
       "nombre": "Moto G32",
       "precio": 180,
       "descripcion": "Celular Motorola 128GB Rosa Pastel",
-      "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
+      "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg",
+      "categoria": "Smartphone"
     },
     {
       "id": "MLA210987654_FF",
       "nombre": "Moto G42",
       "precio": 120,
       "descripcion": "Celular Motorola G42 6.4″ 64Gb 4Gb Snapdragon 680 Verde",
-      "imagen_url": "https://resources.sears.com.mx/medios-plazavip/mkt/6391016f3462c_p103_motog42_128gb_verde_2_1200wx1200h_cjpeg.jpg?scale=500&qlty=75"
+      "imagen_url": "https://resources.sears.com.mx/medios-plazavip/mkt/6391016f3462c_p103_motog42_128gb_verde_2_1200wx1200h_cjpeg.jpg?scale=500&qlty=75",
+      "categoria": "Smartphone"
     },
     {
       "id": "MLA109876543_GG",
       "nombre": "Electrolux Eqp10",
       "precio": 90,
       "descripcion": "Aspiradora 1600 W Con Bolsa",
-      "imagen_url": "https://acdn.mitiendanube.com/stores/001/231/488/products/aspiradora-electrolux-eqp10-1600-w-con-bolsa_21-dba7298c362300911016179174153764-640-0.jpg"
+      "imagen_url": "https://acdn.mitiendanube.com/stores/001/231/488/products/aspiradora-electrolux-eqp10-1600-w-con-bolsa_21-dba7298c362300911016179174153764-640-0.jpg",
+      "categoria": "Aspiradora"
     },
     {
       "id": "MLA098765432_HH",
       "nombre": "HIDROVAC CB30",
       "precio": 200,
       "descripcion": "Aspiradora Profesional 1 Motor 1000W 30 Litros Inox Polvo y Líquidos",
-      "imagen_url": "https://www.hidrolimpsrl.com/wp-content/uploads/sites/160/2019/03/cb30_.jpg"
+      "imagen_url": "https://www.hidrolimpsrl.com/wp-content/uploads/sites/160/2019/03/cb30_.jpg",
+      "categoria": "Aspiradora"
     },
     {
       "id": "MLA987654321_II",
       "nombre": "Hoodie Love that for you",
       "precio": 150,
       "descripcion": "Buzo marron Chocolate Oversize",
-      "imagen_url": "https://acdn.mitiendanube.com/stores/953/334/products/hd1edba9893864a4d831e9ee1643f98bcb1-339e8feadbc7652e9016564393699217-640-0.jpg"
+      "imagen_url": "https://acdn.mitiendanube.com/stores/953/334/products/hd1edba9893864a4d831e9ee1643f98bcb1-339e8feadbc7652e9016564393699217-640-0.jpg",
+      "categoria": "Indumentaria"
     },
     {
       "id": "MLA876543210_JJ",
       "nombre": "Reebok Glide",
       "precio": 100,
       "descripcion": "Zapatillas Reebok",
-      "imagen_url": "https://reebokarg.vtexassets.com/arquivos/ids/196993/Imagen-1.jpg?v=638243899780470000"
+      "imagen_url": "https://reebokarg.vtexassets.com/arquivos/ids/196993/Imagen-1.jpg?v=638243899780470000",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA765432109_KK",
       "nombre": "Reebok Classic",
       "precio": 120,
       "descripcion": "Zapatillas Reebok Classic Leather Hombre",
-      "imagen_url": "https://celadasa.vtexassets.com/arquivos/ids/227999-800-auto?v=638163983640100000&width=800&height=auto&aspect=true"
+      "imagen_url": "https://celadasa.vtexassets.com/arquivos/ids/227999-800-auto?v=638163983640100000&width=800&height=auto&aspect=true",
+      "categoria": "Zapatillas"
     },
     {
       "id": "MLA654321098_LL",
       "nombre": "Cargador Motorola",
       "precio": 200,
       "descripcion": "Cargador Turbo Power Motorola 30w Carga Rápida Usb Tipo C",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_866615-MLA71758113354_092023-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_866615-MLA71758113354_092023-O.webp",
+      "categoria": "Cargador"
     },
     {
       "id": "MLA543210987_MM",
       "nombre": "Prolongador Trv",
       "precio": 150,
       "descripcion": "Alargue Zapatilla 4 Tomas 1,5mts + Usb X2",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_788773-MLA46441906744_062021-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_788773-MLA46441906744_062021-O.webp",
+      "categoria": "Hogar"
     },
     {
       "id": "MLA432109876_NN",
       "nombre": " Velez Sarfield 2020",
       "precio": 100,
       "descripcion": "Camiseta Velez Sarfield 2020 Visitante",
-      "imagen_url": "https://latinfootballshop.es/cdn/shop/products/132Front.jpg?v=1688240958"
+      "imagen_url": "https://latinfootballshop.es/cdn/shop/products/132Front.jpg?v=1688240958",
+      "categoria": "Futbol"
     },
     {
       "id": "MLA321098765_OO",
       "nombre": "Nike Mercurial Hardshell",
       "precio": 180,
       "descripcion": "Canilleras Nike",
-      "imagen_url": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/S/P/SP2128-410_0_4.jpg"
+      "imagen_url": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/S/P/SP2128-410_0_4.jpg",
+      "categoria": "Futbol"
     },
     {
       "id": "MLA210987654_PP",
       "nombre": "Adidas Everlesto",
       "precio": 120,
       "descripcion": "Canilleras Futbol Adidas",
-      "imagen_url": "https://nubishops.com.ar/tools/thumb.php?im=https://d3ugyf2ht6aenh.cloudfront.net/stores/088/647/products/1411-4f4521b889c0ff1d7515916308273350-1024-1024.webp"
+      "imagen_url": "https://nubishops.com.ar/tools/thumb.php?im=https://d3ugyf2ht6aenh.cloudfront.net/stores/088/647/products/1411-4f4521b889c0ff1d7515916308273350-1024-1024.webp",
+      "categoria": "Futbol"
     },
     {
       "id": "MLA109876543_QQ",
       "nombre": "Lámpara Led",
       "precio": 90,
       "descripcion": "Lámpara De Mesa Led",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_721768-MCO47784847225_102021-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_721768-MCO47784847225_102021-O.webp",
+      "categoria": "Hogar"
     },
     {
       "id": "MLA098765432_RR",
       "nombre": "Otto Bock Acero",
       "precio": 200,
       "descripcion": "Silla De Ruedas Otto Bock Acero Movilidad Premium",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_808991-MLU72284666037_102023-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_808991-MLU72284666037_102023-O.webp",
+      "categoria": "Salud"
     },
     {
       "id": "MLA987654321_SS",
       "nombre": "Noblex Mnt390",
       "precio": 150,
       "descripcion": "Parlante Torre Noblex Mnt390 Tower System Bluetooth Luces Color Negro",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_854925-MLU72675266406_112023-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_854925-MLU72675266406_112023-O.webp",
+      "categoria": "Audio"
     },
     {
       "id": "MLA876543210_TT",
       "nombre": "Samsung Lf22t35",
       "precio": 100,
       "descripcion": "Monitor Led Samsung 22'' Con Diseño Sin Bordes - Lf22t35 Color Negro",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_843829-MLU72646996287_112023-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_843829-MLU72646996287_112023-O.webp",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA765432109_UU",
       "nombre": "Gafa Hgf388AFP",
       "precio": 120,
       "descripcion": "Heladera plata con freezer 374L 220V",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_665218-MLA52105396454_102022-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_665218-MLA52105396454_102022-O.webp",
+      "categoria": "Hogar"
     },
     {
       "id": "MLA654321098_VV",
       "nombre": "Gafa DigiFit",
       "precio": 200,
       "descripcion": "Lavarropas automático blanco 6.5kg 220 V",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_993056-MLA51901524831_102022-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_993056-MLA51901524831_102022-O.webp",
+      "categoria": "Hogar"
     },
     {
       "id": "MLA543210987_WW",
       "nombre": "Brother HL-1",
       "precio": 150,
       "descripcion": "Impresora Series HL-1212W",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_793026-MLA48955225118_012022-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_793026-MLA48955225118_012022-O.webp",
+      "categoria": "Periferico"
     },
     {
       "id": "MLA432109876_XX",
       "nombre": "Hp M107a",
       "precio": 100,
       "descripcion": "Impresora Laser Monocromatica M107 20ppm Usb Tienda Oficial Hp Color Blanco",
-      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_791400-MLU72868294383_112023-O.webp"
+      "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_791400-MLU72868294383_112023-O.webp",
+      "categoria": "Periferico"
     }
   ],
-  "wishlist": [
-    {
-      "id": 12124,
-      "idUser": 414173926,
-      "nombre": "Smartphone",
-      "products": [
-        {
-          "id": "MLA543210987_CC",
-          "nombre": "Galaxy S23 Ultra",
-          "precio": 150,
-          "descripcion": "Samsung 12gb 256gb Color Green",
-          "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp"
-        },
-        {
-          "id": "MLA432109876_DD",
-          "nombre": "Galaxy A24",
-          "precio": 100,
-          "descripcion": "Celular Samsung 128/6GB Light Green",
-          "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
-        },
-        {
-          "id": "MLA321098765_EE",
-          "nombre": "Moto G32",
-          "precio": 180,
-          "descripcion": "Celular Motorola 128GB Rosa Pastel",
-          "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
-        },
-        {
-          "id": "MLA210987654_FF",
-          "nombre": "Moto G42",
-          "precio": 120,
-          "descripcion": "Celular Motorola G42 6.4″ 64Gb 4Gb Snapdragon 680 Verde",
-          "imagen_url": "https://resources.sears.com.mx/medios-plazavip/mkt/6391016f3462c_p103_motog42_128gb_verde_2_1200wx1200h_cjpeg.jpg?scale=500&qlty=75"
-        }
-      ]
-    },
-    {
-      "id": 12125,
-      "idUser": 414173926,
-      "nombre": "Zapatillas",
-      "products": [
-        {
-          "id": "MLA876543210_P",
-          "nombre": "Air Force 1 Low",
-          "precio": 100,
-          "descripcion": "Zapatillas Nike",
-          "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
-        },
-        {
-          "id": "MLA765432109_Q",
-          "nombre": "Dunk Low SE",
-          "precio": 120,
-          "descripcion": "Zapatillas Nike",
-          "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
-        },
-        {
-          "id": "MLA654321098_R",
-          "nombre": "React Infinity Run Fk 3",
-          "precio": 200,
-          "descripcion": "Zapatillas Nike",
-          "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
-        },
-        {
-          "id": "MLA543210987_S",
-          "nombre": "Nike W React Element 55",
-          "precio": 150,
-          "descripcion": "Zapatillas Nike",
-          "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
-        },
-        {
-          "id": "MLA432109876_T",
-          "nombre": "Suede Classic XXI",
-          "precio": 100,
-          "descripcion": "Zapatillas Puma",
-          "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
-        }
-      ]
-    }
-  ],
+  "wishlist": [{
+    "id": 12124,
+    "idUser": 192380859,
+    "nombre": "Smartphone",
+    "products": [
+      {
+        "id": "MLA543210987_CC",
+        "nombre": "Galaxy S23 Ultra",
+        "precio": 150,
+        "descripcion": "Samsung 12gb 256gb Color Green",
+        "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp"
+      },
+      {
+        "id": "MLA432109876_DD",
+        "nombre": "Galaxy A24",
+        "precio": 100,
+        "descripcion": "Celular Samsung 128/6GB Light Green",
+        "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
+      },
+      {
+        "id": "MLA321098765_EE",
+        "nombre": "Moto G32",
+        "precio": 180,
+        "descripcion": "Celular Motorola 128GB Rosa Pastel",
+        "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
+      },
+      {
+        "id": "MLA210987654_FF",
+        "nombre": "Moto G42",
+        "precio": 120,
+        "descripcion": "Celular Motorola G42 6.4″ 64Gb 4Gb Snapdragon 680 Verde",
+        "imagen_url": "https://resources.sears.com.mx/medios-plazavip/mkt/6391016f3462c_p103_motog42_128gb_verde_2_1200wx1200h_cjpeg.jpg?scale=500&qlty=75"
+      }
+    ]
+  },
+  {
+    "id": 12125,
+    "idUser": 192380859,
+    "nombre": "Zapatillas",
+    "products": [
+      {
+        "id": "MLA876543210_P",
+        "nombre": "Air Force 1 Low",
+        "precio": 100,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
+      },
+      {
+        "id": "MLA765432109_Q",
+        "nombre": "Dunk Low SE",
+        "precio": 120,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+      },
+      {
+        "id": "MLA654321098_R",
+        "nombre": "React Infinity Run Fk 3",
+        "precio": 200,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
+      },
+      {
+        "id": "MLA543210987_S",
+        "nombre": "Nike W React Element 55",
+        "precio": 150,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
+      },
+      {
+        "id": "MLA432109876_T",
+        "nombre": "Suede Classic XXI",
+        "precio": 100,
+        "descripcion": "Zapatillas Puma",
+        "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
+      }
+    ]
+  }],
   "friendships": [
     {
       "id": 1,
       "userId": 414173926,
       "friend": {
-        "id": 2025934981,
-        "nickname": "TETETE",
-        "first_name": "Test",
-        "last_name": "Test",
+        "id": 192380859,
+        "nickname": "NAHUELMIRABELLA",
+        "first_name": "nahuel",
+        "last_name": "mirabella",
         "address": {
-          "state": "AR-C",
-          "city": "Palermo",
-          "address": "Test Address 123",
-          "zip_code": "1414"
-        }
-      }
-    },
-    {
-      "id": 2,
-      "userId": 414173926,
-      "friend": {
-        "id": 202593497,
-        "nickname": "AgusAKD95",
-        "first_name": "TestAgus",
-        "last_name": "TestPingui",
-        "address": {
-          "state": "AR-C",
-          "city": "Palermo",
-          "address": "Test Address 123",
-          "zip_code": "1414"
-        }
-      }
-    },
-    {
-      "id": 3,
-      "userId": 414173926,
-      "friend": {
-        "id": 202593498,
-        "nickname": "TETE2870021",
-        "first_name": "Test",
-        "last_name": "Test",
-        "address": {
-          "state": "AR-C",
-          "city": "Palermo",
-          "address": "Test Address 123",
-          "zip_code": "1414"
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
         }
       }
     }
