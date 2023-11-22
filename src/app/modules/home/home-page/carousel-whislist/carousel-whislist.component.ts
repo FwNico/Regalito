@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { Meli } from 'src/app/core/models/Meli';
 import { User } from 'src/app/core/models/User';
 import { ResponseUser } from 'src/app/core/models/UserDAO';
@@ -23,8 +23,9 @@ register();
   styleUrls: ['./carousel-whislist.component.css']
 })
 
-export class CarouselWhislistComponent implements OnInit {
+export class CarouselWhislistComponent implements OnInit{
   @Input() isUserView: boolean = false
+  @Input() idFriend:number = 0
   @Output() regalito: EventEmitter<string> = new EventEmitter<string>();
   whislists: WishList[] = [];
   whislistItem?: WishList;
@@ -42,14 +43,19 @@ export class CarouselWhislistComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.userMeli?.user_id);
     const swiperInstance = this.initializeSwiper();
     this.swiper = swiperInstance;
-    this.wishList.getAllWishList(this.userId).subscribe((prod) => {
-      this.whislists = prod;
-      console.log(this.whislists[0].idUser);
-    })
-    console.log(this.isUserView)
+    console.log(this.idFriend)
+    if (this.isUserView) {
+      this.wishList.getAllWishList(this.idFriend!).subscribe((prod) => {
+        this.whislists = prod;
+      })
+    } else {
+      this.wishList.getAllWishList(this.userId).subscribe((prod) => {
+        this.whislists = prod;
+        console.log(this.whislists[0].idUser);
+      })
+    }
 
   }
 
@@ -86,9 +92,15 @@ export class CarouselWhislistComponent implements OnInit {
   }
 
   uptadateWishlist() {
-    this.wishList.getAllWishList(this.userId).subscribe((prod) => {
-      this.whislists = prod;
-    })
+    if (this.isUserView) {
+      this.wishList.getAllWishList(this.idFriend!).subscribe((prod) => {
+        this.whislists = prod;
+      })
+    } else {
+      this.wishList.getAllWishList(this.userId).subscribe((prod) => {
+        this.whislists = prod;
+      })
+    }
   }
 
   getIdWishlist(item: Product): number | null {

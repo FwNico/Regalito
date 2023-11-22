@@ -7,8 +7,10 @@
         <app-side-bar></app-side-bar>
     </div>
 
-    <div class="box b4">
-        <app-carousel-whislist (regalito)="obtainData($event)" [isUserView]="isUserView"></app-carousel-whislist>
+
+    
+    <div *ngIf="friendId!=null" class="box b4">
+        <app-carousel-whislist (regalito)="obtainData($event)" [isUserView]="isUserView" [idFriend]="friendId" ></app-carousel-whislist>
     </div>
 
 </div>

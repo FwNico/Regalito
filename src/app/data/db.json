@@ -648,6 +648,40 @@
           "zip_code": "2224"
         }
       }
+    },
+    {
+      "id": 9,
+      "userId": 437402821,
+      "status": "pending",
+      "friend": {
+        "id": 192380859,
+        "nickname": "NAHUELMIRABELLA",
+        "first_name": "nahuel",
+        "last_name": "mirabella",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
+    },
+    {
+      "id": 10,
+      "userId": 192380859,
+      "status": "toConfirm",
+      "friend": {
+        "id": 437402821,
+        "nickname": "GOJEREMIAS27",
+        "first_name": "Jeremias",
+        "last_name": "Gonzalez",
+        "address": {
+          "state": "AR-C",
+          "city": "Mar del plata",
+          "address": "Test Address 123",
+          "zip_code": "2224"
+        }
+      }
     }
   ],
   "regalito": [
@@ -716,6 +750,13 @@
     },
     {
       "id": 9,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "PENDING",
+      "idProduct": "MLA765432109_Q"
+    },
+    {
+      "id": 10,
       "idUserEmit": 437402821,
       "idUserRecived": 414173926,
       "status": "PENDING",

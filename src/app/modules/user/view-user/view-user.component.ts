@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WishList } from 'src/app/core/models/WishList';
 import { UserService } from 'src/app/core/services/user/userService.service';
@@ -13,18 +13,18 @@ import { CarouselWhislistComponent } from '../../home/home-page/carousel-whislis
 })
 
 export class ViewUserComponent implements OnInit {
-
     friendId: number | null = null
     wishList: WishList[]
     dataRegalito: string = ""
     isUserView: boolean = true
-    constructor(private route: ActivatedRoute, private wishListService: WishListService, private regalitoRepository: RegalitoRepository) {
+    constructor(private cdr: ChangeDetectorRef,private route: ActivatedRoute, private wishListService: WishListService, private regalitoRepository: RegalitoRepository) {
         this.wishList = []
     }
 
     ngOnInit(): void {
         this.route.params.subscribe(params => {
             this.friendId = params["userId"]
+            this.cdr.detectChanges()
         })
         this.getWishList(this.friendId!)
     }
@@ -43,7 +43,7 @@ export class ViewUserComponent implements OnInit {
 
 
     sendRegalito() {
-        
+
         this.regalitoRepository.createRegalito(this.dataRegalito, this.friendId! as number)
     }
 
