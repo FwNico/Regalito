@@ -5,7 +5,7 @@
   justify-content: top;
   margin-top: 50px;
   height: 20vh;
-  width: 250px;
+  width: 330px;
 }
 
 form {
@@ -27,6 +27,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
+  margin-top: 5px;
 }
 
 .error-message {
@@ -42,6 +43,7 @@ input {
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 .add-friend-button:disabled {

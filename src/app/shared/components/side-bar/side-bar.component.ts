@@ -12,6 +12,9 @@ import { FriendshipService } from 'src/app/core/services/friendship/friendship.s
 export class SideBarComponent implements OnInit{
   
   public friends: Friendship[] = [];
+  public editFriendship: Friendship = new Friendship ({});
+  public editFriendship2: Friendship = new Friendship ({});
+  public friendship2: Friendship = new Friendship ({});
 
   userId: number | undefined
 
@@ -25,7 +28,10 @@ export class SideBarComponent implements OnInit{
   }
 
   public listFriends(){
-    this.friendshipRepository.getFriends(this.userId).then( data => this.friends = data);
+    setTimeout(()=> {this.friendshipRepository.getFriends(this.userId).then ( data => this.friends = data)
+    .catch (error => console.log("Ocurrió un error al cargar la lista de amistades", error))
+    }, 400)
+    
   }
 
   public addFriend(friendship: Friendship) {
@@ -35,7 +41,36 @@ export class SideBarComponent implements OnInit{
   }
 
   public deleteFriend(id: number) {
-    this.friendshipRepository.deleteFriend(id).then(bool => console.log("Se elimino la amistad: ", bool));
+    this.friendshipRepository.deleteFriend(id).then(bool => console.log(`Se elimino la amistad con Id: ${id}`,  bool));
+    this.listFriends();
+  }
+
+  public getFriend(id:number){
+    this.friendshipRepository.getFriend(id).then(data => this.friendship2 = data);
+  }
+
+  public updateFriendship(friendship: Friendship){
+
+    if(friendship.id){
+      this.getFriend((friendship.id -1))
+      setTimeout( ()=> {
+      this.editFriendship2 = structuredClone(this.friendship2);
+      this.editFriendship2.status = "active";
+      this.friendshipRepository.updateFriendship(this.editFriendship2).then(bool => console.log("Se modificó la amistad: ", bool));
+      }, 500) 
+    }
+
+    this.editFriendship = structuredClone(friendship);
+    this.editFriendship.status = "active";
+    this.friendshipRepository.updateFriendship(this.editFriendship).then(bool => console.log("Se modificó la amistad: ", bool));
+    
+    this.listFriends();
+  }
+
+  public rejectFriendship(id: number){
+    this.friendshipRepository.deleteFriend(id).then(bool => console.log(`Se elimino la amistad con Id: ${id}`,  bool));
+    this.friendshipRepository.deleteFriend((id-1)).then(bool => console.log(`Se elimino la amistad con Id: ${(id-1)}`,  bool));
+
     this.listFriends();
   }
 
