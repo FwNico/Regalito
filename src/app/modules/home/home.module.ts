@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HomeRoutingModule } from './home-routing.module';
@@ -39,7 +39,10 @@ import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService
     ProductRepository,
     WishListRepository,
     RegalitoRepository,
-    RegalitoService    
+    RegalitoService
+  ],
+  exports: [
+    CarouselWhislistComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

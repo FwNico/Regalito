@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 import { Friendship } from 'src/app/core/models/Friendship';
 
 @Component({
@@ -12,17 +14,21 @@ export class ListFriendsComponent implements OnInit {
   @Output() friendToDelete: EventEmitter<number> = new EventEmitter();
   @Output() friendToDelete2: EventEmitter<number> = new EventEmitter();
 
-  constructor(){ 
+  constructor(private router: Router) {
 
   }
-  
-  ngOnInit(): void{
+
+  ngOnInit(): void {
 
   }
-  
+
   public deleteFriend(id: number) {
     this.friendToDelete.emit(id);
     //this.friendToDelete2.emit((id+1!));
+  }
+
+  navigate(userId: number) {
+    this.router.navigate(['/user', userId])
   }
 
 }
