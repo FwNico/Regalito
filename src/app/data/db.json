@@ -568,50 +568,36 @@
   ],
   "friendships": [
     {
-      "id": 1,
-      "userId": 414173926,
+      "id": 5,
+      "userId": 437402821,
+      "status": "pending",
       "friend": {
-        "id": 192380859,
-        "nickname": "NAHUELMIRABELLA",
-        "first_name": "nahuel",
-        "last_name": "mirabella",
+        "id": 202593496,
+        "nickname": "SABRINARAMOSS",
+        "first_name": "Sabrina",
+        "last_name": "Ramos",
         "address": {
-          "address": null,
-          "city": null,
-          "state": "AR-B",
-          "zip_code": null
+          "state": "AR-C",
+          "city": "Palermo",
+          "address": "Test Address 123",
+          "zip_code": "1414"
         }
       }
     },
     {
-      "id": 3,
-      "userId": 437402821,
+      "id": 6,
+      "userId": 202593496,
+      "status": "toConfirm",
       "friend": {
-        "id": 192380859,
-        "nickname": "NAHUELMIRABELLA",
-        "first_name": "nahuel",
-        "last_name": "mirabella",
+        "id": 437402821,
+        "nickname": "GOJEREMIAS27",
+        "first_name": "Jeremias",
+        "last_name": "Gonzalez",
         "address": {
-          "address": null,
-          "city": null,
-          "state": "AR-B",
-          "zip_code": null
-        }
-      }
-    },
-    {
-      "id": 4,
-      "userId": 437402821,
-      "friend": {
-        "id": 414173926,
-        "nickname": "NICOLASDUARTE95",
-        "first_name": "Nicolas",
-        "last_name": "Duarte",
-        "address": {
-          "address": null,
-          "city": null,
-          "state": "AR-B",
-          "zip_code": null
+          "state": "AR-C",
+          "city": "Mar del plata",
+          "address": "Test Address 123",
+          "zip_code": "2224"
         }
       }
     }

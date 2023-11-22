@@ -1,10 +1,19 @@
 <div class="list-friend-container">
   <label>Amigos</label>
+  <div *ngIf="friends.length==0">
+    <span>Aun no tienes amigos</span>
+    <br>
+    <span>Utiliza el buscador de más arriba</span>
+  </div>
+  
   <table>
       <tbody>
         <tr *ngFor="let item of friends">
           <td><button (click)="navigate(item.friend.id!)" class= "friend" >{{ item.friend.nickname }}</button></td>
-          <td><button class= "delete-friend-button"(click)="deleteFriend(item.id!)">X</button></td>
+          <td *ngIf="(item.status == 'pending')"> <button class="pending-friend-button">Pendiente</button></td>
+          <td *ngIf="(item.status == 'active')"> <button  class= "delete-friend-button"(click)="deleteFriend(item.id!)">Eliminar</button></td>
+          <td *ngIf="(item.status == 'toConfirm')"> <button class="add-friend-button" (click)="acceptFriendship(item!)">Aceptar</button></td>
+          <td *ngIf="(item.status == 'toConfirm')"> <button  class= "delete-friend-button"(click)="rejectFriendship(item.id!)">Rechazar</button></td>
         </tr>
       </tbody>
     </table>
