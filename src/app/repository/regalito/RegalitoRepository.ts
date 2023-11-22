@@ -17,9 +17,9 @@ export class RegalitoRepository {
 
     //idUserRecived es el id del usuario que va a recibir la solicitud de regalo
     createRegalito(idProduct: string, idUserRecived: number) {
-        const regalito = new Regalito(this.meli?.user_id!, idUserRecived, "PENDING", idProduct)
+        const regalito = new Regalito(this.meli?.user_id!, idUserRecived++, "PENDING", idProduct)
         this.regalitoService.createRegalito(regalito).subscribe({
-            next: (data) => { console.log("se guardo el regalo" + data) },
+            next: (data) => { console.log("se guardo el regalo" + data.status) },
             error: (error) => { console.log("error al guardar regalito " + error) }
         })
     }

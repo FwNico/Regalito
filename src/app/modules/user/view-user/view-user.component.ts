@@ -17,7 +17,8 @@ export class ViewUserComponent implements OnInit {
     friendId: number | null = null
     wishList: WishList[]
     dataRegalito: string = ""
-    constructor(private userService: UserService, private route: ActivatedRoute, private wishListService: WishListService, private regalitoRepository: RegalitoRepository) {
+    isUserView: boolean = true
+    constructor(private route: ActivatedRoute, private wishListService: WishListService, private regalitoRepository: RegalitoRepository) {
         this.wishList = []
     }
 
@@ -30,7 +31,7 @@ export class ViewUserComponent implements OnInit {
 
     obtainData(idProduct: string) {
         this.dataRegalito = idProduct
-        console.log(idProduct)
+        this.sendRegalito()
     }
 
 
@@ -42,29 +43,9 @@ export class ViewUserComponent implements OnInit {
 
 
     sendRegalito() {
-        this.regalitoRepository.createRegalito(this.dataRegalito, this.friendId!)
+        
+        this.regalitoRepository.createRegalito(this.dataRegalito, this.friendId! as number)
     }
 
-
-
-
-
-    /* addUser(){
-        if(this.userMeli != null){
-            const user: User = {
-                //reemplazar null por datos reales
-                id: this.userMeli.id,
-                nickname: this.userMeli.nickname,
-                first_name: this.userMeli.first_name,
-                last_name: this.userMeli.last_name,
-                address: this.userMeli.address,
-            }
-        
-            this.userService.postUser(user).subscribe({
-                next: (data) => {console.log(data)},
-                error: (error) => {console.log(error)}
-            })
-        }
-    } */
 
 }

@@ -671,6 +671,55 @@
       "idUserRecived": 34213,
       "status": "pending",
       "idProduct": "MLA876543210_P"
+    },
+    {
+      "id": 3,
+      "idUserEmit": 437402821,
+      "idUserRecived": "414173926",
+      "status": "PENDING",
+      "idProduct": "MLA876543210_P"
+    },
+    {
+      "id": 4,
+      "idUserEmit": 437402821,
+      "idUserRecived": "414173926",
+      "status": "PENDING",
+      "idProduct": "MLA654321098_R"
+    },
+    {
+      "id": 5,
+      "idUserEmit": 437402821,
+      "idUserRecived": "414173926",
+      "status": "PENDING",
+      "idProduct": "MLA543210987_S"
+    },
+    {
+      "id": 6,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "PENDING",
+      "idProduct": "MLA654321098_R"
+    },
+    {
+      "id": 7,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "PENDING",
+      "idProduct": "MLA543210987_S"
+    },
+    {
+      "id": 8,
+      "idUserEmit": 437402821,
+      "idUserRecived": "414173926",
+      "status": "PENDING",
+      "idProduct": "MLA543210987_S"
+    },
+    {
+      "id": 9,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "PENDING",
+      "idProduct": "MLA765432109_Q"
     }
   ]
 }

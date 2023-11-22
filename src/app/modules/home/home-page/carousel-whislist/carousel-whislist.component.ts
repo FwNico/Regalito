@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Meli } from 'src/app/core/models/Meli';
 import { User } from 'src/app/core/models/User';
 import { ResponseUser } from 'src/app/core/models/UserDAO';
@@ -24,7 +24,7 @@ register();
 })
 
 export class CarouselWhislistComponent implements OnInit {
-
+  @Input() isUserView: boolean = false
   @Output() regalito: EventEmitter<string> = new EventEmitter<string>();
   whislists: WishList[] = [];
   whislistItem?: WishList;
@@ -32,7 +32,6 @@ export class CarouselWhislistComponent implements OnInit {
   userMeli: Meli | null;
   userId: number = 0;
   swiper: Swiper | undefined;
-  
 
   constructor(private wishListRepository: WishListRepository, private wishList: WishListService,
     private userService: UserService, private tokenRepository: TokenRepository, private wishlistRepository: WishListRepository) {
@@ -50,6 +49,7 @@ export class CarouselWhislistComponent implements OnInit {
       this.whislists = prod;
       console.log(this.whislists[0].idUser);
     })
+    console.log(this.isUserView)
 
   }
 
