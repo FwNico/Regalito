@@ -7,6 +7,7 @@ import { CarouselWhislistComponent } from '../home/home-page/carousel-whislist/c
 import { HomeModule } from '../home/home.module';
 import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
 import { TokenRepository } from 'src/app/repository/token/tokenRepository';
+import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoRepository';
 
 
 
@@ -14,7 +15,7 @@ import { TokenRepository } from 'src/app/repository/token/tokenRepository';
 @NgModule({
   declarations: [
     ViewUserComponent,
-    AddUserComponent
+    AddUserComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +24,8 @@ import { TokenRepository } from 'src/app/repository/token/tokenRepository';
   ],
   providers: [
     WishListRepository,
-    TokenRepository
+    TokenRepository,
+    RegalitoRepository
   ]
 })
 export class UserModule { }

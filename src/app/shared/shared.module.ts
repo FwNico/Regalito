@@ -6,6 +6,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { Error404Component } from './components/error404/error404.component';
 import { FriendsModule } from '../modules/friends/friends.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { WishlistFriendComponent } from './components/wishlist-friend/wishlist-friend.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SideBarComponent,
     NavBarComponent,
     Error404Component,
-    FooterComponent
+    FooterComponent,
+    WishlistFriendComponent
   ],
   imports: [
     CommonModule,

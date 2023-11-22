@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { WishList } from 'src/app/core/models/WishList';
 import { UserService } from 'src/app/core/services/user/userService.service';
 import { WishListService } from 'src/app/core/services/wishList/WishlistService.service';
+import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoRepository';
+import { CarouselWhislistComponent } from '../../home/home-page/carousel-whislist/carousel-whislist.component';
 
 @Component({
     selector: 'app-view-user',
@@ -12,7 +15,12 @@ import { WishListService } from 'src/app/core/services/wishList/WishlistService.
 export class ViewUserComponent implements OnInit {
 
     friendId: number | null = null
-    constructor(private userService: UserService, private route: ActivatedRoute, private wishListService:WishListService) { }
+    wishList: WishList[]
+    dataRegalito: string = ""
+    constructor(private userService: UserService, private route: ActivatedRoute, private wishListService: WishListService, private regalitoRepository: RegalitoRepository) {
+        this.wishList = []
+    }
+
     ngOnInit(): void {
         this.route.params.subscribe(params => {
             this.friendId = params["userId"]
@@ -20,41 +28,24 @@ export class ViewUserComponent implements OnInit {
         this.getWishList(this.friendId!)
     }
 
+    obtainData(idProduct: string) {
+        this.dataRegalito = idProduct
+        console.log(idProduct)
+    }
+
 
     getWishList(idUser: number) {
         this.wishListService.getAllWishList(idUser).subscribe({
-            next:(data)=> {console.log("las wishlist: " + data[0].products[0].nombre)}
+            next: (data) => { this.wishList = data }
         })
     }
 
 
-    getAllUsers() {
-        this.userService.getAllUsers().subscribe({
-            next: (data) => {
-                //this.userList = data;
-                console.log(data)
-            },
-            error: (error) => { console.log(error) }
-        })
+    sendRegalito() {
+        this.regalitoRepository.createRegalito(this.dataRegalito, this.friendId!)
     }
 
-    getUser(id: number) {
-        this.userService.getUserById(id).subscribe({
-            next: (user) => {
-                console.log(user)
-            },
-            error: (error) => { console.log(error) }
-        })
-    }
 
-    deleteUser(id: number) {
-        this.userService.deleteUser(id).subscribe({
-            next: () => {
-                console.log("El usuario fue eliminado")
-            },
-            error: (error) => { console.log(error) }
-        })
-    }
 
 
 

@@ -529,6 +529,20 @@
       "nombre": "Zapatillas",
       "products": [
         {
+          "id": "MLA543210987_S",
+          "nombre": "Nike W React Element 55",
+          "precio": 150,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
+        }
+      ]
+    },
+    {
+      "id": 12125,
+      "idUser": 437402821,
+      "nombre": "Zapatillas",
+      "products": [
+        {
           "id": "MLA876543210_P",
           "nombre": "Air Force 1 Low",
           "precio": 100,
@@ -587,6 +601,40 @@
     {
       "id": 6,
       "userId": 202593496,
+      "status": "toConfirm",
+      "friend": {
+        "id": 437402821,
+        "nickname": "GOJEREMIAS27",
+        "first_name": "Jeremias",
+        "last_name": "Gonzalez",
+        "address": {
+          "state": "AR-C",
+          "city": "Mar del plata",
+          "address": "Test Address 123",
+          "zip_code": "2224"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "userId": 437402821,
+      "status": "pending",
+      "friend": {
+        "id": 414173926,
+        "nickname": "NICOLASDUARTE95",
+        "first_name": "Nicolas",
+        "last_name": "Duarte",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
+    },
+    {
+      "id": 8,
+      "userId": 414173926,
       "status": "toConfirm",
       "friend": {
         "id": 437402821,

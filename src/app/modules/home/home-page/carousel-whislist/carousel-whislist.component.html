@@ -20,7 +20,7 @@
     <swiper-slide *ngFor="let item of whislistItem?.products" class="swiper-slide">
       <ng-container>
         <div>
-          <app-regalito-page></app-regalito-page>
+          <button (click)="emitRegalito(item.id!)">regalito</button>
         </div>
       </ng-container> 
         <button><img src="https://img.freepik.com/vector-premium/icono-marca-cruz-roja-simbolo-eleccion-negativa-boton-aplicacion-signo_744955-339.jpg?w=360" class="deleteImg" (click)="deleteProductWishList(item)"></button>

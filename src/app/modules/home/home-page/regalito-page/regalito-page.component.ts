@@ -31,8 +31,15 @@ export class RegalitoPageComponent implements OnInit {
     })
   }
 
-  sendRegalito(idProduct: string, idUser: number) {
-    this.regalitoRepository.createRegalito("MLA432109876_DD", 2025934981)
+
+  deleteRegalito() {
+
   }
+
+  acceptRegalito() {
+    // this.regalitoService.
+  }
+
+
 
 }
