@@ -36,8 +36,9 @@ export class FriendshipService {
       );
   }
 
-  
-
-
+  public updateFriendship(friendship: Friendship): Observable<Friendship> {
+    if (!friendship.id) throw Error("Friendship id is required");
+    return this.http.patch<Friendship>(`${this.baseURL}/${friendship.id}`, friendship);
+  }
 
 }

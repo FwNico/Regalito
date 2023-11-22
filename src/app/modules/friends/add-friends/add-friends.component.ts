@@ -22,13 +22,15 @@ export class AddFriendsComponent implements OnInit{
   
   public friendship: Friendship = new Friendship(
     { 
-      id: null
+      id: null,
+      status: "pending"
     }
   );
 
   public pendingFriendship: Friendship = new Friendship(
     { 
-      id: null
+      id: null,
+      status: "toConfirm"
     }
   );
 
@@ -53,7 +55,7 @@ export class AddFriendsComponent implements OnInit{
       if(this.userId != undefined){
         this.friendship.userId = this.userId
       }
-      this.userService.getUserById(this.friendship.userId!).subscribe({
+      this.userService.getUserById(this.userId!).subscribe({
         next: (data) => { this.loguedUser = data}
       })
       
@@ -66,23 +68,10 @@ export class AddFriendsComponent implements OnInit{
   }
 
   public listFriends(){
-    this.friendshipRepository.getFriends(this.userId).then( data => this.friendships = data);
+    setTimeout(()=> {this.friendshipRepository.getFriends(this.userId).then( data => this.friendships = data)
+    .catch (error => console.log("Ocurrió un error al cargar la lista de amistades", error))
+    }, 400)
   }
-
-/*   listFriends(){
-    this.friendshipService.getAllFriendships(this.userId).subscribe({
-      next: (data) => { this.friendships = data},
-      error: (error) => {console.log("Error al traer la lista de amigos", error)}
-    })
-  } */
-
-    //this.friendshipRepository.getFriends(this.userId).then(data => this.friendships = data);
-/*     try {
-      await this.friendshipRepository.getFriends(this.userId).then(data => this.friendships = data);
-    } catch (error) {
-      console.log("Ocurrió un error al cargar la lista de amistades");
-    } */
-  
 
   filterSearch(): void{
     //primero filtramos la busqueda para que no muestre al usuario logueado ni a usuarios que no coincidan con el input
@@ -97,9 +86,7 @@ export class AddFriendsComponent implements OnInit{
           this.searchResults.splice(i, 1);
         }
       }
-    }
-    );
-    this.listFriends(); 
+    });
   }
 
   getAllUsers(){
@@ -116,14 +103,19 @@ export class AddFriendsComponent implements OnInit{
       next: (data) =>{
         this.friendship.friend = data;
         this.onNewFriend.emit(this.friendship);
-/*         this.pendingFriendship.userId = id;
-        this.pendingFriendship.friend = this.loguedUser;
-        this.onNewPendingFriend.emit(this.pendingFriendship); */
         this.searchInput ="";
+        setTimeout(()=> {this.sendFriendRequest(id)}, 300);
       },
       error: (error) => {console.log("Error al añadir un amigo", error)}
     })
     this.listFriends();
+  }
+
+  public sendFriendRequest(id:number){
+    this.pendingFriendship.userId = id;
+    this.pendingFriendship.status = "toConfirm";
+    this.pendingFriendship.friend = this.loguedUser;
+    this.onNewPendingFriend.emit(this.pendingFriendship);
   }
 
   

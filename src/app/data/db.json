@@ -505,21 +505,6 @@
     }
   ],
   "friendships": [
-    {
-      "id": 1,
-      "userId": 414173926,
-      "friend": {
-        "id": 192380859,
-        "nickname": "NAHUELMIRABELLA",
-        "first_name": "nahuel",
-        "last_name": "mirabella",
-        "address": {
-          "address": null,
-          "city": null,
-          "state": "AR-B",
-          "zip_code": null
-        }
-      }
-    }
+    
   ]
 }
