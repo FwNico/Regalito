@@ -490,7 +490,7 @@
   "wishlist": [
     {
       "id": 12124,
-      "idUser": 192380859,
+      "idUser": 414173926,
       "nombre": "Smartphone",
       "products": [
         {
@@ -525,7 +525,7 @@
     },
     {
       "id": 12125,
-      "idUser": 192380859,
+      "idUser": 414173926,
       "nombre": "Zapatillas",
       "products": [
         {
@@ -600,29 +600,56 @@
           "zip_code": "2224"
         }
       }
+    },
+    {
+      "id": 7,
+      "userId": 414173926,
+      "status": "pending",
+      "friend": {
+        "id": 192380859,
+        "nickname": "NAHUELMIRABELLA",
+        "first_name": "nahuel",
+        "last_name": "mirabella",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
+    },
+    {
+      "id": 8,
+      "userId": 192380859,
+      "status": "toConfirm",
+      "friend": {
+        "id": 414173926,
+        "nickname": "NICOLASDUARTE95",
+        "first_name": "Nicolas",
+        "last_name": "Duarte",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
     }
   ],
-  "regalito": [
+  "regalitos": [
     {
-      "id": 0,
-      "idUserEmit": 2312,
-      "idUserRecived": 34213,
+      "id": 1,
+      "idUserEmit": 414173926,
+      "idUserRecived": 92380859,
       "status": "pending",
       "idProduct": "MLA876543210_P"
     },
     {
       "id": 1,
-      "idUserEmit": 2312,
-      "idUserRecived": 37123,
+      "idUserEmit": 92380859,
+      "idUserRecived": 414173926,
       "status": "pending",
-      "idProduct": "MLA876543210_P"
-    },
-    {
-      "id": 2,
-      "idUserEmit": 2312,
-      "idUserRecived": 34213,
-      "status": "pending",
-      "idProduct": "MLA876543210_P"
+      "idProduct": "MLA432109876_T"
     }
   ]
 }

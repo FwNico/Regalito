@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Meli } from '../../../../core/models/Meli';
 import { TokenRepository } from '../../../../repository/token/tokenRepository';
 import { RegalitoRepository } from '../../../../repository/regalito/RegalitoRepository';
-import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService.service';
+import { RegalitoService } from 'src/app/core/services/regalitos/regalito.service';
 import { Regalito } from 'src/app/core/models/Regalito';
 
 @Component({
@@ -21,14 +21,7 @@ export class RegalitoPageComponent implements OnInit {
     this.listRegalitosSend = []
   }
   ngOnInit(): void {
-    this.regalitoService.regalitoRecived(this.meli?.user_id!).subscribe({
-      next: (data) => { this.listRegalitosRecived = data },
-      error: (resp) => { console.log("error al traer datos de regalo" + resp) }
-    })
-    this.regalitoService.regalitosSend(this.meli?.user_id!).subscribe({
-      next: (data) => { this.listRegalitosSend = data },
-      error: (resp) => { console.log("error al obtener regalos enviados", resp) }
-    })
+
   }
 
   sendRegalito(idProduct: string, idUser: number) {

@@ -1,0 +1,31 @@
+<div class="sent-list-container">
+    <label>Regalitos Enviados:</label>
+    <div *ngIf="sentList.length==0">
+      <span>Aún no has enviado regalitos</span>
+    </div>
+    
+    <table>
+        <tbody>
+          <tr *ngFor="let item of sentList">
+            <td class= "regalo" >{{item.idProduct}}</td>
+            <td class= "status" >Estado: {{item.status}} </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="received-list-container">
+    <label>Regalitos Recibidos:</label>
+    <div *ngIf="receivedList.length==0">
+      <span>Aún no has recibidos regalitos</span>
+    </div>
+    
+    <table>
+        <tbody>
+          <tr *ngFor="let item of receivedList">
+            <td class= "regalo" >{{item.idProduct}}</td>
+            <td class= "status" >Estado: {{item.status}} </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>

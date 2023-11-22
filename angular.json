@@ -60,8 +60,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "sslKey": "C:\\Users\\Jeremias\\Desktop\\facu\\laboratorio\\Regalito\\key.pem",
-            "sslCert": "C:\\Users\\Jeremias\\Desktop\\facu\\laboratorio\\Regalito\\cert.pem"
+            "sslKey": "C:\\Users\\duart\\OneDrive\\Desktop\\Labo4\\Regalito\\key.pem",
+            "sslCert": "C:\\Users\\duart\\OneDrive\\Desktop\\Labo4\\Regalito\\cert.pem"
           },
           "configurations": {
             "production": {

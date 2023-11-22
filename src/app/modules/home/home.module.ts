@@ -14,7 +14,7 @@ import { WishListRepository } from 'src/app/repository/wishList/wishListReposito
 import { CarouselWhislistComponent } from './home-page/carousel-whislist/carousel-whislist.component';
 import { RegalitoPageComponent } from './home-page/regalito-page/regalito-page.component';
 import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoRepository';
-import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService.service';
+import { RegalitoService } from 'src/app/core/services/regalitos/regalito.service';
 
 
 
