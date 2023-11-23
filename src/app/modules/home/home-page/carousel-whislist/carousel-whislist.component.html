@@ -46,14 +46,9 @@
 <ng-container *ngIf="view === false">
   <swiper-container class="swiper-container">
     <swiper-slide *ngFor="let item of whislistItem?.products" class="swiper-slide">
-      <ng-container>
-        <div>
-          <button (click)="emitRegalito(item)">regalito</button>
-        </div>
-      </ng-container>
       <button *ngIf="isUserView === false">
         <img
-          src="https://img.freepik.com/vector-premium/icono-marca-cruz-roja-simbolo-eleccion-negativa-boton-aplicacion-signo_744955-339.jpg?w=360"
+          src="https://cdn2.iconfinder.com/data/icons/thin-line-color-1/21/33-512.png"
           class="deleteImg" (click)="deleteProductWishList(item)">
       </button>
       <img [src]="item.imagen_url" class="imagen">
@@ -62,11 +57,20 @@
       </div>
       <div class="precio"><b>${{item.precio}}</b></div>
       <div class="descripcion">{{item.descripcion}}</div>
+      <ng-container *ngIf="isUserView ===true">
+        <div>
+          <button class="regalar-button" (click)="emitRegalito(item)">
+              <img class="img-regalar" src="\assets\regalito2.png">Regalar</button>
+        </div>
+      </ng-container>
     </swiper-slide>
 
   </swiper-container>
   <div>
     <button class="boton-back" (click)="change()">Back</button>
+    <span *ngIf="regalar===true" class="enviado"> Regalito enviado!</span>
+    
   </div>
+  
 
 </ng-container>

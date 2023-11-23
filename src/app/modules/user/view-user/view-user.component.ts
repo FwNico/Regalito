@@ -23,11 +23,14 @@ export class ViewUserComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.obtainUserId();
+    }
+
+    obtainUserId(){
         this.route.params.subscribe(params => {
             this.friendId = params["userId"]
             this.cdr.detectChanges()
         })
-        this.getWishList(this.friendId!)
     }
 
     obtainData(product: Product) {
@@ -38,7 +41,8 @@ export class ViewUserComponent implements OnInit {
 
     getWishList(idUser: number) {
         this.wishListService.getAllWishList(idUser).subscribe({
-            next: (data) => { this.wishList = data }
+            next: (data) => { this.wishList = data },
+            error: (error)=> {console.log("No se pudo traer la wishlist", error)}
         })
     }
 

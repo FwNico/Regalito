@@ -28,9 +28,11 @@ export class SideBarComponent implements OnInit{
   }
 
   public listFriends(){
-    setTimeout(()=> {this.friendshipRepository.getFriends(this.userId).then ( data => this.friends = data)
+/*     setTimeout(()=> {this.friendshipRepository.getFriends(this.userId).then ( data => this.friends = data)
     .catch (error => console.log("Ocurrió un error al cargar la lista de amistades", error))
-    }, 400)
+    }, 200) */
+    this.friendshipRepository.getFriends(this.userId).then ( data => this.friends = data)
+    .catch (error => console.log("Ocurrió un error al cargar la lista de amistades", error))
     
   }
 

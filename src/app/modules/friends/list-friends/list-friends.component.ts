@@ -34,9 +34,6 @@ export class ListFriendsComponent implements OnInit {
       if (element.friend.id === userId && element.status ==="active") {
         this.router.navigate(['/user', userId])
       }
-      else {
-        console.log("no son amigos")
-      }
     });
   }
 

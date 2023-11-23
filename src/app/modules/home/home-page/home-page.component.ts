@@ -45,9 +45,9 @@ export class HomePageComponent implements OnInit {
         } else {
           console.log("el token se encuentra guardado")
         }
-      } else {
+      }/*  else {
         console.log("fallo la recuperada de codigo")
-      }
+      } */
     })
   }
 

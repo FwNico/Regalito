@@ -60,7 +60,7 @@
 
 .swiper-slide{
     width: 180px !important;
-    height: 250px;
+    height: auto;
     margin: 45px 20px;
     background-color: white;
     border: 1.5px solid #003D29;
@@ -69,11 +69,13 @@
     text-align: center;
 }
 .nombre{
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 .precio{
   margin: 10px 0px;
 }
+
+
 
 .boton-back {
   padding: 10px 15px; 
@@ -116,9 +118,10 @@
 .deleteImg{
   width: 30px;
   height: 30px;
-  float: right;
+  margin-left: 130px;
+  float: center;
   border-radius: 50px;
-  border: 2px solid red;
+  
 }
 .deleteWhislist{
   width: 30px!important;
@@ -196,4 +199,30 @@
 .error-message {
   color: red;
   font-weight: bold;
+}
+
+.regalar-button{
+  margin-top: 5px;
+  background-color: #01875a;
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.img-regalar{
+  margin-right: 5px;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.enviado{
+  color:#01875a;
+  font-size: large;
+  margin-left: 300px
 }

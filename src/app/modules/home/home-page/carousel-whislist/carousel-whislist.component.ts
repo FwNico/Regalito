@@ -24,7 +24,7 @@ register();
   styleUrls: ['./carousel-whislist.component.css']
 })
 
-export class CarouselWhislistComponent implements OnInit {
+export class CarouselWhislistComponent implements OnInit, OnChanges{
   @Input() isUserView: boolean = false
   @Input() idFriend: number = 0
   @Output() regalito: EventEmitter<Product> = new EventEmitter<Product>();
@@ -35,6 +35,7 @@ export class CarouselWhislistComponent implements OnInit {
   userMeli: Meli | null;
   userId: number = 0;
   swiper: Swiper | undefined;
+  regalar: boolean =false;
   form: boolean = false;
   nameForm = new FormControl('', [Validators.maxLength(20), Validators.required, Validators.minLength(2)]);
   idWishlist: number = -1;
@@ -52,7 +53,12 @@ export class CarouselWhislistComponent implements OnInit {
     const swiperInstance = this.initializeSwiper();
     this.swiper = swiperInstance;
     this.getWishList();
+  }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['idFriend']) {
+      this.getWishList()
+    }
   }
 
   getWishList() {
@@ -173,7 +179,10 @@ export class CarouselWhislistComponent implements OnInit {
 
   emitRegalito(product: Product) {
     console.log("click para enviar este dato " + product)
-    this.regalito.emit(product)
+    this.regalito.emit(product);
+
+    this.regalar = true;
+    setTimeout(()=> {this.regalar = false}, 1000);
   }
 }
 
