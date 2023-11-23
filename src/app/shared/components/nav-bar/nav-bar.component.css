@@ -26,7 +26,9 @@ a {
 .nav-links {
   list-style: none;
   display: flex;
-  margin-left: auto; /* Mueve los elementos al final del contenedor */
+  margin-left: auto;
+  align-items: center;
+  /* Mueve los elementos al final del contenedor */
 }
 
 .nav-links li {
@@ -44,5 +46,16 @@ a {
 }
 
 .home {
-  margin-left: 20px; /* Añade margen izquierdo para la separación */
+  margin-left: 20px;
+  /* Añade margen izquierdo para la separación */
+}
+
+.imgHouse {
+  width: 40px;
+  height: 40px;
+}
+
+.imgRegalito {
+  width: 35px;
+  height: 35px;
 }

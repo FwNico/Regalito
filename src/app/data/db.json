@@ -525,7 +525,7 @@
     },
     {
       "id": 12125,
-      "idUser": 192380859,
+      "idUser": 437402821,
       "nombre": "Zapatillas",
       "products": [
         {
@@ -587,7 +587,7 @@
     {
       "id": 6,
       "userId": 202593496,
-      "status": "toConfirm",
+      "status": "active",
       "friend": {
         "id": 437402821,
         "nickname": "GOJEREMIAS27",
@@ -604,7 +604,7 @@
     {
       "id": 7,
       "userId": 437402821,
-      "status": "pending",
+      "status": "active",
       "friend": {
         "id": 414173926,
         "nickname": "NICOLASDUARTE95",
@@ -760,6 +760,19 @@
         "precio": 120,
         "descripcion": "Zapatillas Nike",
         "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+      }
+    },
+    {
+      "id": 9,
+      "idUserEmit": 437402821,
+      "idUserRecived": 192380859,
+      "status": "pending",
+      "product": {
+        "id": "MLA432109876_DD",
+        "nombre": "Galaxy A24",
+        "precio": 100,
+        "descripcion": "Celular Samsung 128/6GB Light Green",
+        "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
       }
     }
   ]

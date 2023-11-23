@@ -1,11 +1,18 @@
 <nav class="navbar">
-    <div class="logo">
-        <a (click)="goToRegalito()">Regalito</a>
-    </div>
-    <div class="home">
-      <a>HOME</a>
-    </div>
-    <ul class="nav-links">
-      <li><a>{{user}}</a></li>
-    </ul>
-  </nav>
+  <div class="logo">
+    <a>Regalito</a>
+
+  </div>
+  <div class="home">
+    <button (click)="goToHome()" class="btn">
+      <img class="imgHouse"
+        src="https://images.vexels.com/media/users/3/140565/isolated/preview/f2641a154e758ab3fd19f7643961b00f-icono-de-casa-redonda.png">
+    </button>
+  </div>
+  <ul class="nav-links">
+    <li> <button class="btn" (click)="goToRegalito()">
+        <img class="imgRegalito" src="\assets\regalito2.png">
+      </button></li>
+    <li><a>{{user}}</a></li>
+  </ul>
+</nav>

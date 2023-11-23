@@ -26,11 +26,15 @@ export class NavBarComponent implements OnInit {
   getUser() {
     this.userService.getUserById(this.meli?.user_id!).subscribe({
       next: (data) => { this.user = data.nickname },
-      error: (error) => { console.log("error al traer usuario")}
+      error: (error) => { console.log("error al traer usuario") }
     })
   }
 
   public goToRegalito() {
     this.router.navigate(["/regalito"]);
+  }
+
+  public goToHome() {
+    this.router.navigate(['/home'])
   }
 }
