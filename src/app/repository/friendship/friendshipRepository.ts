@@ -9,13 +9,13 @@ import { FriendshipService } from "src/app/core/services/friendship/friendship.s
 
 export class FriendshipRepository{
 
-    constructor(private friendshipService: FriendshipService){
+  constructor(private friendshipService: FriendshipService){
 
-    }
+  }
 
-    public getFriends(): Promise<Friendship[]> {
+  public getFriends(userId: number | undefined): Promise<Friendship[]> {
         return new Promise<Friendship[]>((resolve, reject) => {
-          this.friendshipService.getAllFriendships().subscribe({
+          this.friendshipService.getAllFriendships(userId).subscribe({
             next: data => resolve(data),
             error: error => reject(error)
           })
@@ -40,5 +40,7 @@ export class FriendshipRepository{
           })
         });
     }
+
+  
 
 }

@@ -10,6 +10,7 @@ export class ListFriendsComponent implements OnInit {
 
   @Input() friends: Friendship[] = [];
   @Output() friendToDelete: EventEmitter<number> = new EventEmitter();
+  @Output() friendToDelete2: EventEmitter<number> = new EventEmitter();
 
   constructor(){ 
 
@@ -21,6 +22,7 @@ export class ListFriendsComponent implements OnInit {
   
   public deleteFriend(id: number) {
     this.friendToDelete.emit(id);
+    //this.friendToDelete2.emit((id+1!));
   }
 
 }
