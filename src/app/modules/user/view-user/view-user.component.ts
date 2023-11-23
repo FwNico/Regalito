@@ -1,60 +1,51 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { WishList } from 'src/app/core/models/WishList';
 import { UserService } from 'src/app/core/services/user/userService.service';
+import { WishListService } from 'src/app/core/services/wishList/WishlistService.service';
+import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoRepository';
+import { CarouselWhislistComponent } from '../../home/home-page/carousel-whislist/carousel-whislist.component';
+import { Product } from 'src/app/core/models/Product';
 
 @Component({
-  selector: 'app-view-user',
-  templateUrl: './view-user.component.html',
-  styleUrls: ['./view-user.component.css']
+    selector: 'app-view-user',
+    templateUrl: './view-user.component.html',
+    styleUrls: ['./view-user.component.css']
 })
 
-export class ViewUserComponent {
-  constructor(private userService: UserService) {}
+export class ViewUserComponent implements OnInit {
+    friendId: number | null = null
+    wishList: WishList[]
+    dataRegalito: Product = new Product("","","",0,"","")
+    isUserView: boolean = true
+    constructor(private cdr: ChangeDetectorRef,private route: ActivatedRoute, private wishListService: WishListService, private regalitoRepository: RegalitoRepository) {
+        this.wishList = []
+    }
+
+    ngOnInit(): void {
+        this.route.params.subscribe(params => {
+            this.friendId = params["userId"]
+            this.cdr.detectChanges()
+        })
+        this.getWishList(this.friendId!)
+    }
+
+    obtainData(product: Product) {
+        this.dataRegalito = product
+        this.sendRegalito()
+    }
 
 
-  getAllUsers(){
-    this.userService.getAllUsers().subscribe({
-            next: (data) =>{
-                //this.userList = data;
-                console.log(data)
-            },
-            error: (error) => {console.log(error)} 
-    })
-}
-
-getUser(id: number){
-    this.userService.getUserById(id).subscribe({
-        next: (user)=>{
-            console.log(user)
-        },
-        error: (error)=> {console.log(error)}
-    })
-}
-
-deleteUser(id: number){
-    this.userService.deleteUser(id).subscribe({
-        next: () =>{
-            console.log("El usuario fue eliminado")
-        },
-        error: (error) =>{console.log(error)}
-    })
-}
-
-/* addUser(){
-    if(this.userMeli != null){
-        const user: User = {
-            //reemplazar null por datos reales
-            id: this.userMeli.id,
-            nickname: this.userMeli.nickname,
-            first_name: this.userMeli.first_name,
-            last_name: this.userMeli.last_name,
-            address: this.userMeli.address,
-        }
-    
-        this.userService.postUser(user).subscribe({
-            next: (data) => {console.log(data)},
-            error: (error) => {console.log(error)}
+    getWishList(idUser: number) {
+        this.wishListService.getAllWishList(idUser).subscribe({
+            next: (data) => { this.wishList = data }
         })
     }
-} */
+
+
+    sendRegalito() {
+        this.regalitoRepository.createRegalito(this.dataRegalito, this.friendId! as number)
+    }
+
 
 }
