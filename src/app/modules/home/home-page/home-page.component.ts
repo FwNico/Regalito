@@ -13,7 +13,6 @@ import { ProductService } from 'src/app/core/services/products/products.service'
 import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
 import { WishList } from 'src/app/core/models/WishList';
 import { Product } from 'src/app/core/models/Product';
-import { RegalitoPageComponent } from './regalito-page/regalito-page.component';
 // register Swiper custom elements
 register();
 

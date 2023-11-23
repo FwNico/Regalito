@@ -9,6 +9,7 @@
   }
   .gridLayaout{
     margin-top: 75px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto;

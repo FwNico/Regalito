@@ -1,18 +1,18 @@
 
 
 <ng-container *ngIf="form === false">
-  <ng-container>
   <button class="masContainer" (click)="form = true" *ngIf="isUserView === false">
-      Add new wishlist  
+      Nueva Wishlist  
       <img src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png" class="masImg">
     </button>
 </ng-container>
 
-<ng-container *ngIf="form">
+<ng-container *ngIf="form === true">
   <form action="" class="form-inline">
     <label class="form-label">Nombre de Wishlist</label>
     <input type="text" [formControl]="nameForm" class="form-input">
     <button [disabled]="nameForm.invalid" class="form-button" (click)="newWishlist()">Crear Wishlist</button>
+    <button class="back-button" (click)="form = false">Atrás</button>
     <span class="error-box" [hidden]="nameForm.valid">
       <span *ngIf="nameForm.errors?.['required']" class="error-message">
         No puede estar el campo vacío.
@@ -27,7 +27,7 @@
   </form>
 </ng-container>
 
-</ng-container>
+
 <ng-container *ngIf="view === true">
   <div class="wishlist-container">
     
@@ -38,8 +38,7 @@
         <h3>{{prod.nombre}}</h3>
         </span>
       </div>
-      <button *ngIf="isUserView === false" class="delete-button" (click)="deleteWishList(prod.id!)">Borrar
-        lista</button>
+      <button *ngIf="isUserView === false" class="delete-button" (click)="deleteWishList(prod.id!)">Borrar Wishlist</button>
     </ng-container>
   
   </div>

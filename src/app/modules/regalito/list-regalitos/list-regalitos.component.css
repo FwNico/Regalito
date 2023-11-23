@@ -34,7 +34,7 @@ td {
   font-weight: bold;
   color: #0066cc;
   text-align: left;
-  width: 800px;
+  width: 600px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -92,8 +92,8 @@ button {
 }
 
 .imagen{
-  max-width: 10px;
-  max-height: 10px; 
+  max-width: 50px;
+  max-height: 50px; 
   margin: 0;
   white-space: nowrap;
   overflow: hidden; 

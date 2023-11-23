@@ -97,6 +97,8 @@ export class CarouselWhislistComponent implements OnInit {
         }
       });
       this.getWishList()
+      this.form = false;
+      this.nameForm.reset();
     }
   }
 
