@@ -1,46 +1,48 @@
+a {
+  cursor: pointer;
+}
 
-  a{
-    cursor: pointer;
-  }
-  
-  .navbar {
-    background-color: #003D29;
-    color: #fff;
-    display: flex;
-    max-width: auto;
-    max-height: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    
-  }
-  
-  .logo a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-right: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .nav-links a:hover {
-    border-bottom: 2px solid #fff;
-  }
+.navbar {
+  background-color: #003D29;
+  color: #fff;
+  display: flex;
+  max-width: auto;
+  max-height: auto;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: auto; /* Mueve los elementos al final del contenedor */
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.home {
+  margin-left: 20px; /* Añade margen izquierdo para la separación */
+}
