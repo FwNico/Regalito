@@ -1,18 +1,17 @@
-<div>
-    <app-nav-bar></app-nav-bar>
-</div>
-<div class="gridLayaout">
 
+
+<div class="gridLayaout"> 
+    <div class="box b1"> 
+        <app-nav-bar></app-nav-bar>
+    </div>
     <div class="box b2">
         <app-side-bar></app-side-bar>
     </div>
-
-    <div *ngIf="friendId!=null" class="box b4">
+    <div class="box b3" *ngIf="friendId!=null">
         <app-carousel-whislist (regalito)="obtainData($event)" [isUserView]="isUserView"
             [idFriend]="friendId"></app-carousel-whislist>
-
     </div>
-    <div>
+    <div class="box b4">
         <app-footer></app-footer>
     </div>
-    </div>
+</div>

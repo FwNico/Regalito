@@ -638,7 +638,7 @@
     {
       "id": 9,
       "userId": 437402821,
-      "status": "pending",
+      "status": "active",
       "friend": {
         "id": 192380859,
         "nickname": "NAHUELMIRABELLA",
@@ -655,7 +655,7 @@
     {
       "id": 10,
       "userId": 192380859,
-      "status": "toConfirm",
+      "status": "active",
       "friend": {
         "id": 437402821,
         "nickname": "GOJEREMIAS27",
