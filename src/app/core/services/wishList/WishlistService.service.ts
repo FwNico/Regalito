@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { WishList } from '../../models/WishList';
 import { Product } from "../../models/Product";
 
@@ -11,8 +11,12 @@ export class WishListService {
 
 
     private baseURL = "http://localhost:3000/wishlist"
+    
+    public wishListsSubject: BehaviorSubject<WishList[]> = new BehaviorSubject<WishList[]>([]);
+    public wishLists$: Observable<WishList[]> = this.wishListsSubject.asObservable();
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) {     
+    }
 
     //GUARDA UNA NUEVA WISHLIST
     public saveWishList(wishtlist: WishList): Observable<WishList> {
@@ -27,20 +31,23 @@ export class WishListService {
     }
 
     //METODO PARA OBTENER UNA WISHLIST DE UN USUARIO PASANDOLE ID DE LA LISTA
+    
     public getWishList(id: number): Promise<WishList | undefined> {
         const url = `${this.baseURL}/${id}`
         return this.http.get<WishList>(url).toPromise()
     }
-
+    
     //METODO PARA OBTENER TODAS LAS WISHLSIT DE UN USUARIO
     public getAllWishList(idUser: number): Observable<WishList[]> {
         const url = `${this.baseURL}?idUser=${idUser}`;
         return this.http.get<WishList[]>(url)
     }
-
+    
+    
     //METODO PARA BORRAR UNA WISHLIST
     deleteWishList(id: number): Observable<any>{
         const url = `${this.baseURL}/${id}`;
         return this.http.delete<any>(url)
     }
+    
 }

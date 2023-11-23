@@ -427,83 +427,85 @@
       "categoria": "Periferico"
     }
   ],
-  "wishlist": [{
-    "id": 12124,
-    "idUser": 192380859,
-    "nombre": "Smartphone",
-    "products": [
-      {
-        "id": "MLA543210987_CC",
-        "nombre": "Galaxy S23 Ultra",
-        "precio": 150,
-        "descripcion": "Samsung 12gb 256gb Color Green",
-        "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp"
-      },
-      {
-        "id": "MLA432109876_DD",
-        "nombre": "Galaxy A24",
-        "precio": 100,
-        "descripcion": "Celular Samsung 128/6GB Light Green",
-        "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
-      },
-      {
-        "id": "MLA321098765_EE",
-        "nombre": "Moto G32",
-        "precio": 180,
-        "descripcion": "Celular Motorola 128GB Rosa Pastel",
-        "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
-      },
-      {
-        "id": "MLA210987654_FF",
-        "nombre": "Moto G42",
-        "precio": 120,
-        "descripcion": "Celular Motorola G42 6.4″ 64Gb 4Gb Snapdragon 680 Verde",
-        "imagen_url": "https://resources.sears.com.mx/medios-plazavip/mkt/6391016f3462c_p103_motog42_128gb_verde_2_1200wx1200h_cjpeg.jpg?scale=500&qlty=75"
-      }
-    ]
-  },
-  {
-    "id": 12125,
-    "idUser": 192380859,
-    "nombre": "Zapatillas",
-    "products": [
-      {
-        "id": "MLA876543210_P",
-        "nombre": "Air Force 1 Low",
-        "precio": 100,
-        "descripcion": "Zapatillas Nike",
-        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
-      },
-      {
-        "id": "MLA765432109_Q",
-        "nombre": "Dunk Low SE",
-        "precio": 120,
-        "descripcion": "Zapatillas Nike",
-        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
-      },
-      {
-        "id": "MLA654321098_R",
-        "nombre": "React Infinity Run Fk 3",
-        "precio": 200,
-        "descripcion": "Zapatillas Nike",
-        "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
-      },
-      {
-        "id": "MLA543210987_S",
-        "nombre": "Nike W React Element 55",
-        "precio": 150,
-        "descripcion": "Zapatillas Nike",
-        "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
-      },
-      {
-        "id": "MLA432109876_T",
-        "nombre": "Suede Classic XXI",
-        "precio": 100,
-        "descripcion": "Zapatillas Puma",
-        "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
-      }
-    ]
-  }],
+  "wishlist": [
+    {
+      "id": 12124,
+      "idUser": 192380859,
+      "nombre": "Smartphone",
+      "products": [
+        {
+          "id": "MLA543210987_CC",
+          "nombre": "Galaxy S23 Ultra",
+          "precio": 150,
+          "descripcion": "Samsung 12gb 256gb Color Green",
+          "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp"
+        },
+        {
+          "id": "MLA432109876_DD",
+          "nombre": "Galaxy A24",
+          "precio": 100,
+          "descripcion": "Celular Samsung 128/6GB Light Green",
+          "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
+        },
+        {
+          "id": "MLA321098765_EE",
+          "nombre": "Moto G32",
+          "precio": 180,
+          "descripcion": "Celular Motorola 128GB Rosa Pastel",
+          "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
+        },
+        {
+          "id": "MLA210987654_FF",
+          "nombre": "Moto G42",
+          "precio": 120,
+          "descripcion": "Celular Motorola G42 6.4″ 64Gb 4Gb Snapdragon 680 Verde",
+          "imagen_url": "https://resources.sears.com.mx/medios-plazavip/mkt/6391016f3462c_p103_motog42_128gb_verde_2_1200wx1200h_cjpeg.jpg?scale=500&qlty=75"
+        }
+      ]
+    },
+    {
+      "id": 12125,
+      "idUser": 192380859,
+      "nombre": "Zapatillas",
+      "products": [
+        {
+          "id": "MLA876543210_P",
+          "nombre": "Air Force 1 Low",
+          "precio": 100,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
+        },
+        {
+          "id": "MLA765432109_Q",
+          "nombre": "Dunk Low SE",
+          "precio": 120,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+        },
+        {
+          "id": "MLA654321098_R",
+          "nombre": "React Infinity Run Fk 3",
+          "precio": 200,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
+        },
+        {
+          "id": "MLA543210987_S",
+          "nombre": "Nike W React Element 55",
+          "precio": 150,
+          "descripcion": "Zapatillas Nike",
+          "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
+        },
+        {
+          "id": "MLA432109876_T",
+          "nombre": "Suede Classic XXI",
+          "precio": 100,
+          "descripcion": "Zapatillas Puma",
+          "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
+        }
+      ]
+    }
+  ],
   "friendships": [
     {
       "id": 1,

@@ -6,12 +6,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: stretch;
+  width: 1200px!important;
 }
 
 .wishlist-card {
   flex: 0 0 calc(30% - 20px); /* Ajusta el ancho de cada tarjeta según tus necesidades */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background-color: #fff;
   border: 1px solid #003D29;
@@ -21,16 +22,18 @@
   cursor: pointer;
   text-align: center;
   margin: 10px 15px;
-
 }
-
+.card{
+  margin-left: auto;
+  margin-right: auto;
+}
 .wishlist-card:hover {
   transform: scale(1.05);
 }
 
 .wishlist-card img {
-  width: 100%;
-  max-width: 200px;
+  width: 200px;
+  height: 150px;
   border-radius: 8px;
 }
 
@@ -108,8 +111,7 @@
 .masImg {
   width: 20px;
   height: 20px;
-  margin-left: auto !important; 
-  margin-right: auto!important;
+  margin-left: 8px;
 }
 .deleteImg{
   width: 30px;
@@ -139,87 +141,51 @@
   background-color: #d63737; /* Cambia el color al pasar el ratón */
 }
 
-/* Estilos CSS */
-/*
-.d-flex {
-  display: flex;
-  flex-wrap: wrap;
+.error-box {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-
-
-.card {
-  width: 15rem; 
-  margin: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s ease; 
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-}
-
-
-.card-img-top {
-  width: 150px;
-  height: 120px;
-  margin-left: 50px;
-  border: 4px solid ;
-}
-
-.card-body {
-  padding: 10px;
-  text-align: center;
-}
-
-
-.card-title {
-  font-size: 1.25rem;
+.error-message {
+  color: red;
   font-weight: bold;
+  /* Agrega otros estilos según tus necesidades */
 }
 
-.card-text {
-  color: #555;
-}
-
-.boton-back {
-  padding: 10px 15px; 
-  font-size: 16px; 
-  background-color: #007bff; 
-  color: #fff; 
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-}
-
-.boton-back:hover {
-  background-color: #0056b3; 
-}
-
-.masContainer {
+.form-inline {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 15px;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
+  margin-left: 30px;
+  margin-bottom: 10px;
+  width: 700px;
 }
 
-.masContainer:hover {
+.form-label {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.form-input {
+  margin-right: 10px;
+  border: 1px solid black;
+}
+
+.form-button {
+  margin-right: 10px;
   background-color: #003D29;
   color: white;
+  padding: 5px;
+  border-radius: 6px;
 }
 
-.masImg {
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
+.error-box {
+  display: inline-block;
+  margin-left: 10px;
 }
-*/
 
+.error-message {
+  color: red;
+  font-weight: bold;
+}

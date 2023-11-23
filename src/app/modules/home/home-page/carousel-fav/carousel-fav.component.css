@@ -117,3 +117,19 @@ input[type="text"]::placeholder {
   border-radius: 5px;
   margin-top: 10px;
 }
+
+.wishlist-dropdown {
+  width: 130px; /* Ajusta el ancho según tus preferencias */
+  margin-right: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Estilo para las opciones del dropdown */
+.wishlist-dropdown option {
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}

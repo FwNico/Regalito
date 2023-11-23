@@ -13,6 +13,7 @@ import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper';
 import { Product } from 'src/app/core/models/Product';
 import { ParseFlags } from '@angular/compiler';
+import { FormControl,ReactiveFormsModule, Validators } from '@angular/forms';
 // register Swiper custom elements
 register();
 
@@ -27,13 +28,18 @@ export class CarouselWhislistComponent implements OnInit {
   whislists: WishList[] = [];
   whislistItem?: WishList;
   view: boolean = true;
+  newProductsForm: Product[] = []; 
   userMeli: Meli | null;
   userId: number = 0;
   swiper: Swiper | undefined;
+  form : boolean = false;
+  nameForm = new FormControl('', [Validators.maxLength(20), Validators.required, Validators.minLength(2)]);
+  idWishlist: number = -1;
 
 
   constructor(private wishListRepository: WishListRepository, private wishList: WishListService, 
-    private userService: UserService, private tokenRepository: TokenRepository, private wishlistRepository: WishListRepository) {
+    private userService: UserService, private tokenRepository: TokenRepository, 
+    private wishlistRepository: WishListRepository) {
     this.userMeli = tokenRepository.getAccessToken();
     if (this.userMeli !== null) {
       this.userId = this.userMeli.user_id
@@ -44,74 +50,109 @@ export class CarouselWhislistComponent implements OnInit {
     console.log(this.userMeli?.user_id);
     const swiperInstance = this.initializeSwiper();
     this.swiper = swiperInstance;
-    this.wishList.getAllWishList(this.userId).subscribe((prod) => {
-      this.whislists = prod;
-      console.log(this.whislists[0].idUser);
-    })
+    this.getWishList();
 
   }
+  
+  getWishList(){
+    this.wishList.getAllWishList(this.userId).subscribe({
+      next:(prod)=>{
+      this.whislists = prod;
+      },
+      error: (error)=>{
+        console.log(error);
+      } 
+  })
+  }
 
-  seeWishList(wishList: WishList) {
+  formSubmit(): WishList{
+    let list: WishList = new WishList("invalida", this.newProductsForm, 0);
+    if(this.nameForm.valid === true){
+      list = new WishList(this.nameForm.value!, this.newProductsForm, this.userId);
+    }
+    return list;
+  }
+
+  newWishlist(){
+    if(this.formSubmit!==null){
+    this.wishList.saveWishList(this.formSubmit()).subscribe({
+      next: (wishlist)=>{
+        this.whislists.push(wishlist)
+      },
+      error: (error) => {
+        console.log(error);
+        
+      }
+    });
+    this.getWishList()
+  }
+  }
+
+  getItemsWishlist(wishList: WishList){
+    this.getWishList();
     this.whislistItem = wishList;
+    this.idWishlist = wishList.id!;
+  }
+  seeWishList() {
     this.view = false;
   }
 
   change() {
     this.view = true;
   }
-
-  deleteWishList(id: number) {
-    this.wishListRepository.deleteWishList(id);
-    this.uptadateWishlist();
-    this.initializeSwiper();
+  
+  deleteWishList(id : number) {
+    let whislist: WishList[] = this.whislists;
+    this.whislists = whislist.filter(data=> data.id !== id);
+    this.wishListRepository.deleteWishList(id!);
   }
-
+  
+  
   deleteProductWishList(item: Product) {
-    const idWishlist = this.getIdWishlist(item);
-    if (idWishlist !== null) {
-      this.wishListRepository.deleteProductWishList(idWishlist, item.id!);
-      
-      // Verificar si la lista de deseos queda vacía
-      const wishlist = this.whislists.find(w => w.id === idWishlist);
-      if (wishlist && wishlist.products.length === 1) { // 1 porque acabamos de eliminar un producto
-        this.deleteWishList(idWishlist);
-      } else {
-        this.updateSwiper();
-        this.initializeSwiper();
-      }
+    let list: Product[] 
+    if (this.idWishlist != null) {
+      try {
+        this.wishListRepository.getWishListForId(this.idWishlist).then((response) => {
+          list = response?.products!
+          if (list !== undefined) {
+              list= list.filter((element)=> element.id !== item.id)
+              this.whislistItem!.products = list;
+              this.wishList.editWishList(list, this.idWishlist).subscribe({
+                  next: (data) => { this.getWishList();},
+                  error: (error) => { console.log("Error al borrar el producto de la wishlist" + error) }
+              })
+            }})            
+        }
+        catch(error){
+          console.log(error);
+        } 
     }
-    
+  } 
+ 
+  getWishListbyId(id : number): WishList | undefined {
+    return this.whislists.find(wishlist => wishlist.id === id)
   }
 
-  uptadateWishlist() {
-    this.wishList.getAllWishList(this.userId).subscribe((prod) => {
-      this.whislists = prod;
-    })
-  }
 
-  getIdWishlist(item : Product):number | null{
-    let idWishlist : number| null = null; 
-    for(let i=0;i<this.whislists.length;i++){
-      if(this.whislists[i].products.includes(item))
-      {
-        idWishlist=this.whislists[i].id
-      }
-    }
-    return idWishlist;
+  searchProduct(lista: WishList, item: Product): boolean {
+    // Utiliza el método find para buscar el producto en la lista
+    const foundProduct = lista.products.find(data => data === item);
+    // Si foundProduct es undefined, el producto no se encontró; de lo contrario, se encontró
+    return foundProduct !== undefined;
   }
+  
   private initializeSwiper(): Swiper {
     return new Swiper('.swiper-container', {
       slidesPerView: 'auto',
-      autoplay : true,
-      loop : true
+      autoplay : true
     });
-}
-
-private updateSwiper(): void {
-  // Verifica si la instancia del carrusel está definida antes de llamar al método update
-  if (this.swiper) {
-    this.swiper.update();
   }
-}
+
+  private updateSwiper(): void {
+  // Verifica si la instancia del carrusel está definida antes de llamar al método update
+    if (this.swiper) {
+      this.swiper.update();
+    }
+  }
 
 }
