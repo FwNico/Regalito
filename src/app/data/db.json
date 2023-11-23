@@ -490,7 +490,7 @@
   "wishlist": [
     {
       "id": 12124,
-      "idUser": 192380859,
+      "idUser": 414173926,
       "nombre": "Smartphone",
       "products": [
         {
@@ -773,6 +773,58 @@
         "precio": 100,
         "descripcion": "Celular Samsung 128/6GB Light Green",
         "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
+      }
+    },
+    {
+      "id": 10,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "pending",
+      "product": {
+        "id": "MLA321098765_EE",
+        "nombre": "Moto G32",
+        "precio": 180,
+        "descripcion": "Celular Motorola 128GB Rosa Pastel",
+        "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
+      }
+    },
+    {
+      "id": 11,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "pending",
+      "product": {
+        "id": "MLA432109876_DD",
+        "nombre": "Galaxy A24",
+        "precio": 100,
+        "descripcion": "Celular Samsung 128/6GB Light Green",
+        "imagen_url": "https://www.bairesit.com.ar/Image/0/700_700-a7.jpg"
+      }
+    },
+    {
+      "id": 12,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "pending",
+      "product": {
+        "id": "MLA543210987_CC",
+        "nombre": "Galaxy S23 Ultra",
+        "precio": 150,
+        "descripcion": "Samsung 12gb 256gb Color Green",
+        "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_799456-MLU72675206798_112023-O.webp"
+      }
+    },
+    {
+      "id": 13,
+      "idUserEmit": 437402821,
+      "idUserRecived": 414173926,
+      "status": "pending",
+      "product": {
+        "id": "MLA321098765_EE",
+        "nombre": "Moto G32",
+        "precio": 180,
+        "descripcion": "Celular Motorola 128GB Rosa Pastel",
+        "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
       }
     }
   ]
