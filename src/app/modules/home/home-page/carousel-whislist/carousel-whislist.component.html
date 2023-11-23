@@ -1,13 +1,14 @@
 
 
 <ng-container *ngIf="form === false">
-  <button class="masContainer" (click)="form = true">
-    Add new wishlist  
-    <img src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png" class="masImg">
-  </button>
+  <ng-container>
+  <button class="masContainer" (click)="form = true" *ngIf="isUserView === false">
+      Add new wishlist  
+      <img src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png" class="masImg">
+    </button>
 </ng-container>
 
-<ng-container *ngIf="form === true">
+<ng-container *ngIf="form">
   <form action="" class="form-inline">
     <label class="form-label">Nombre de Wishlist</label>
     <input type="text" [formControl]="nameForm" class="form-input">
@@ -26,6 +27,7 @@
   </form>
 </ng-container>
 
+</ng-container>
 <ng-container *ngIf="view === true">
   <div class="wishlist-container">
     
@@ -36,27 +38,36 @@
         <h3>{{prod.nombre}}</h3>
         </span>
       </div>
-      <button class="delete-button" (click)="deleteWishList(prod.id!)">Borrar lista</button>
+      <button *ngIf="isUserView === false" class="delete-button" (click)="deleteWishList(prod.id!)">Borrar
+        lista</button>
     </ng-container>
   
   </div>
 </ng-container>
 <ng-container *ngIf="view === false">
-  
-  <swiper-container class="swiper-container" >
-    <swiper-slide *ngFor="let item of whislistItem?.products" class="swiper-slide" >
-        <button (click)="deleteProductWishList(item)"><img src="https://img.freepik.com/vector-premium/icono-marca-cruz-roja-simbolo-eleccion-negativa-boton-aplicacion-signo_744955-339.jpg?w=360" class="deleteImg" ></button>
-        <img [src]="item.imagen_url" class="imagen">
-        <div class="nombre"><h3><b>{{item.nombre}}</b></h3></div>
-        <div class="precio"><b>${{item.precio}}</b></div>
-        <div class="descripcion">{{item.descripcion}}</div>
-    </swiper-slide >
+  <swiper-container class="swiper-container">
+    <swiper-slide *ngFor="let item of whislistItem?.products" class="swiper-slide">
+      <ng-container>
+        <div>
+          <button (click)="emitRegalito(item)">regalito</button>
+        </div>
+      </ng-container>
+      <button *ngIf="isUserView === false">
+        <img
+          src="https://img.freepik.com/vector-premium/icono-marca-cruz-roja-simbolo-eleccion-negativa-boton-aplicacion-signo_744955-339.jpg?w=360"
+          class="deleteImg" (click)="deleteProductWishList(item)">
+      </button>
+      <img [src]="item.imagen_url" class="imagen">
+      <div class="nombre">
+        <h3><b>{{item.nombre}}</b></h3>
+      </div>
+      <div class="precio"><b>${{item.precio}}</b></div>
+      <div class="descripcion">{{item.descripcion}}</div>
+    </swiper-slide>
+
   </swiper-container>
-  
   <div>
     <button class="boton-back" (click)="change()">Back</button>
   </div>
 
 </ng-container>
-
-

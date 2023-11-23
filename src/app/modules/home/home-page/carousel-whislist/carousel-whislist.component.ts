@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { Meli } from 'src/app/core/models/Meli';
 import { User } from 'src/app/core/models/User';
 import { ResponseUser } from 'src/app/core/models/UserDAO';
@@ -24,7 +24,10 @@ register();
   styleUrls: ['./carousel-whislist.component.css']
 })
 
-export class CarouselWhislistComponent implements OnInit {
+export class CarouselWhislistComponent implements OnInit{
+  @Input() isUserView: boolean = false
+  @Input() idFriend:number = 0
+  @Output() regalito: EventEmitter<Product> = new EventEmitter<Product>();
   whislists: WishList[] = [];
   whislistItem?: WishList;
   view: boolean = true;
@@ -36,8 +39,7 @@ export class CarouselWhislistComponent implements OnInit {
   nameForm = new FormControl('', [Validators.maxLength(20), Validators.required, Validators.minLength(2)]);
   idWishlist: number = -1;
 
-
-  constructor(private wishListRepository: WishListRepository, private wishList: WishListService, 
+  constructor(private wishListRepository: WishListRepository, private wishList: WishListService,
     private userService: UserService, private tokenRepository: TokenRepository, 
     private wishlistRepository: WishListRepository) {
     this.userMeli = tokenRepository.getAccessToken();
@@ -47,7 +49,6 @@ export class CarouselWhislistComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.userMeli?.user_id);
     const swiperInstance = this.initializeSwiper();
     this.swiper = swiperInstance;
     this.getWishList();
@@ -147,12 +148,21 @@ export class CarouselWhislistComponent implements OnInit {
       autoplay : true
     });
   }
-
   private updateSwiper(): void {
-  // Verifica si la instancia del carrusel está definida antes de llamar al método update
+    // Verifica si la instancia del carrusel está definida antes de llamar al método update
     if (this.swiper) {
       this.swiper.update();
     }
+    }
+  
+   
+  
+    emitRegalito(product: Product) {
+      console.log("click para enviar este dato " + product)
+      this.regalito.emit(product)
+    }
   }
 
-}
+  
+
+

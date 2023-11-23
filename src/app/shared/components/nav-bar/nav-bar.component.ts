@@ -16,5 +16,7 @@ export class NavBarComponent implements OnInit{
     
   }
 
-  
+  public goToRegalito() {
+    this.router.navigate(["/regalito"]);
+  }
 }
