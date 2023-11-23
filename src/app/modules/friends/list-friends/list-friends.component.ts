@@ -14,6 +14,7 @@ export class ListFriendsComponent implements OnInit {
   @Output() friendToDelete: EventEmitter<number> = new EventEmitter();
   @Output() friendRejected: EventEmitter<number> = new EventEmitter();
   @Output() friendshipToUpdate: EventEmitter<Friendship> = new EventEmitter();
+  isFriend: boolean = false
 
   constructor(private router: Router) {
 
@@ -29,14 +30,21 @@ export class ListFriendsComponent implements OnInit {
   }
 
   navigate(userId: number) {
-    this.router.navigate(['/user', userId])
+    this.friends.forEach(element => {
+      if (element.friend.id === userId && element.status ==="active") {
+        this.router.navigate(['/user', userId])
+      }
+      else {
+        console.log("no son amigos")
+      }
+    });
   }
 
-  public rejectFriendship(id:number){
+  public rejectFriendship(id: number) {
     this.friendRejected.emit(id);
   }
 
-  public acceptFriendship(friendship: Friendship){
+  public acceptFriendship(friendship: Friendship) {
     // change status to active
     this.friendshipToUpdate.emit(friendship);
   }

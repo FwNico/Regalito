@@ -13,7 +13,7 @@ import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper';
 import { Product } from 'src/app/core/models/Product';
 import { ParseFlags } from '@angular/compiler';
-import { FormControl,ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 // register Swiper custom elements
 register();
 
@@ -24,23 +24,23 @@ register();
   styleUrls: ['./carousel-whislist.component.css']
 })
 
-export class CarouselWhislistComponent implements OnInit{
+export class CarouselWhislistComponent implements OnInit {
   @Input() isUserView: boolean = false
-  @Input() idFriend:number = 0
+  @Input() idFriend: number = 0
   @Output() regalito: EventEmitter<Product> = new EventEmitter<Product>();
   whislists: WishList[] = [];
   whislistItem?: WishList;
   view: boolean = true;
-  newProductsForm: Product[] = []; 
+  newProductsForm: Product[] = [];
   userMeli: Meli | null;
   userId: number = 0;
   swiper: Swiper | undefined;
-  form : boolean = false;
+  form: boolean = false;
   nameForm = new FormControl('', [Validators.maxLength(20), Validators.required, Validators.minLength(2)]);
   idWishlist: number = -1;
 
   constructor(private wishListRepository: WishListRepository, private wishList: WishListService,
-    private userService: UserService, private tokenRepository: TokenRepository, 
+    private userService: UserService, private tokenRepository: TokenRepository,
     private wishlistRepository: WishListRepository) {
     this.userMeli = tokenRepository.getAccessToken();
     if (this.userMeli !== null) {
@@ -54,42 +54,53 @@ export class CarouselWhislistComponent implements OnInit{
     this.getWishList();
 
   }
-  
-  getWishList(){
-    this.wishList.getAllWishList(this.userId).subscribe({
-      next:(prod)=>{
-      this.whislists = prod;
-      },
-      error: (error)=>{
-        console.log(error);
-      } 
-  })
+
+  getWishList() {
+    if (this.isUserView) {
+      this.wishList.getAllWishList(this.idFriend).subscribe({
+        next: (prod) => {
+          this.whislists = prod;
+        },
+        error: (error) => {
+          console.log(error);
+        }
+      })
+    } else {
+      this.wishList.getAllWishList(this.userId).subscribe({
+        next: (prod) => {
+          this.whislists = prod;
+        },
+        error: (error) => {
+          console.log(error);
+        }
+      })
+    }
   }
 
-  formSubmit(): WishList{
+  formSubmit(): WishList {
     let list: WishList = new WishList("invalida", this.newProductsForm, 0);
-    if(this.nameForm.valid === true){
+    if (this.nameForm.valid === true) {
       list = new WishList(this.nameForm.value!, this.newProductsForm, this.userId);
     }
     return list;
   }
 
-  newWishlist(){
-    if(this.formSubmit!==null){
-    this.wishList.saveWishList(this.formSubmit()).subscribe({
-      next: (wishlist)=>{
-        this.whislists.push(wishlist)
-      },
-      error: (error) => {
-        console.log(error);
-        
-      }
-    });
-    this.getWishList()
-  }
+  newWishlist() {
+    if (this.formSubmit !== null) {
+      this.wishList.saveWishList(this.formSubmit()).subscribe({
+        next: (wishlist) => {
+          this.whislists.push(wishlist)
+        },
+        error: (error) => {
+          console.log(error);
+
+        }
+      });
+      this.getWishList()
+    }
   }
 
-  getItemsWishlist(wishList: WishList){
+  getItemsWishlist(wishList: WishList) {
     this.getWishList();
     this.whislistItem = wishList;
     this.idWishlist = wishList.id!;
@@ -101,36 +112,37 @@ export class CarouselWhislistComponent implements OnInit{
   change() {
     this.view = true;
   }
-  
-  deleteWishList(id : number) {
+
+  deleteWishList(id: number) {
     let whislist: WishList[] = this.whislists;
-    this.whislists = whislist.filter(data=> data.id !== id);
+    this.whislists = whislist.filter(data => data.id !== id);
     this.wishListRepository.deleteWishList(id!);
   }
-  
-  
+
+
   deleteProductWishList(item: Product) {
-    let list: Product[] 
+    let list: Product[]
     if (this.idWishlist != null) {
       try {
         this.wishListRepository.getWishListForId(this.idWishlist).then((response) => {
           list = response?.products!
           if (list !== undefined) {
-              list= list.filter((element)=> element.id !== item.id)
-              this.whislistItem!.products = list;
-              this.wishList.editWishList(list, this.idWishlist).subscribe({
-                  next: (data) => { this.getWishList();},
-                  error: (error) => { console.log("Error al borrar el producto de la wishlist" + error) }
-              })
-            }})            
-        }
-        catch(error){
-          console.log(error);
-        } 
+            list = list.filter((element) => element.id !== item.id)
+            this.whislistItem!.products = list;
+            this.wishList.editWishList(list, this.idWishlist).subscribe({
+              next: (data) => { this.getWishList(); },
+              error: (error) => { console.log("Error al borrar el producto de la wishlist" + error) }
+            })
+          }
+        })
+      }
+      catch (error) {
+        console.log(error);
+      }
     }
-  } 
- 
-  getWishListbyId(id : number): WishList | undefined {
+  }
+
+  getWishListbyId(id: number): WishList | undefined {
     return this.whislists.find(wishlist => wishlist.id === id)
   }
 
@@ -141,11 +153,11 @@ export class CarouselWhislistComponent implements OnInit{
     // Si foundProduct es undefined, el producto no se encontró; de lo contrario, se encontró
     return foundProduct !== undefined;
   }
-  
+
   private initializeSwiper(): Swiper {
     return new Swiper('.swiper-container', {
       slidesPerView: 'auto',
-      autoplay : true
+      autoplay: true
     });
   }
   private updateSwiper(): void {
@@ -153,16 +165,16 @@ export class CarouselWhislistComponent implements OnInit{
     if (this.swiper) {
       this.swiper.update();
     }
-    }
-  
-   
-  
-    emitRegalito(product: Product) {
-      console.log("click para enviar este dato " + product)
-      this.regalito.emit(product)
-    }
   }
 
-  
+
+
+  emitRegalito(product: Product) {
+    console.log("click para enviar este dato " + product)
+    this.regalito.emit(product)
+  }
+}
+
+
 
 

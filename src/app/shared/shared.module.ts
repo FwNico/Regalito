@@ -6,6 +6,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { Error404Component } from './components/error404/error404.component';
 import { FriendsModule } from '../modules/friends/friends.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { TokenRepository } from '../repository/token/tokenRepository';
+import { UserRepository } from '../repository/user/userRepository';
+import { UserService } from '../core/services/user/userService.service';
 
 
 @NgModule({
@@ -18,12 +21,17 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     CommonModule,
     SharedRoutingModule,
-    FriendsModule, 
+    FriendsModule
   ],
   exports: [
     SideBarComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+  ],
+  providers:[
+    UserRepository,
+    TokenRepository,
+    UserService
   ]
 })
 export class SharedModule { }
