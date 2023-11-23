@@ -579,6 +579,42 @@
           "categoria": "Indumentaria"
         }
       ]
+    },
+    {
+      "id": 12127,
+      "idUser": 192380859,
+      "nombre": "asdasd",
+      "products": []
+    },
+    {
+      "id": 12128,
+      "idUser": 192380859,
+      "nombre": "sadsadsadsa",
+      "products": []
+    },
+    {
+      "id": 12129,
+      "idUser": 192380859,
+      "nombre": "sadsadsad",
+      "products": []
+    },
+    {
+      "id": 12130,
+      "idUser": 192380859,
+      "nombre": "sadsadsad",
+      "products": []
+    },
+    {
+      "id": 12131,
+      "idUser": 192380859,
+      "nombre": "asdasdsadasd",
+      "products": []
+    },
+    {
+      "id": 12132,
+      "idUser": 192380859,
+      "nombre": "asdsdaasd",
+      "products": []
     }
   ],
   "friendships": [
@@ -840,6 +876,149 @@
         "precio": 180,
         "descripcion": "Celular Motorola 128GB Rosa Pastel",
         "imagen_url": "https://images.fravega.com/f500/5b3d88a81a18a6d705c33f2a559e8d0e.jpg"
+      }
+    },
+    {
+      "id": 14,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA876543210_P",
+        "nombre": "Air Force 1 Low",
+        "precio": 100,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
+      }
+    },
+    {
+      "id": 15,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA765432109_Q",
+        "nombre": "Dunk Low SE",
+        "precio": 120,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+      }
+    },
+    {
+      "id": 16,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA654321098_R",
+        "nombre": "React Infinity Run Fk 3",
+        "precio": 200,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
+      }
+    },
+    {
+      "id": 17,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA543210987_S",
+        "nombre": "Nike W React Element 55",
+        "precio": 150,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
+      }
+    },
+    {
+      "id": 18,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA432109876_T",
+        "nombre": "Suede Classic XXI",
+        "precio": 100,
+        "descripcion": "Zapatillas Puma",
+        "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
+      }
+    },
+    {
+      "id": 19,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA765432109_Q",
+        "nombre": "Dunk Low SE",
+        "precio": 120,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+      }
+    },
+    {
+      "id": 20,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA765432109_Q",
+        "nombre": "Dunk Low SE",
+        "precio": 120,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/464988/DQ6215_001_E_PREM.jpg?v=638150038321430000"
+      }
+    },
+    {
+      "id": 21,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA876543210_P",
+        "nombre": "Air Force 1 Low",
+        "precio": 100,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://nikearprod.vtexassets.com/arquivos/ids/698251/DM0576_400_A_PREM.jpg?v=638229571100200000"
+      }
+    },
+    {
+      "id": 22,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA654321098_R",
+        "nombre": "React Infinity Run Fk 3",
+        "precio": 200,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw05eaa1f0/products/NIDH5392-401/NIDH5392-401-1.JPG"
+      }
+    },
+    {
+      "id": 23,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA543210987_S",
+        "nombre": "Nike W React Element 55",
+        "precio": 150,
+        "descripcion": "Zapatillas Nike",
+        "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
+      }
+    },
+    {
+      "id": 24,
+      "idUserEmit": 192380859,
+      "idUserRecived": 437402821,
+      "status": "pending",
+      "product": {
+        "id": "MLA432109876_T",
+        "nombre": "Suede Classic XXI",
+        "precio": 100,
+        "descripcion": "Zapatillas Puma",
+        "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
       }
     }
   ]

@@ -15,7 +15,7 @@
     grid-template-rows: auto auto auto auto;
     max-height: 100%;
     max-width: 100%;
-    border: 2px solid ;
+    
   }
  
  
@@ -23,15 +23,15 @@
  
  .b2{
     grid-row: 1/ span 8;
-    border: 2px solid blue;
+    
  }
  .b3{
     grid-row: 1/ span 2;
-    border: 2px solid red;
+    
  }
  
  .b4{
-    border: 2px solid cyan;
+  
   grid-row: 3/ span 6;
  }
  
