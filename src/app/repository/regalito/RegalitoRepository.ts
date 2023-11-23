@@ -3,6 +3,7 @@ import { Meli } from '../../core/models/Meli';
 import { TokenRepository } from '../token/tokenRepository';
 import { RegalitoService } from 'src/app/core/services/regalitos/regalito.service';
 import { Injectable } from '@angular/core';
+import { Product } from 'src/app/core/models/Product';
 
 @Injectable({
     providedIn: 'root'
@@ -16,10 +17,10 @@ export class RegalitoRepository {
     }
 
     //idUserRecived es el id del usuario que va a recibir la solicitud de regalo
-    createRegalito(idProduct: string, idUserRecived: number) {
-        const regalito = new Regalito(this.meli?.user_id!, idUserRecived, "pending", idProduct)
+    createRegalito(product: Product, idUserRecived: number) {
+        const regalito = new Regalito(this.meli?.user_id!, idUserRecived++, "pending", product)
         this.regalitoService.createRegalito(regalito).subscribe({
-            next: (data) => { console.log("se guardo el regalo" + data) },
+            next: (data) => { console.log("se guardo el regalo" + data.status) },
             error: (error) => { console.log("error al guardar regalito " + error) }
         })
     }

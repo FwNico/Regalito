@@ -5,13 +5,18 @@
     </div>
     
     <table>
-        <tbody>
+      <tbody>
           <tr *ngFor="let item of sentList">
-            <td class= "regalo" >{{item.idProduct}}</td>
-            <td class= "status" >Estado: {{item.status}} </td>
+            <td class="imagen"><img [src]="item.product.imagen_url"></td>
+            <td class= "regalo" >{{item.product.nombre}}</td>
+            <td class= "status-pending" *ngIf="(item.status=='pending')">{{item.status}}</td>
+            <td class= "cancel-regalito" *ngIf="(item.status=='pending')"> <button class="cancel-button" (click)="deleteRegalito(item.id!)">Cancelar</button></td>
+            <td class= "status-accepted" *ngIf="(item.status=='accepted')">{{item.status}}</td>
+            <td class= "buy-regalito" *ngIf="(item.status=='accepted')"> <button class="buy-button">Comprar ahora!</button></td>
+            <td class= "status-rejected" *ngIf="(item.status=='rejected')" [attr.colspan]="2">{{item.status}}</td>
           </tr>
-        </tbody>
-      </table>
+      </tbody>
+    </table>
 </div>
 
 <div class="received-list-container">
@@ -23,8 +28,15 @@
     <table>
         <tbody>
           <tr *ngFor="let item of receivedList">
-            <td class= "regalo" >{{item.idProduct}}</td>
-            <td class= "status" >Estado: {{item.status}} </td>
+            <td class="imagen"><img [src]="item.product.imagen_url"></td>
+            <td class= "regalo" >{{item.product.nombre}}</td>
+            <td class= "status-pending" *ngIf="(item.status=='pending')">{{item.status}}</td>
+            <td class= "pending-regalito" *ngIf="(item.status=='pending')">
+               <button class="accept-button" (click)="acceptRegalito(item)">Aceptar</button>
+               <button class="cancel-button" (click)="rejectRegalito(item)">Rechazar</button>
+            </td>
+            <td class= "status-accepted" *ngIf="(item.status=='accepted')" [attr.colspan]="2">{{item.status}}</td>
+            <td class= "status-rejected" *ngIf="(item.status=='rejected')" [attr.colspan]="2">{{item.status}}</td>
           </tr>
         </tbody>
       </table>

@@ -17,7 +17,7 @@ export class ListRegalitosComponent implements OnInit{
   sentList: Regalito[] = [];
   receivedList: Regalito[] = [];
   
-  constructor(private regalitoService: RegalitoService, private tokenRepository: TokenRepository, private productService: ProductService){
+  constructor(private regalitoService: RegalitoService, private tokenRepository: TokenRepository){
     this.userId = this.tokenRepository.getAccessToken()?.user_id;
   }
     
@@ -42,14 +42,33 @@ export class ListRegalitosComponent implements OnInit{
     })
   }
 
-  getProduct(id: string): Product {
-    let product = new Product ("", "", "", 0, "", "")
-    this.productService.getProductById(id).subscribe({
-      next:  (data) => {product = data},
-      error: (error) => {console.log("Error al traer un producto", error)}
-    })
-    return product
+  deleteRegalito(id: number){
+    this.regalitoService.deleteRegalito(id).subscribe({
+      next: (bool)=> {console.log("Regalito eliminado", bool)},
+      error: (error)=> {console.log("Error al eliminar el regalito", error)}
+    });
+
+    this.getRegalitosSent(this.userId!);
   }
 
+  acceptRegalito(regalito: Regalito){
+    regalito.status = "accepted"
+    this.regalitoService.updateRegalito(regalito).subscribe({
+      next: (data)=> {console.log("Se cambió el status a accepted", data)},
+      error: (error)=> {console.log("Ocurrió un error al cambiar el estado", error)}
+    });
+
+    this.getRegalitosReceived(this.userId!);
+  }
+
+  rejectRegalito(regalito: Regalito){
+    regalito.status = "rejected"
+    this.regalitoService.updateRegalito(regalito).subscribe({
+      next: (data)=> {console.log("Se cambió el status a accepted", data)},
+      error: (error)=> {console.log("Ocurrió un error al cambiar el estado", error)}
+    });
+
+    this.getRegalitosReceived(this.userId!);
+  }
 
 }

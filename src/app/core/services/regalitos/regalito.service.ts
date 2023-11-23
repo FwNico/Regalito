@@ -35,4 +35,9 @@ export class RegalitoService {
         const url = `${this.baseURL}?idUserRecived=${id}`
         return this.http.get<Regalito[]>(url)
     }
+
+    updateRegalito(regalito: Regalito): Observable<Regalito> {
+        if (!regalito.id) throw Error("Regalito id is required");
+        return this.http.patch<Regalito>(`${this.baseURL}/${regalito.id}`, regalito);
+    }
 }
