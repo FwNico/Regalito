@@ -26,7 +26,7 @@ register();
 export class CarouselWhislistComponent implements OnInit{
   @Input() isUserView: boolean = false
   @Input() idFriend:number = 0
-  @Output() regalito: EventEmitter<string> = new EventEmitter<string>();
+  @Output() regalito: EventEmitter<Product> = new EventEmitter<Product>();
   whislists: WishList[] = [];
   whislistItem?: WishList;
   view: boolean = true;
@@ -127,9 +127,9 @@ export class CarouselWhislistComponent implements OnInit{
     }
   }
 
-  emitRegalito(idProduct: string) {
-    console.log("click para enviar este dato " + idProduct)
-    this.regalito.emit(idProduct)
+  emitRegalito(product: Product) {
+    console.log("click para enviar este dato " + product)
+    this.regalito.emit(product)
   }
 
 }

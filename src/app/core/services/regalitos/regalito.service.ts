@@ -7,7 +7,7 @@ import { Injectable } from "@angular/core";
   })
 export class RegalitoService {
 
-    private baseURL = "http://localhost:3000/regalito"
+    private baseURL = "http://localhost:3000/regalitos"
 
     constructor(private http: HttpClient) {
     }
@@ -25,14 +25,19 @@ export class RegalitoService {
     }
 
     //SOLAMENTE TRAE REGALOS ENVIADOS POR LA PERSONA
-    regalitosSend(id: number): Observable<Regalito[]> {
-        const url = `${this.baseURL}?=idUserEmit${id}`
+    regalitosSent(id: number): Observable<Regalito[]> {
+        const url = `${this.baseURL}?idUserEmit=${id}`
         return this.http.get<Regalito[]>(url)
     }
 
     //SOLAMENTE TRAE REGALOS RECIBIDOS
-    regalitoRecived(id: number) {
-        const url = `${this.baseURL}?=idUserRecived${id}`
+    regalitosReceived(id: number): Observable<Regalito[]> {
+        const url = `${this.baseURL}?idUserRecived=${id}`
         return this.http.get<Regalito[]>(url)
+    }
+
+    updateRegalito(regalito: Regalito): Observable<Regalito> {
+        if (!regalito.id) throw Error("Regalito id is required");
+        return this.http.patch<Regalito>(`${this.baseURL}/${regalito.id}`, regalito);
     }
 }

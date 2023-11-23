@@ -5,6 +5,7 @@ import { UserService } from 'src/app/core/services/user/userService.service';
 import { WishListService } from 'src/app/core/services/wishList/WishlistService.service';
 import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoRepository';
 import { CarouselWhislistComponent } from '../../home/home-page/carousel-whislist/carousel-whislist.component';
+import { Product } from 'src/app/core/models/Product';
 
 @Component({
     selector: 'app-view-user',
@@ -15,7 +16,7 @@ import { CarouselWhislistComponent } from '../../home/home-page/carousel-whislis
 export class ViewUserComponent implements OnInit {
     friendId: number | null = null
     wishList: WishList[]
-    dataRegalito: string = ""
+    dataRegalito: Product = new Product("","","",0,"","")
     isUserView: boolean = true
     constructor(private cdr: ChangeDetectorRef,private route: ActivatedRoute, private wishListService: WishListService, private regalitoRepository: RegalitoRepository) {
         this.wishList = []
@@ -29,8 +30,8 @@ export class ViewUserComponent implements OnInit {
         this.getWishList(this.friendId!)
     }
 
-    obtainData(idProduct: string) {
-        this.dataRegalito = idProduct
+    obtainData(product: Product) {
+        this.dataRegalito = product
         this.sendRegalito()
     }
 
@@ -43,7 +44,6 @@ export class ViewUserComponent implements OnInit {
 
 
     sendRegalito() {
-
         this.regalitoRepository.createRegalito(this.dataRegalito, this.friendId! as number)
     }
 

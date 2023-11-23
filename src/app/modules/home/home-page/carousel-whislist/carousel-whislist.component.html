@@ -23,7 +23,7 @@
     <swiper-slide *ngFor="let item of whislistItem?.products" class="swiper-slide">
       <ng-container>
         <div>
-          <button (click)="emitRegalito(item.id!)">regalito</button>
+          <button (click)="emitRegalito(item)">regalito</button>
         </div>
       </ng-container>
       <button *ngIf="isUserView === false">

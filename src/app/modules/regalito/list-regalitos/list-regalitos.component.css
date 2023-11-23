@@ -1,0 +1,108 @@
+.sent-list-container,
+.received-list-container {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+span {
+  color: #777;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+
+.regalo {
+  font-weight: bold;
+  color: #0066cc;
+  text-align: left;
+  width: 800px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.status-pending {
+  color: #ff9900;
+  font-style: italic;
+}
+
+.cancel-regalito {
+  text-align: center;
+}
+
+.status-accepted {
+  color: #009933;
+  font-style: italic;
+}
+
+.status-rejected {
+  color: #ff3333;
+  font-style: italic;
+}
+
+.buy-regalito {
+  text-align: center;
+}
+
+.pending-regalito {
+  text-align: center;
+}
+
+button {
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.accept-button {
+  background-color: #009933;
+  color: #fff;
+}
+
+.cancel-button {
+  background-color: #ff3333;
+  color: #fff;
+}
+
+.buy-button {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+.imagen{
+  max-width: 10px;
+  max-height: 10px; 
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden; 
+  vertical-align: middle;
+}
+
+img{
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto;
+}

@@ -4,6 +4,7 @@ import { HomePageComponent } from './modules/home/home-page/home-page.component'
 import { LandingPageComponent } from './modules/landing/landing-page/landing-page.component';
 import { Error404Component } from './shared/components/error404/error404.component';
 import { ViewUserComponent } from './modules/user/view-user/view-user.component';
+import { ListRegalitosComponent } from './modules/regalito/list-regalitos/list-regalitos.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,12 @@ const routes: Routes = [
     path:'user/:userId',
     component: ViewUserComponent,
     loadChildren: ()=> import("./modules/user/user.module").then(u => u.UserModule)
+  },
+
+  {
+    path:'regalito',
+    component: ListRegalitosComponent,
+    loadChildren: ()=> import("./modules/regalito/regalito.module").then(u => u.RegalitoModule)
   },
   
   {

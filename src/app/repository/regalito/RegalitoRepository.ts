@@ -1,8 +1,9 @@
 import { Regalito } from 'src/app/core/models/Regalito';
 import { Meli } from '../../core/models/Meli';
 import { TokenRepository } from '../token/tokenRepository';
-import { RegalitoService } from 'src/app/core/services/regalitos/RegalitoService.service';
+import { RegalitoService } from 'src/app/core/services/regalitos/regalito.service';
 import { Injectable } from '@angular/core';
+import { Product } from 'src/app/core/models/Product';
 
 @Injectable({
     providedIn: 'root'
@@ -16,8 +17,8 @@ export class RegalitoRepository {
     }
 
     //idUserRecived es el id del usuario que va a recibir la solicitud de regalo
-    createRegalito(idProduct: string, idUserRecived: number) {
-        const regalito = new Regalito(this.meli?.user_id!, idUserRecived++, "PENDING", idProduct)
+    createRegalito(product: Product, idUserRecived: number) {
+        const regalito = new Regalito(this.meli?.user_id!, idUserRecived++, "pending", product)
         this.regalitoService.createRegalito(regalito).subscribe({
             next: (data) => { console.log("se guardo el regalo" + data.status) },
             error: (error) => { console.log("error al guardar regalito " + error) }
@@ -33,15 +34,15 @@ export class RegalitoRepository {
         )
     }
 
-    getRegalitosSend(idList: number) {
-        this.regalitoService.regalitosSend(idList).subscribe({
+    getRegalitosSent(id: number) {
+        this.regalitoService.regalitosSent(id).subscribe({
             next: resp => { console.log(resp) },
             error: error => { console.log(error) }
         })
     }
 
-    getRegalitosRecived(idList: number) {
-        this.regalitoService.regalitoRecived(idList).subscribe({
+    getRegalitosReceived(id: number) {
+        this.regalitoService.regalitosReceived(id).subscribe({
             next: resp => { console.log(resp) },
             error: error => { console.log(error) }
         })
