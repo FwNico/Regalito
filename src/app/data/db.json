@@ -490,7 +490,7 @@
   "wishlist": [
     {
       "id": 12124,
-      "idUser": 414173926,
+      "idUser": 192380859,
       "nombre": "Smartphone",
       "products": [
         {
@@ -526,20 +526,6 @@
     {
       "id": 12125,
       "idUser": 192380859,
-      "nombre": "Zapatillas",
-      "products": [
-        {
-          "id": "MLA543210987_S",
-          "nombre": "Nike W React Element 55",
-          "precio": 150,
-          "descripcion": "Zapatillas Nike",
-          "imagen_url": "https://showsport.vtexassets.com/arquivos/ids/747218/NIK-CD6964002--1-.jpg?v=637615212649800000"
-        }
-      ]
-    },
-    {
-      "id": 12125,
-      "idUser": 437402821,
       "nombre": "Zapatillas",
       "products": [
         {

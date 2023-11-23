@@ -1,23 +1,49 @@
-<h2>Wishlists</h2>
-<ng-container>
-  <button class="masContainer" *ngIf="isUserView === false">
-    Add new wishlist
-    <img src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png" class="masImg">
-  </button>
+
+
+<ng-container *ngIf="form === false">
+  <ng-container>
+  <button class="masContainer" (click)="form = true" *ngIf="isUserView === false">
+      Add new wishlist  
+      <img src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png" class="masImg">
+    </button>
+</ng-container>
+
+<ng-container *ngIf="form">
+  <form action="" class="form-inline">
+    <label class="form-label">Nombre de Wishlist</label>
+    <input type="text" [formControl]="nameForm" class="form-input">
+    <button [disabled]="nameForm.invalid" class="form-button" (click)="newWishlist()">Crear Wishlist</button>
+    <span class="error-box" [hidden]="nameForm.valid">
+      <span *ngIf="nameForm.errors?.['required']" class="error-message">
+        No puede estar el campo vacío.
+      </span>
+      <span *ngIf="nameForm.errors?.['minlength']" class="error-message">
+        Debe tener más de 2 caracteres.
+      </span>
+      <span *ngIf="nameForm.errors?.['maxlength']" class="error-message">
+        Debe tener menos de 20 caracteres.
+      </span>
+    </span>
+  </form>
+</ng-container>
+
 </ng-container>
 <ng-container *ngIf="view === true">
   <div class="wishlist-container">
+    
     <ng-container *ngFor="let prod of whislists">
-      <div class="wishlist-card" (click)="seeWishList(prod)">
-        <img src="{{prod.products[0].imagen_url}}">
+      <div class="wishlist-card" (click)="seeWishList()">
+        <span class="card" (click)="getItemsWishlist(prod)">
+        <img src="https://img.freepik.com/fotos-premium/caja-regalo-3d-sobre-fondo-blanco-aislado-cumpleanos-celebracion-embalaje-3d_742252-2380.jpg" >
         <h3>{{prod.nombre}}</h3>
+        </span>
       </div>
       <button *ngIf="isUserView === false" class="delete-button" (click)="deleteWishList(prod.id!)">Borrar
         lista</button>
     </ng-container>
+  
   </div>
 </ng-container>
-
 <ng-container *ngIf="view === false">
   <swiper-container class="swiper-container">
     <swiper-slide *ngFor="let item of whislistItem?.products" class="swiper-slide">
@@ -43,4 +69,5 @@
   <div>
     <button class="boton-back" (click)="change()">Back</button>
   </div>
+
 </ng-container>

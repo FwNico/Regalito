@@ -5,6 +5,7 @@ import { WishList } from '../../core/models/WishList';
 import { Meli } from "src/app/core/models/Meli";
 import { WishListService } from "src/app/core/services/wishList/WishlistService.service";
 import { Product } from "src/app/core/models/Product";
+import { Observable } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -39,9 +40,8 @@ export class WishListRepository {
                 })
             }
         })
-
     }
-
+ 
     deleteProductWishList(idWishlist:number, idProducto: string){
         let list: Product[] | undefined
         this.getWishListForId(idWishlist).then((response) => {
@@ -55,11 +55,12 @@ export class WishListRepository {
             }
         })
     }
+
     
     getWishListForId(id: number): Promise<WishList | undefined> {
         return this.wishlistService.getWishList(id)
     }
-
+    
     getAllWishList(idUser: number) {
         this.wishlistService.getAllWishList(idUser).subscribe({
             next: (respose) => { console.log(respose) },

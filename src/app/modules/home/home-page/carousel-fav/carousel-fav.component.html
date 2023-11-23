@@ -1,6 +1,6 @@
 
 <div class="filtro-categorias">
-  <input type="text" [(ngModel)]="searchTerm" placeholder="Busca un producto" (input)="buscarProductos()">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar un producto" (input)="buscarProductos()">
     <label for="categoria">Filtro por categoría: </label>
     <select name="categoria" id="categoria" class="mi-selector" (change)="filtrarCategorias()">
       <option value="Todas">Todas</option>
@@ -17,17 +17,37 @@
       <option value="Audio">Audio</option>
     </select>
   </div>
-<swiper-container class="swiper-container">
-    
-    <swiper-slide *ngFor="let producto of filteredProducts" class="swiper-slide">
-        <img [src]="producto.imagen_url" class="imagen">
-        <div class="nombre"><h3><b>{{producto.nombre}}</b></h3></div>
-        <div class="precio">${{producto.precio}}</div>
-        <button class="button">Add to Wishlist</button>
+
+  <swiper-container class="swiper-container">
+    <swiper-slide *ngFor="let producto of filteredProducts; let i = index" class="swiper-slide">
+      <img [src]="producto.imagen_url" class="imagen">
+      <div class="nombre"><h3><b>{{producto.nombre}}</b></h3></div>
+      <div class="precio">${{producto.precio}}</div>
+      <select [(ngModel)]="selectedWishlist[i]" name="wishlists" class="wishlist-dropdown">
+        <option *ngFor="let list of whislists" [value]="list.id">{{list.nombre}}</option>
+      </select>
+      <button class="button" (click)="addProductToWishlist(producto, i)">Añadir</button>
     </swiper-slide>
-    <div *ngIf="filteredProducts.length===0" class="no-products-message">
-      <p>
-        No encontramos un producto que coincida con ese nombre.
-      </p>
+  
+    <div *ngIf="filteredProducts.length === 0" class="no-products-message">
+      <p>No encontramos un producto que coincida con ese nombre.</p>
     </div>
-</swiper-container>
+  </swiper-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
