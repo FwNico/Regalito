@@ -6,6 +6,9 @@ import { Product } from 'src/app/core/models/Product';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper';
+import { WishList } from 'src/app/core/models/WishList';
+import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
+import { WishListService } from 'src/app/core/services/wishList/WishlistService.service';
 // register Swiper custom elements
 register();
 
@@ -23,19 +26,27 @@ export class CarouselFavComponent implements OnInit {
   filteredProducts: Product[] = [];
   searchTerm: string = '';
   swiper: Swiper | undefined;
+  view : boolean = true;
+  whislists: WishList[] = [];
+  userId: number = 0;
+  wishlistSelect: HTMLSelectElement | null = null;
+  idWhislist ?: number;
+  selectedWishlist: number[] = [];
 
-  constructor(private favs: ProductService, private tokenRepository: TokenRepository) {
+
+  constructor(private favs: ProductService, private tokenRepository: TokenRepository,
+    private wishListRepository: WishListRepository, private wishList: WishListService) {
     this.myAccessToken = tokenRepository.getAccessToken();
   }
 
   ngOnInit(): void {
     this.selectElement = document.getElementById('categoria') as HTMLSelectElement;
 
-    this.favs.productsList(this.myAccessToken!.access_token, this.myAccessToken!.user_id).subscribe((products) => {
-      this.products = products;
-      this.filteredProducts = [...products];
-    });
+    this.getFavs();
+    this.userId = this.myAccessToken?.user_id!
+    this.getWishList();
   }
+
   ngAfterViewInit(): void {
     // Inicializa el carrusel y almacena la instancia
     const swiperInstance = this.initializeSwiper();
@@ -43,6 +54,32 @@ export class CarouselFavComponent implements OnInit {
     this.swiper = swiperInstance;
 }
 
+  addProductToWishlist(prod: Product, index: number) {
+    if (this.selectedWishlist[index] !== undefined) {
+      const prods: Product[] = [prod];
+      this.idWhislist = this.selectedWishlist[index];
+      this.wishListRepository.editWishList(prods, this.idWhislist!);
+    }
+    this.getWishList();
+  }
+
+ getFavs(){
+  this.favs.productsList(this.myAccessToken!.access_token, this.myAccessToken!.user_id).subscribe((products) => {
+    this.products = products;
+    this.filteredProducts = [...products];
+  });
+ }
+
+ getWishList(){
+  this.wishList.getAllWishList(this.userId).subscribe({
+    next:(prod)=>{
+    this.whislists = prod;
+    },
+    error: (error)=>{
+      console.log(error);
+    } 
+})
+}
   private initializeSwiper(): Swiper {
       return new Swiper('.swiper-container', {
         slidesPerView: 'auto',
@@ -70,6 +107,14 @@ export class CarouselFavComponent implements OnInit {
 
   verproduct(): void {
     console.log(this.products);
+  }
+
+  change1(){
+    this.view = false;
+  }
+
+  change2(){
+    this.view = true;
   }
 
   // Método para buscar productos según el término de búsqueda
