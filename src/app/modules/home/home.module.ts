@@ -12,7 +12,6 @@ import { CarouselFavComponent } from './home-page/carousel-fav/carousel-fav.comp
 import { ProductRepository } from 'src/app/repository/products/ProductsRepository';
 import { WishListRepository } from 'src/app/repository/wishList/wishListRepository';
 import { CarouselWhislistComponent } from './home-page/carousel-whislist/carousel-whislist.component';
-import { RegalitoPageComponent } from './home-page/regalito-page/regalito-page.component';
 import { RegalitoRepository } from 'src/app/repository/regalito/RegalitoRepository';
 import { RegalitoService } from 'src/app/core/services/regalitos/regalito.service';
 
@@ -23,8 +22,7 @@ import { RegalitoService } from 'src/app/core/services/regalitos/regalito.servic
   declarations: [
     HomePageComponent,
     CarouselFavComponent,
-    CarouselWhislistComponent,
-    RegalitoPageComponent
+    CarouselWhislistComponent
   ],
   imports: [
     CommonModule,

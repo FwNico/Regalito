@@ -564,6 +564,21 @@
           "imagen_url": "https://woker.vtexassets.com/arquivos/ids/345696-800-800?v=638169960212470000&width=800&height=800&aspect=true"
         }
       ]
+    },
+    {
+      "id": 12126,
+      "idUser": 414173926,
+      "nombre": "Ropa",
+      "products": [
+        {
+          "id": "MLA905560536_C",
+          "nombre": "Campera Montagne",
+          "precio": 200,
+          "descripcion": "Campera de mujer",
+          "imagen_url": "https://d368r8jqz0fwvm.cloudfront.net/46119-product_lg/campera-de-mujer-ane.jpg",
+          "categoria": "Indumentaria"
+        }
+      ]
     }
   ],
   "friendships": [
@@ -604,7 +619,7 @@
     {
       "id": 7,
       "userId": 437402821,
-      "status": "active",
+      "status": "pending",
       "friend": {
         "id": 414173926,
         "nickname": "NICOLASDUARTE95",

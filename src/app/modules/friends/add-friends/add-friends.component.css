@@ -3,9 +3,10 @@
   flex-direction:row;
   align-items: left;
   justify-content: top;
-  margin-top: 50px;
+  margin-top: 30px;
   height: 20vh;
   width: 330px;
+  padding: 15px;
 }
 
 form {
