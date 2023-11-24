@@ -592,42 +592,131 @@
     {
       "id": 12127,
       "idUser": 192380859,
-      "nombre": "asdasd",
+      "nombre": "asdasdasd",
       "products": []
     },
     {
       "id": 12128,
       "idUser": 192380859,
-      "nombre": "sadsadsadsa",
+      "nombre": "asdadasdas",
       "products": []
     },
     {
       "id": 12129,
       "idUser": 192380859,
-      "nombre": "sadsadsad",
+      "nombre": "adasdasdasdas",
       "products": []
     },
     {
       "id": 12130,
       "idUser": 192380859,
-      "nombre": "sadsadsad",
-      "products": []
-    },
-    {
-      "id": 12131,
-      "idUser": 192380859,
-      "nombre": "asdasdsadasd",
-      "products": []
-    },
-    {
-      "id": 12132,
-      "idUser": 192380859,
-      "nombre": "asdsdaasd",
+      "nombre": "asdasd",
       "products": []
     }
   ],
   "friendships": [
-    
+    {
+      "id": 1,
+      "userId": 192380859,
+      "status": "pending",
+      "friend": {
+        "id": 437402821,
+        "nickname": "GOJEREMIAS27",
+        "first_name": "Jeremias",
+        "last_name": "Gonzalez",
+        "address": {
+          "state": "AR-C",
+          "city": "Mar del plata",
+          "address": "Test Address 123",
+          "zip_code": "2224"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "userId": 437402821,
+      "status": "toConfirm",
+      "friend": {
+        "id": 192380859,
+        "nickname": "NAHUELMIRABELLA",
+        "first_name": "nahuel",
+        "last_name": "mirabella",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
+    },
+    {
+      "id": 3,
+      "userId": 192380859,
+      "status": "pending",
+      "friend": {
+        "id": 414173926,
+        "nickname": "NICOLASDUARTE95",
+        "first_name": "Nicolas",
+        "last_name": "Duarte",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
+    },
+    {
+      "id": 4,
+      "userId": 414173926,
+      "status": "toConfirm",
+      "friend": {
+        "id": 192380859,
+        "nickname": "NAHUELMIRABELLA",
+        "first_name": "nahuel",
+        "last_name": "mirabella",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
+    },
+    {
+      "id": 5,
+      "userId": 192380859,
+      "status": "pending",
+      "friend": {
+        "id": 202593497,
+        "nickname": "AgusAKD95",
+        "first_name": "Agustin",
+        "last_name": "Zubiaurre",
+        "address": {
+          "state": "AR-C",
+          "city": "Palermo",
+          "address": "Test Address 123",
+          "zip_code": "1414"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "userId": 202593497,
+      "status": "toConfirm",
+      "friend": {
+        "id": 192380859,
+        "nickname": "NAHUELMIRABELLA",
+        "first_name": "nahuel",
+        "last_name": "mirabella",
+        "address": {
+          "address": null,
+          "city": null,
+          "state": "AR-B",
+          "zip_code": null
+        }
+      }
+    }
   ],
   "regalitos": [
     {
